@@ -2,7 +2,7 @@
 
 ### 1학기
 
-- [CSE2003](CSE2003 Introduction to Engineering Design): 기초공학설계 (작성 중)
+- [CSE2003](CSE2003 Introduction to Engineering Design/README.md): 기초공학설계 (작성 중)
 
 ### 2학기
 
