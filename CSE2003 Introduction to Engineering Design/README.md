@@ -8,7 +8,7 @@ CSE2003 - Introduction to Engineering Design
 
 
 
-## Practice 
+## Exercise
 
 - 매 수업마다 과제를 주고 실습을 합니다. 제시문에서 구현하라는 대로 구현하면 됩니다.
 - 다소 더러운 문제가 나오긴 합니다.
