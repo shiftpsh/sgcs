@@ -1,10 +1,10 @@
-# 기초공학설계
+# C프로그래밍
 
-CSE2003 - Introduction to Engineering Design
+CSE2035 - C Programming
 
-2018년 1학기
+2018년 2학기
 
-- C언어 프로그래밍 기초를 배웁니다.
+- 조금 더 깊이 있는 C언어 프로그래밍 기초를 배웁니다. Pointer와 메모리 할당, Struct를 주로 배우고, 약간의 알고리즘도 배웁니다.
 
 
 
@@ -22,6 +22,12 @@ CSE2003 - Introduction to Engineering Design
 
 
 
+## Algorithms
+
+- 버블 정렬
+- 이분 탐색
+
+
 ## Source Code
 
-- 첨부된 중간고사 소스코드의 점수는 100점입니다. 기말고사나 프로젝트, 실습 점수는 잘 모릅니다.
+- 첨부된 중간고사 소스코드의 점수는 94점입니다(3번 문제에서 테스트케이스 5개 중 1개 실패로 6점 감점).
