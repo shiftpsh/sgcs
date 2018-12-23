@@ -58,8 +58,8 @@
 
 ## 작성된 과목 목록
 
-* **CSE2003** Introduction to Engineering Design: 기초공학설계
+* **CSE2003** Introduction to Engineering Design: 기초공학설계 (2018-1학기)
 
-* **CSE2035** C Programming: C프로그래밍 (실습 #24, 프로젝트 작성 예정)
+* **CSE2035** C Programming: C프로그래밍 (2018-2학기)
 
 오래되거나 틀린 정보는 [Issues](https://github.com/shiftpsh/sgcs/issues)에 제보해 주세요!
