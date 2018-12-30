@@ -23,6 +23,10 @@
 *   **[GitHub Education Pack](https://education.github.com/pack)**
 
     2년간 GitHub 비공개 레포 무료, 외에도 개발자를 위한 여러 도구 제공
+    
+*   **[JetBrains](https://www.jetbrains.com/student/)**: **CLion**, **ReSharper** 등
+
+    엄청나게 좋은 IDE들 무료로 제공!
 
 *   **[AWS Educate](https://aws.amazon.com/ko/education/awseducate)**: **AWS 크레딧 $100**
 
