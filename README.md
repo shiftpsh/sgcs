@@ -28,7 +28,7 @@
 
     엄청나게 좋은 IDE들 무료로 제공!
 
-*   **[AWS Educate](https://aws.amazon.com/ko/education/awseducate)**: **AWS 크레딧 $100**
+*   **[AWS Educate](https://aws.amazon.com/ko/education/awseducate)**: **AWS 크레딧 매년 $100**
 
 *   **[학생용 Microsoft Azure 스타터](https://azure.microsoft.com/ko-kr/offers/ms-azr-0144p/)**: Azure Cloud Service
 
