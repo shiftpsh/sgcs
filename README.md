@@ -67,4 +67,12 @@
 | CSE2003 | Introduction to Engineering Design / 기초공학설계 | 2018-01  |
 | CSE2035 | C Programming / C프로그래밍                      | 2018-02  |
 
+## 작성 중인 과목 목록
+
+| Code    | Class                                         | Semester |
+| ------- | --------------------------------------------- | -------- |
+| CSE3030 | Assembly Programming / 어셈블리 프로그래밍      | 2019-01  |
+| CSE3080 | Data Structures / 자료구조                     | 2019-01  |
+| CSE3013 | Computer Science and Engineering Laboratory I / 컴퓨터공학 설계 및 실험 I  | 2019-01  |
+
 오래되거나 틀린 정보는 [Issues](https://github.com/shiftpsh/sgcs/issues)에 제보해 주세요!
