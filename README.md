@@ -22,7 +22,7 @@
 
 *   **[GitHub Education Pack](https://education.github.com/pack)**
 
-    2년간 GitHub 비공개 레포 무료, 외에도 개발자를 위한 여러 도구 제공
+    2년간 GitHub 프로 기능 전부 무료, 학생인 상태라면 계속 갱신 가능. 외에도 개발자를 위한 여러 도구 제공
     
 *   **[JetBrains](https://www.jetbrains.com/student/)**: **CLion**, **ReSharper** 등
 
