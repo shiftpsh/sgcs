@@ -8,7 +8,7 @@
 
 대부분은 학교 메일(~@sogang.ac.kr)이 필요하니 학교 메일이 없다면 메일부터 만듭시다
 
-*   **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**: **G Suite**, **Google Drive(무제한)**, 4명 초과 행아웃 등
+*   **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**: **G Suite**, **Google Drive(무제한)** 등
 
     SAINT ID로 로그인해 계정 신청
 
