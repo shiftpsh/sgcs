@@ -62,17 +62,17 @@
 
 ## 작성된 과목 목록
 
-| Code    | Class                                         | Semester | Contents |
-| ------- | --------------------------------------------- | -------- | -------- |
-| CSE2003 | Introduction to Engineering Design<br>기초공학설계 | 2018-01  | 실습 코드, 프로젝트(레포트 및 코드), 시험 코드 전부 |
-| CSE2035 | C Programming<br>C프로그래밍                      | 2018-02  | 실습 코드, 프로젝트(레포트 및 코드), 시험 코드 전부 |
+| Code    | Semester | Class                                         | Contents |
+| ------- | -------- | --------------------------------------------- | -------- |
+| CSE2003 | 2018-01  | Introduction to Engineering Design<br>기초공학설계 | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
+| CSE2035 | 2018-02  | C Programming<br>C프로그래밍                      | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
 
 ## 작성 중인 과목 목록
 
-| Code    | Class                                         | Semester |
-| ------- | --------------------------------------------- | -------- |
-| CSE3030 | Assembly Programming<br>어셈블리 프로그래밍      | 2019-01  |
-| CSE3080 | Data Structures<br>자료구조                     | 2019-01  |
-| CSE3013 | Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I  | 2019-01  |
+| Code    | Semester | Class                                         |
+| ------- | -------- | --------------------------------------------- |
+| CSE3030 | 2019-01  | Assembly Programming<br>어셈블리 프로그래밍      |
+| CSE3080 | 2019-01  | Data Structures<br>자료구조                     |
+| CSE3013 | 2019-01  | Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I  |
 
 오래되거나 틀린 정보는 [Issues](https://github.com/shiftpsh/sgcs/issues)에 제보해 주세요!
