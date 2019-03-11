@@ -8,7 +8,7 @@
 
 대부분은 학교 메일(~@sogang.ac.kr)이 필요하니 학교 메일이 없다면 메일부터 만듭시다
 
-*   **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**: **G Suite**, **Google Drive(무제한)**, 4명 초과 행아웃 등
+*   **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**: **G Suite**, **Google Drive(무제한)** 등
 
     SAINT ID로 로그인해 계정 신청
 
@@ -22,7 +22,7 @@
 
 *   **[GitHub Education Pack](https://education.github.com/pack)**
 
-    2년간 GitHub 비공개 레포 무료, 외에도 개발자를 위한 여러 도구 제공
+    2년간 GitHub 프로 기능 전부 무료, 학생인 상태라면 계속 갱신 가능. 외에도 개발자를 위한 여러 도구 제공
     
 *   **[JetBrains](https://www.jetbrains.com/student/)**: **CLion**, **ReSharper** 등
 
