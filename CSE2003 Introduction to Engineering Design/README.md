@@ -2,7 +2,7 @@
 
 CSE2003 - Introduction to Engineering Design
 
-2018년 1학기
+2018년 1학기 / 김주호 교수님
 
 - C언어 프로그래밍 기초를 배웁니다.
 
