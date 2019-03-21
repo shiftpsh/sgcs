@@ -6,7 +6,10 @@ CSE2003 - Introduction to Engineering Design
 
 - C언어 프로그래밍 기초를 배웁니다.
 
-
+- [실습 코드](exercise)
+- [프로젝트 리포트, 코드](project)
+- [중간고사 코드](midterm) (문제 미포함)
+- [기말고사 코드](final) (문제 미포함)
 
 ## Exercise
 
@@ -14,13 +17,9 @@ CSE2003 - Introduction to Engineering Design
 - 다소 더러운 문제가 나오긴 합니다.
 - 실습 문제를 매년 새로 만드는지는 잘 모르겠습니다.
 
-
-
 ## Exam
 
 - 시험 문제는 아마도 매년 새로 나옵니다. 족보는 별로 도움이 되지 않고 직접 코드를 짜보는 게 제일 도움이 되는 것 같습니다.
-
-
 
 ## Source Code
 

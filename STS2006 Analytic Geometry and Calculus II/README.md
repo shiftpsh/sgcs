@@ -6,6 +6,8 @@ STS2006 - Analytic Geometry and Calculus II
 
 - 다변수함수, 편미분, 이중적분, 삼중적분, 벡터미적분학을 배웁니다.
 
+- [강의 노트](note.pdf)
+
 ## Class 
 
 - 과제는 없습니다.
