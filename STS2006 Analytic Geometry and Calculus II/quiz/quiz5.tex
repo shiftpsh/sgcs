@@ -1,0 +1,59 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 5 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Rewrite the iterated integral $\displaystyle \int_0^1 \int_y^1 \int_0^y f\left(x, y, z\right) \mathop{dz} \mathop{dx} \mathop{dy}$ as an iterated integral in a different order, integrating first with respect to $x$, then $y$, then $z$.
+
+\paragraph{Solution.} Let tetrahedron $T=\left\{\left(x, y, z\right)\middle| y\leq x \leq1, z\leq y \leq1, 0\leq z \leq1\right\}$. Then
+\begin{align*}
+	& \int_0^1 \int_y^1 \int_0^y f\left(x, y, z\right) \mathop{dz} \mathop{dx} \mathop{dy} \\
+	=& \iiint_T f\left(x, y, z\right) \mathop{dV}\\
+	=& \int_0^1 \int_z^1 \int_y^1 f\left(x, y, z\right) \mathop{dx} \mathop{dy} \mathop{dz} \\
+\end{align*}
+\par
+
+\subsubsection{2. (5 pts)} Rewrite the iterated integral $\displaystyle \int_{-2}^2 \int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}} \int_{\sqrt{x^2+y^2}}^2 xz \mathop{dz} \mathop{dx} \mathop{dy}$ by changing to cylindrical coordinates. Don't evaluate.
+
+\paragraph{Solution.} Let $D=\left\{\left(r, \theta, z\right)\middle| 0\leq z\leq 2, 0\leq\theta\leq2\pi, 0\leq r\leq z\right\}$, where $x^2+y^2=r^2$ and $x=r\cos\theta$. Then
+
+\begin{align*}
+	& \int_{-2}^2 \int_{-\sqrt{4-y^2}}^{\sqrt{4-y^2}} \int_{\sqrt{x^2+y^2}}^2 xz \mathop{dz} \mathop{dx} \mathop{dy}\\
+	=& \iiint_D xz \mathop{dV}\\
+	=& \int_0^{2\pi} \int_0^2 \int_0^z z\cdot r^2\cos\theta \mathop{dr} \mathop{dz} \mathop{d\theta}\\
+\end{align*}
+
+\end{document}

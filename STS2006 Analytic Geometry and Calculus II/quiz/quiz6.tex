@@ -1,0 +1,66 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 6 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Evaluate the line integral $\int_C y^2z \mathop{ds}$, where $C$ is the line segment from $\left(3, 1, 2\right)$ to $\left(1, 2, 5\right)$.
+
+\paragraph{Solution.} $C$ can be expressed as
+\[C: t\left(3, 1, 2\right) + \left(1-t\right)\left(1, 2, 5\right)=\left(1+2t, 2-t, 5-3t\right) \quad 0\leq t\leq1\]
+in vector form. Therefore
+\begin{align*}
+	& \int_C y^2z \mathop{ds}\\
+	=& \int_0^1 y^2z\cdot\sqrt{\left(2\right)^2+\left(-1\right)^2+\left(-3\right)^2}\mathop{dt}\\
+	=& \sqrt{14}\int_0^1 \left(2-t\right)^2\left(5-3t\right)\mathop{dt}\\
+	=& \sqrt{14}\left[-\dfrac{3}{4}t^4+\dfrac{17}{3}t^3-16t^2+20t\right]_0^1\\
+	=& \dfrac{107}{12}\sqrt{14}
+\end{align*}
+\par
+
+\subsubsection{2. (5 pts)} Evaluate the line integral $\int_C \mathbf{F}\cdot\mathop{d\mathbf{r}}$, where $\mathbf{F}\left(x, y\right)=xy^2\mathbf{i}-x^2\mathbf{j}$ and $C$ is given by the vector function $\mathbf{r}\left(t\right)=t^3\mathbf{i}+t^2\mathbf{j}$, $0\leq t\leq1$.
+
+\paragraph{Solution.}
+
+\begin{align*}
+	& \int_C \mathbf{F}\cdot\mathop{d\mathbf{r}}\\
+	=& \int_0^1 \mathbf{F}\left(\mathbf{r}\left(t\right)\right)\cdot\mathbf{r}^\prime\left(t\right)\mathop{dt}\\
+	=& \int_0^1 \mathbf{F}\left(t^3, t^2\right)\cdot\left(3t^2, 2t\right)\mathop{dt}\\
+	=& \int_0^1 \left(t^7, -t^6\right)\cdot\left(3t^2, 2t\right)\mathop{dt}\\
+	=& \int_0^1 3t^9-2t^7\mathop{dt}\\
+	=& \sqrt{14}\left[\dfrac{3}{10}t^{10}-\dfrac{1}{4}t^8\right]_0^1 = \dfrac{1}{20}
+\end{align*}
+
+\end{document}

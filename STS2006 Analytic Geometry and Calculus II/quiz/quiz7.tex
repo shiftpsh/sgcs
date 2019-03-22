@@ -1,0 +1,60 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 7 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Evaluate the line integral \[\int_c \left(y+e^{x^2+2x+1}\right)\mathop{dx}+\left(ex+\cos y^2+\sin\left(y+1\right)\right)\mathop{dy}\] where $C$ is positively oriented boundary curve of a region $D$ that has area of 10. \textit{(Hint: Use Green's theorem.)}
+
+\paragraph{Solution.}
+\begin{align*}
+	& \int_c \left(y+e^{x^2+2x+1}\right)\mathop{dx}+\left(ex+\cos y^2+\sin\left(y+1\right)\right)\mathop{dy}\\
+	=& \iint_D \dfrac{\partial}{\partial x}\left(ex+\cos y^2+\sin\left(y+1\right)\right) 
+		- \dfrac{\partial}{\partial y}\left(y+e^{x^2+2x+1}\right)\mathop{dA}\\
+	=& \iint_D e-1\mathop{dA} = 10\left(e-1\right)
+\end{align*}
+\par
+
+\subsubsection{2. (5 pts)} Find a parametric representation for the part of the cylinder $y^2+z^2=16$ that lies between the planes $x=0$ and $x=5$.
+
+\paragraph{Solution.} \[
+	\begin{cases}
+		x=x \\
+		y=4\cos\theta \\
+		z=4\sin\theta
+	\end{cases}\quad\text{where}\quad 0<x<5, 0\leq\theta\leq2\pi
+\]
+
+\end{document}

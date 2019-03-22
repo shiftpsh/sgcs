@@ -1,0 +1,65 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 1 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Find the limit \[\lim_{\left(x, y\right)\rightarrow\left(0, 0\right)} \dfrac{x^3-y^2}{x^2+2y^2} \] if it exists, or show that the limit does not exist.
+
+\paragraph{Solution.} Let \[f\left(x, y\right) = \dfrac{x^3-y^2}{x^2+2y^2}\]
+if $x = 0$, \[f\left(0, y\right) = \dfrac{0^3-y^2}{0^2+2y^2} = \dfrac{-y^2}{2y^2} = -\dfrac{1}{2}\]
+\[\therefore f\left(0, y\right)\rightarrow-\dfrac{1}{2}\quad\textrm{when}\quad y\rightarrow0 \]
+if $y = 0$, \[f\left(x, 0\right) = \dfrac{x^3-0^2}{x^2+2 \times 0^2} = \dfrac{x^3}{x^2} = x\]
+\[\therefore f\left(x, 0\right)\rightarrow0\quad\textrm{when}\quad x\rightarrow0 \]
+thus the limit \textbf{does not exist}.
+
+\subsubsection{2. (5 pts)} Find the first partial derivatives $\dfrac{\partial z}{\partial x}$, $\dfrac{\partial z}{\partial y}$ of the function $z = \cos\left(x^2y+x^2-y^2+1\right)$.
+\par
+
+\paragraph{Solution.}
+\begin{align*}
+	\dfrac{\partial z}{\partial x} &= \dfrac{\partial}{\partial x} \cos\left(x^2y+x^2-y^2+1\right)\\
+	&= -\sin\left(x^2y+x^2-y^2+1\right)\cdot\dfrac{\partial}{\partial x}\left(x^2y+x^2-y^2+1\right)\\
+	&= -\sin\left(x^2y+x^2-y^2+1\right)\left(2xy+2x\right)\\
+	&= -2x\left(y+1\right)\sin\left(x^2y+x^2-y^2+1\right)
+\end{align*}
+
+\begin{align*}
+	\dfrac{\partial z}{\partial y} &= \dfrac{\partial}{\partial y} \cos\left(x^2y+x^2-y^2+1\right)\\
+	&= -\sin\left(x^2y+x^2-y^2+1\right)\cdot\dfrac{\partial}{\partial y}\left(x^2y+x^2-y^2+1\right)\\
+	&= -\left(x^2-2y\right)\sin\left(x^2y+x^2-y^2+1\right)
+\end{align*}
+
+\end{document}

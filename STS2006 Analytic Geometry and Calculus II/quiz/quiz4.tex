@@ -1,0 +1,68 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 4 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Evaluate the integral $\iint_D \sin\left(x^2+y^2\right)\mathop{dA}$, where $D$ is the region in the first quadrant between the circles with the center the origin and radii 1 and 3.
+
+\paragraph{Solution.} By definition, $D=\left\{\left(r, \theta\right)\middle| 1\leq r \leq3, 0\leq\theta\leq\dfrac{\pi}{2}\right\}$.
+\begin{align*}
+	& \iint_D \sin\left(x^2+y^2\right)\mathop{dA}\\
+	=& \int^{\frac{\pi}{2}}_{0} \int^{3}_{1} r \sin r^2 \mathop{dr} \mathop{d\theta}\\
+	=& \dfrac{\pi}{2} \int^{3}_{1} r \sin r^2 \mathop{dr}
+\end{align*}
+Let $r^2=u$, $2r\mathop{dr}=\mathop{du}$. Then
+\begin{align*}
+	& \dfrac{\pi}{2} \int^{3}_{1} r \sin r^2 \mathop{dr}\\
+	=& \dfrac{\pi}{4} \int^{9}_{1}  \mathop{du} \sin u\\
+	=& \dfrac{\pi}{4} \left.\left(-\cos u\right)\right|^9_1\\
+	=& \dfrac{\pi}{4} \left(\cos 1 - \cos 9\right)
+\end{align*}
+\par
+
+\subsubsection{2. (5 pts)} Find the area of the part of the plane $3x+2y+z=5$ that lies in the first octant.
+
+\paragraph{Solution.} Let $z=f\left(x, y\right)=5-3x-2y$. Then the area of the plane is the surface integral of $f$ for $D=\left\{\left(x, y\right)\middle| 0\leq x \leq2, 0\leq y \leq\dfrac{6-3x}{2}\right\}$.
+
+\begin{align*}
+	S &= \iint_D \sqrt{\left(\dfrac{\partial f}{\partial x}\right)^2 + \left(\dfrac{\partial f}{\partial y}\right)^2 + 1} \mathop{dA}\\
+	&= \int_0^2 \int_0^\frac{6-3x}{2} \sqrt{\left(-3\right)^2 + \left(-2\right)^2 + 1} \mathop{dy} \mathop{dx}\\
+	&= \int_0^2 \dfrac{6-3x}{2} \sqrt{14} \mathop{dx}\\
+	&= \sqrt{14}\left[ 3x-\dfrac{3x^2}{4}\right]^2_0\\
+	&= 3\sqrt{14}
+\end{align*}
+
+\end{document}

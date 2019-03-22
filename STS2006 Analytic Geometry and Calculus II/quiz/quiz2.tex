@@ -1,0 +1,78 @@
+
+\documentclass[runningheads]{llncs}
+\usepackage[paperheight=295mm,paperwidth=210mm]{geometry}
+\usepackage{graphicx}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{underscore}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[square,sort,comma,super]{natbib}
+\usepackage{inconsolata} % Inconsolata
+\usepackage{mathptmx} % Times New Roman
+\usepackage[cache=false]{minted}
+\graphicspath{ {./images/} }
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\renewcommand{\bibname}{참고문헌}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+\linespread{1.2}
+{\renewcommand{\arraystretch}{1.5}%
+\setlength{\tabcolsep}{0.5em}%
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+	
+\begin{document}
+
+\title{STS2006 (Analytic Geometry and Calculus II) \newline Quiz 2 Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+\subsubsection{1. (5 pts)} Find the approximation of $\sqrt{\left(3.02\right)^2+\left(1.97\right)^2+\left(5.99\right)^2}$ by using the linear approximation method.
+
+\paragraph{Solution.} Let \[w = f\left(x, y, z\right) = \sqrt{x^2+y^2+z^2}\]
+then
+\begin{align*}
+	&\sqrt{\left(3.02\right)^2+\left(1.97\right)^2+\left(5.99\right)^2}\\
+	\approx & f\left(3, 2, 6\right)
+		+\dfrac{\partial w}{\partial x}\mathop{dx}
+		+\dfrac{\partial w}{\partial y}\mathop{dy}
+		+\dfrac{\partial w}{\partial z}\mathop{dz}\\
+	=&\sqrt{3^2+2^2+6^2}
+		+\left(\dfrac{2\times3}{2\sqrt{3^2+2^2+6^2}}\right)\mathop{dx}
+		+\left(\dfrac{2\times2}{2\sqrt{3^2+2^2+6^2}}\right)\mathop{dy}
+		+\left(\dfrac{2\times6}{2\sqrt{3^2+2^2+6^2}}\right)\mathop{dz}\\
+	=&7+\dfrac{3}{7}\mathop{dx}+\dfrac{2}{7}\mathop{dy}+\dfrac{6}{7}\mathop{dz}\\
+	=&7+\dfrac{3}{7}\left(0.02\right)+\dfrac{2}{7}\left(-0.03\right)+\dfrac{6}{7}\left(-0.01\right)\\
+	=&7-\dfrac{6}{700}
+\end{align*}
+\par
+
+\subsubsection{2. (5 pts)} Use the chain rule to find $\dfrac{\partial w}{\partial r}$, $\dfrac{\partial w}{\partial \theta}$ where $w=xy+yz+zx$, $x=r\cos\theta$, $y=r\sin\theta$, $z=r\theta$.
+
+\paragraph{Solution.}
+\begin{align*}
+	\dfrac{\partial w}{\partial r}
+	&= \dfrac{\partial w}{\partial x}\dfrac{\partial x}{\partial r}
+		 + \dfrac{\partial w}{\partial y}\dfrac{\partial y}{\partial r}
+		 + \dfrac{\partial w}{\partial z}\dfrac{\partial z}{\partial r}\\
+	&= \left(y+z\right)\cos\theta+\left(x+z\right)\sin\theta+\left(x+y\right)\theta
+\end{align*}
+
+\begin{align*}
+	\dfrac{\partial w}{\partial \theta}
+	&= \dfrac{\partial w}{\partial x}\dfrac{\partial x}{\partial \theta}
+		 + \dfrac{\partial w}{\partial y}\dfrac{\partial y}{\partial \theta}
+		 + \dfrac{\partial w}{\partial z}\dfrac{\partial z}{\partial \theta}\\
+	&= \left(y+z\right)\left(-r\sin\theta\right)+\left(x+z\right)\left(r\cos\theta\right)+\left(x+y\right)r
+\end{align*}
+
+\end{document}

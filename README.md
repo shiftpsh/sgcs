@@ -66,7 +66,7 @@
 | ------- | -------- | --------------------------------------------- | -------- |
 | CSE2003 | 2018-01  | [Introduction to Engineering Design<br>기초공학설계](/CSE2003%20Introduction%20to%20Engineering%20Design) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
 | CSE2035 | 2018-02  | [C Programming<br>C프로그래밍](/CSE2035%20C%20Programming) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
-| STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 강의 노트 |
+| STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 퀴즈 전부, 강의 노트 |
 
 ## 작성 중인 과목 목록
 
