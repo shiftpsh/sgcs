@@ -70,10 +70,14 @@
 
 ## 작성 중인 과목 목록
 
-| Code    | Semester | Class                                         |
-| ------- | -------- | --------------------------------------------- |
-| CSE3030 | 2019-01  | Assembly Programming<br>어셈블리 프로그래밍      |
-| CSE3080 | 2019-01  | Data Structures<br>자료구조                     |
-| CSE3013 | 2019-01  | Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I  |
+| Code    | Semester | Class                                         | Contents |
+| ------- | -------- | --------------------------------------------- | -------- |
+| STS2005 | 2018-01  | Analytic Geometry and Calculus I<br>미적분학I | 퀴즈 문제 및 답안, 시험 문제 및 답안 |
+| STS2006 | 2018-02  | Analytic Geometry and Calculus II<br>미적분학II | 시험 문제 및 답안 |
+| CSE3030 | 2019-01  | Assembly Programming<br>어셈블리 프로그래밍      | 강의 노트 |
+| CSE3080 | 2019-01  | Data Structures<br>자료구조                     | 오픈랩 코드 |
+| CSE3013 | 2019-01  | Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I  | 실습 및 과제 코드, 보고서 전부 |
+| MAT2110 | 2019-01  | Linear Algebra<br>선형대수학                     | 강의 노트 |
+| MAT2410 | 2019-01  | Applied Mathematics I<br>응용수학I              | 과제 전부, 강의 노트 |
 
 오래되거나 틀린 정보는 [Issues](https://github.com/shiftpsh/sgcs/issues)에 제보해 주세요!
