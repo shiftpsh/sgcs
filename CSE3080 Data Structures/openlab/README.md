@@ -1,6 +1,6 @@
 # Open Lab List
 
-## [Week 1](week1.c)
+## [Week 1](week1/main.c)
 - Insertion Sort 구현
 - 주어진 자료를 Insertion Sort
 - 배열 크기에 따른 최악의 경우 데이터를 정렬하는 데 얼마만큼의 시간이 걸리는지 계산
