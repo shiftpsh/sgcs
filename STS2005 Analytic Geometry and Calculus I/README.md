@@ -1,6 +1,6 @@
-# 미적분학II
+# 미적분학I
 
-STS2006 - Analytic Geometry and Calculus I
+STS2005 - Analytic Geometry and Calculus I
 
 2018년 1학기 / 박성호 교수님
 
