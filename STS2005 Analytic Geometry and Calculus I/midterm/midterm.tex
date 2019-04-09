@@ -1,0 +1,284 @@
+\input{header}
+	
+\begin{document}
+
+\title{STS2005 (Analytic Geometry and Calculus I) \newline Midterm Exam Solutions}
+\author{Suhyun Park (20181634)}
+\institute{Department of Computer Science and Engineering, Sogang University}
+\maketitle
+
+% Problem 1
+\subsubsection{1. (5 pts)} Prove the limit $\lim_{x\rightarrow 4}\left(2x - 5\right) = 3$ using $\epsilon$, $\delta$ definition of a limit.
+
+\paragraph{Solution.} We first let $\epsilon > 0$ be given. We will find $\delta > 0$ such that $\left|x - 4\right| < \delta$ implies $\left|\left(2x - 5\right) - 3\right| < \epsilon$.
+
+Since $\left|\left(2x - 5\right) - 3\right| = \left|2x - 8\right| = 2\left|x - 4\right| < \epsilon$, we can let $\delta = \dfrac{\epsilon}{2}$. Thus we have found a $\delta$ such that $\left|x - 4\right| < \delta$ implies $\left|\left(2x - 5\right) - 3\right| < \epsilon$, therefore we have shown that $\lim_{x\rightarrow 4}\left(2x - 5\right) = 3$. $\qed$
+
+% Problem 2
+\subsubsection{2. (5 pts each)} Find the derivatives of the following:
+
+\begin{itemize}
+    \item [(a)] $\displaystyle f\left(x\right) = \frac{1}{\sqrt[3]{x^2-1}}$
+    \item [(b)] $\displaystyle y = \tan\left(e^t\right) + e^{\tan t}$
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item [(a)]{
+    \begin{align*}
+		f\left(x\right) =& \frac{1}{\sqrt[3]{x^2-1}}\\
+		\frac{\mathop{d}}{\mathop{dx}}f\left(x\right) =& \frac{\mathop{d}}{\mathop{dx}}\frac{1}{\sqrt[3]{x^2-1}}\\
+		=& \frac{\mathop{d}}{\mathop{dx}}\left(x^2-1\right)^{-\frac{1}{3}}\\
+		=& -\frac{1}{3}\left[\frac{\mathop{d}}{\mathop{dx}}\left(x^2-1\right)\right]\left(x^2-1\right)^{-\frac{4}{3}}\\
+		=& -\frac{2}{3}x\left(x^2-1\right)^{-\frac{4}{3}}
+	\end{align*}
+    }
+    \item [(b)] {
+    \begin{align*}
+		y =& \tan\left(e^t\right) + e^{\tan t}\\
+		\frac{\mathop{dy}}{\mathop{dt}} =& \frac{\mathop{d}}{\mathop{dt}}\left[\tan\left(e^t\right) + e^{\tan t}\right]\\
+		=& \frac{\mathop{d}}{\mathop{dt}}\tan\left(e^t\right) + \frac{\mathop{d}}{\mathop{dt}}e^{\tan t}\\
+		=& \left(\frac{\mathop{d}}{\mathop{dt}}e^t\right)\sec^2\left(e^t\right) + \left(\frac{\mathop{d}}{\mathop{dt}}\tan t\right)e^{\tan t}\\
+		=& e^t\sec^2\left(e^t\right) + e^{\tan t}\sec^2 t
+	\end{align*}
+    }
+\end{itemize}
+
+% Problem 3
+\subsubsection{3. (5 pts each)} Prove the following:
+\begin{itemize}
+    \item [(1)] $\displaystyle \sinh\left(x + y\right) = \sinh x \cosh y + \cosh x \sinh y$
+    \item [(2)] $\displaystyle \tanh^{-1} x = \frac{1}{2} \ln\left(\frac{1 + x}{1 - x}\right)$, $-1 < x < 1$
+    \item [(3)] $\displaystyle \frac{\mathop{d}}{\mathop{dx}} \cosh^{-1} x = \frac{1}{\sqrt{x^2-1}}$, $x > 1$
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item [(1)]{
+    \begin{align*}
+		&\sinh\left(x + y\right)\\
+		=& \frac{e^{x + y} - e^{- x - y}}{2}\\
+		=& \frac{2e^{x + y} - 2e^{- x - y}}{4}\\
+		=& \frac{2e^{x + y} + \left(e^{x - y} - e^{y - x}\right) - \left(e^{x - y} - e^{y - x}\right) - 2e^{- x - y}}{4}\\
+		=& \frac{e^{x+y} + e^{x-y} - e^{-x-y} - e^{y-x}}{4} + \frac{e^{x+y} - e^{x-y} +e^{y-x} -e^{-x-y}}{4} \\
+		=& \left( \frac{e^x-e^{-x}}{2} \right) \left( \frac{e^y + e^{-y}}{2} \right) + \left( \frac{e^x + e^{-x}}{2} \right) \left( \frac{e^y - e^{-y}}{2} \right)\\
+		=& \sinh x \cosh y + \cosh x \sinh y
+	\end{align*}
+    }
+    \item [(2)]{
+    Let $x = \tanh y$. Then
+    \begin{align*}
+		x =& \frac{\sinh y}{\cosh y}\\
+		=& \frac{e^y-e^{-y}}{e^y+e^{-y}}\\
+		=& \frac{e^{2y}-1}{e^{2y}+1}\\
+		\Rightarrow \left(e^{2y}+1\right)x =& e^{2y}-1\\
+		\Rightarrow xe^{2y}+x =& e^{2y}-1\\
+		\Rightarrow \left(x - 1\right)e^{2y} =& -\left(x + 1\right)\\
+		\Rightarrow e^{2y} =& -\frac{x + 1}{x - 1}\\
+		\Rightarrow y =& \frac{1}{2} \ln\left(\frac{x + 1}{x - 1}\right)
+	\end{align*}
+	Since $x = \tanh y$, $\displaystyle y = \tanh^{-1} x = \frac{1}{2} \ln\left(\frac{1 + x}{1 - x}\right)$ where $-1 < x < 1$.
+    }
+    \item [(3)]{
+    Let $x = \cosh y$. Then
+    \begin{align*}
+		&\frac{\mathop{d}}{\mathop{dx}}x = \frac{\mathop{d}}{\mathop{dx}}\cosh y\\
+		&\Rightarrow 1 = \frac{\mathop{dy}}{\mathop{dx}} \sinh y\\
+		&\Rightarrow \frac{\mathop{dy}}{\mathop{dx}} = \frac{1}{\sinh y}
+	\end{align*}
+	Since $\cosh^2 y - \sinh^2 y = 1$, $\sinh y = \pm\sqrt{\cosh^2 y - 1}$. Given $x>1$, $\frac{\mathop{dy}}{\mathop{dx}} > 0$, thus
+	\begin{align*}
+		\frac{\mathop{dy}}{\mathop{dx}} &= \frac{1}{\sqrt{\cosh^2 y - 1}}\\
+		 &= \frac{1}{\sqrt{x^2 - 1}}
+	\end{align*}
+	and since $x = \cosh y$, $y = \cosh^{-1} x$, therefore $\displaystyle \frac{\mathop{d}}{\mathop{dx}} \cosh^{-1} x = \frac{1}{\sqrt{x^2-1}}$ where $x > 1$.
+    }
+\end{itemize}
+
+% Problem 4
+\subsubsection{4. (5 pts)} Find the approximation of $\sqrt{3.96}$ by using the linear approximation or differential.
+
+\paragraph{Solution.} We let $f\left(x\right) = \sqrt{x}$. then $\displaystyle f^\prime\left(x\right) = \frac{1}{2\sqrt{x}}$. Then the linear approximation of $f\left(x\right)$ at $x = 4$ is given by
+
+\begin{align*}
+	L\left(x\right) &= f^\prime\left(4\right)\left(x - 4\right) + f\left(4\right)\\
+	&= \frac{x - 4}{4} + 2\\
+	&= \frac{x}{4} + 1
+\end{align*}
+
+Thus we can approximate $\sqrt{3.96} = f\left(3.96\right)$ as $L\left(3.96\right) = 1.99$.
+
+% Problem 5
+\subsubsection{5. (5 pts)} Use the mean value theorem to prove the inequality \[\left|\sin x - \sin b\right| \leq \left|a - b\right| \textrm{ for all } a \textrm{ and } b.\]
+
+\paragraph{Solution.} By the mean value theorem, there exists $c \in \left(a, b\right)$ such that \[\left|\frac{\sin b - \sin a}{b - a}\right| = \left|\cos c\right|\]
+Since $\left|\cos c\right| \leq 1$, $\displaystyle \left|\frac{\sin b - \sin a}{b - a}\right| \leq 1$, which gives $\left|\sin x - \sin b\right| \leq \left|a - b\right|$ for all $a \neq b$. If $a = b$, $0 = \left|\sin x - \sin b\right| \leq \left|a - b\right| = 0$, thus the statement holds. $\qed$
+
+% Problem 6
+\subsubsection{6. (5 pts each)} Evaluate the following:
+\begin{itemize}
+	\item [(1)] $\displaystyle \lim_{x\rightarrow 0}\frac{\tan 3x}{\sin 2x}$
+	\item [(2)] $\displaystyle \lim_{x\rightarrow1^+}\left[\ln\left(x^7-1\right)-\ln\left(x^5-1\right)\right]$
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+	\item [(1)]{
+		By L'Hospital's rule,
+		\begin{align*}
+		&\lim_{x\rightarrow 0}\frac{\tan 3x}{\sin 2x}\\
+		=& \lim_{x\rightarrow 0}\frac{{\mathop{d}/\mathop{dx}} \tan 3x}{{\mathop{d}/\mathop{dx}} \sin 2x}\\
+		=& \lim_{x\rightarrow 0}\frac{3 \sec^2 3x}{2 \cos 2x}\\
+		=& \frac{3}{2} \lim_{x\rightarrow 0}\frac{1}{\cos 2x \cos^2 3x}\\
+		=& \frac{3}{2}
+		\end{align*}
+	}
+	\item [(2)]{
+		\begin{align*}
+		&\lim_{x\rightarrow1^+}\left[\ln\left(x^7-1\right)-\ln\left(x^5-1\right)\right]\\
+		=& \lim_{x\rightarrow1^+}\ln\frac{x^7-1}{x^5-1}\\
+		=& \lim_{x\rightarrow1^+}\ln\frac{\left(x-1\right)\left(x^6+x^5+x^4+x^3+x^2+x+1\right)}{\left(x-1\right)\left(x^4+x^3+x^2+x+1\right)}\\
+		=& \ln\lim_{x\rightarrow1^+}\frac{\left(x-1\right)\left(x^6+x^5+x^4+x^3+x^2+x+1\right)}{\left(x-1\right)\left(x^4+x^3+x^2+x+1\right)}\\
+		=& \ln\lim_{x\rightarrow1^+}\frac{x^6+x^5+x^4+x^3+x^2+x+1}{x^4+x^3+x^2+x+1}\\
+		=& \ln\frac{7}{5} = \ln 7 - \ln 5
+		\end{align*}
+	}
+\end{itemize}
+
+% Problem 7
+\subsubsection{7. (5 pts each)} Find the following of the curve $y=\left(1-x\right)e^x$:
+\begin{itemize}
+	\item [(1)] Asymptotes.
+	\item [(2)] Intervals of increase or decrease.
+	\item [(3)] Concavity and points of inflection.
+\end{itemize}
+
+\paragraph{Solution.} Let $y=f\left(x\right)$. Since $f\left(x\right)=\left(1-x\right)e^x$, we can derive $f^\prime\left(x\right)=-xe^x$, $f^{\prime\prime}\left(x\right)=-\left(x+1\right)e^x$. Both $f\left(x\right)$ and $f^\prime\left(x\right)$ is continuous and differentiable on $\mathbb{R}$.
+
+\begin{itemize}
+	\item [(1)]{
+		\begin{align*}
+		&\lim_{x\rightarrow -\infty} f\left(x\right)\\
+		=& \lim_{x\rightarrow -\infty} \left(1-x\right)e^x\\
+		=& 0
+		\end{align*}
+		Thus $y=f\left(x\right)$ has an asymptote of $y=0$. No other linear asymptotes can be found; $\lim_{x\rightarrow \infty} f\left(x\right)$ gives $-\infty$.
+	}
+	\item [(2)]{
+		If $f^\prime\left(x\right) > 0$, $f$ will increase, and if $f^\prime\left(x\right) < 0$, $f$ will decrease.
+		
+		Since $f^\prime\left(x\right) = -xe^x = 0 \Rightarrow x = 0$, $f^\prime\left(x\right) < 0$ where $x < 0$, $f^\prime\left(x\right) > 0$ where $x > 0$. Therefore $f$ increases on $\left(-\infty, 0\right)$ and decreases on  $\left(0, \infty\right)$.
+	}
+	\item [(3)]{
+		$f^{\prime\prime}\left(x\right)=-\left(x+1\right)e^x$, therefore
+		\begin{align*}
+		x = -1 &\Rightarrow f^{\prime\prime}\left(x\right) = 0\\
+		x < -1 &\Rightarrow f^{\prime\prime}\left(x\right) > 0\\
+		x > -1 &\Rightarrow f^{\prime\prime}\left(x\right) < 0
+		\end{align*}
+		Thus $f$ is concave on $\left(-\infty, -1\right)$ and is convex on $\left(-1, \infty\right)$. The point of inflection resides at $\left(-1, 2e^{-1}\right)$.
+	}
+\end{itemize}
+
+% Problem 8
+\subsubsection{8. (5 pts)} Use the method of cylindrical shells to find the volume generated by rotating bounded by curves $y = x^3$, $y = 8$, $x = 0$ about the line $x = 3$.
+
+\paragraph{Solution.} The plot of the region bounded by $y = x^3$, $y = 8$, $x = 0$ is:
+\begin{center}
+	\begin{tikzpicture}
+		\draw[->] (-1,0) -- (2.7,0) node[right] {$x$};
+		\draw[->] (0,-1) -- (0,5.2) node[above] {$y$};
+		
+		\node[below left] at (0,0) {0};
+		\node[below] at (1,0) {2};
+		\node[below right] at (1.5,0) {3};
+		\node[left] at (0,4) {8};
+		
+		\draw[scale=0.5,domain=0:2,smooth,variable=\x,blue] plot ({\x},{\x*\x*\x});
+		\draw[scale=0.5,domain=0:2,smooth,variable=\x,blue]  plot ({\x},{8});
+		\draw[scale=0.5,domain=0:8,smooth,variable=\y,blue]  plot ({0},{\y});
+		\draw[scale=0.5,domain=-2:10.4,smooth,dashed,variable=\y,red]  plot ({3},{\y});
+		\draw[scale=0.5,domain=0:8,smooth,dotted,variable=\y,gray]  plot ({2},{\y});
+	\end{tikzpicture}
+\end{center}
+
+Therefore the volume $V$ is given by
+
+\begin{align*}
+V &= \int_0^2 h\times 2\pi r \mathop{dx}\\
+&= 2\pi\int_0^2 \left(8-x^3\right)\left(3-x\right) \mathop{dx}\\
+&= 2\pi\int_0^2 x^4-3x^3-8x+24 \mathop{dx}\\
+&= 2\pi\left[\frac{1}{5}x^5-\frac{3}{4}x^4-4x^2+24x\right]_0^2\\
+&= \frac{264}{5}\pi = 52.8\pi
+\end{align*}
+
+% Problem 9
+\subsubsection{9. (5 pts each)} Evaluate the integral or determine whether each improper integral is convergent or divergent. If the improper integral converges, evaluate the integral.
+\begin{itemize}
+	\item [(1)] $\displaystyle \int \tan^2 x \sec x \mathop{dx}$
+	\item [(2)] $\displaystyle \int_0^\frac{\pi}{2} \cos 5x \cos 10x \mathop{dx}$
+	\item [(3)] $\displaystyle \int \frac{\mathop{dx}}{\cos x - 1}$
+	\item [(4)] $\displaystyle \int \frac{x^4+9x^2+x+2}{x^2+9}\mathop{dx}$
+	\item [(5)] $\displaystyle \int_1^{\infty} \frac{e^\frac{1}{x}}{x^2}\mathop{dx}$
+	\item [(6)] $\displaystyle \int_0^4 \frac{\mathop{dx}}{x^2-x-2}$
+\end{itemize}
+
+\paragraph{Solution.} 
+\begin{itemize}
+	\item [(1)]{
+		\begin{align*}
+		&\int \tan^2 x \sec x \mathop{dx}\\
+		=& \int \left(\sec^2x-1\right) \sec x \mathop{dx}\\
+		=& \int \sec^3x\mathop{dx} -\int \sec x \mathop{dx}\\
+		=& \frac{1}{2}\tan x \sec x - \frac{1}{2}\int \sec x \mathop{dx}\qquad\because \int \sec^mx\mathop{dx}=\frac{\sin x \sec^{m-1}x}{m-1} + \frac{m-2}{m-1}\int\sec^{m-2}x\mathop{dx}\\
+		=& \frac{1}{2}\tan x \sec x - \frac{1}{2}\int \frac{\sec x\left(\sec x+\tan x\right)}{\sec x+\tan x} \mathop{dx}\\
+		=& \frac{1}{2}\tan x \sec x - \frac{1}{2}\ln\left(\sec x+\tan x\right)
+		\end{align*}
+	}
+	\item [(2)]{
+		\begin{align*}
+		& \int_0^\frac{\pi}{2} \cos 5x \cos 10x \mathop{dx}\\
+		=& \frac{1}{2}\int_0^\frac{\pi}{2} \cos 5x + \cos 15x \mathop{dx} \qquad\because \cos\alpha\cos\beta=\frac{1}{2}\left(\cos\left(\alpha-\beta\right)+\cos\left(\alpha+\beta\right)\right)\\
+		=& \frac{1}{2}\left[\int_0^\frac{\pi}{2} \cos 5x \mathop{dx} + \int_0^\frac{\pi}{2} \cos 15x \mathop{dx}\right]\\
+		=& \frac{1}{2}\left[\left.\frac{1}{5}\sin5x\right|_0^\frac{\pi}{2}+\left.\frac{1}{15}\sin15x\right|_0^\frac{\pi}{2}\right]\\
+		=& \frac{1}{2}\left(\frac{1}{5}-\frac{1}{15}\right) = \frac{1}{15}
+		\end{align*}
+	}
+	\item [(3)]{
+		\begin{align*}
+		& \int \frac{\mathop{dx}}{\cos x - 1}\\
+		=& \int \frac{2\mathop{du}}{\left(u^2+1\right)\left(\frac{1-u^2}{u^2+1}-1\right)}\qquad u\triangleq \tan\frac{x}{2}\qquad\cos x=\frac{1-u^2}{u^2+1}\qquad \mathop{du}=\frac{1}{2}\mathop{dx}\sec^2\frac{x}{2}\Rightarrow\mathop{dx}=\frac{2\mathop{du}}{u^2+1}\\
+		=& -\int \frac{1}{u^2}\mathop{du}\\
+		=& \frac{1}{u} + C\\
+		=& \cot\frac{x}{2} + C\\
+		\end{align*}
+	}
+	\item [(4)]{
+		\begin{align*}
+		& \int \frac{x^4+9x^2+x+2}{x^2+9}\mathop{dx}\\
+		=& \int x^2+\frac{x+2}{x^2+9}\mathop{dx}\\
+		=& \int x^2\mathop{dx} + \int \frac{x}{x^2+9}\mathop{dx} + 2\int \frac{1}{x^2+9}\mathop{dx}\\
+		=& \frac{1}{3} x^3 + \frac{1}{2} \int \frac{2x}{x^2+9}\mathop{dx} + 2\int \frac{1}{x^2+9}\mathop{dx}\\
+		=& \frac{1}{3} x^3 + \frac{1}{2} \ln\left(x^2+9\right) + \frac{2}{3}\tan^{-1}\frac{x}{3} + C
+		\end{align*}
+	}
+	\item [(5)]{
+		\begin{align*}
+		& \int_1^{\infty} \frac{e^\frac{1}{x}}{x^2}\mathop{dx}\\
+		=& \lim_{t\rightarrow\infty} \int_1^t \frac{e^\frac{1}{x}}{x^2}\mathop{dx}\\
+		=& - \lim_{t\rightarrow\infty} \int_1^t e^u\mathop{du}\qquad u=\frac{1}{x}\qquad \mathop{du}=-\frac{1}{x^2}\\
+		=& - \lim_{t\rightarrow\infty} e^t + e = -\infty
+		\end{align*}
+		Thus the improper integral diverges.
+	}
+	\item [(6)]{
+		\begin{align*}
+		& \int_0^4 \frac{\mathop{dx}}{x^2-x-2}\\
+		=& \lim_{t\rightarrow 2^-}\int_0^t \frac{\mathop{dx}}{x^2-x-2} + \lim_{t\rightarrow 2^+}\int_t^4 \frac{\mathop{dx}}{x^2-x-2}\\
+		=& \frac{1}{3}\lim_{t\rightarrow 2^-}\int_0^t \left(\frac{1}{x-2}-\frac{1}{x+1}\right)\mathop{dx} + \frac{1}{3}\lim_{t\rightarrow 2^+}\int_t^4 \left(\frac{1}{x-2}-\frac{1}{x+1}\right)\mathop{dx}\\
+		\end{align*}
+		Thus the improper integral diverges.
+	}
+\end{itemize}
+
+\end{document}
