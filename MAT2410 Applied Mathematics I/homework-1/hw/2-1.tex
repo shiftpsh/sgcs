@@ -1,0 +1,113 @@
+% Problem 5
+\subsubsection{5.} 10원짜리 동전 5개와 100원짜리 동전 3개가 들어 있는 주머니에서 동전 3개를 임의로 꺼낸다고 하자. 이 때 임의로 추출된 동전 3개에 포함된 100원짜리 동전의 개수에 대한 확률질량함수와 분포함수를 구하라.
+
+\paragraph{Solution.} 100원짜리 동전의 갯수를 확률변수 $X$로 두면, 확률질량함수 $f$는
+
+\begin{align*}
+	f\left(0\right) &= \frac{\binom{5}{3}\binom{3}{0}}{\binom{8}{3}} = \frac{10}{56} \\
+	f\left(1\right) &= \frac{\binom{5}{2}\binom{3}{1}}{\binom{8}{3}} = \frac{30}{56} \\
+	f\left(2\right) &= \frac{\binom{5}{1}\binom{3}{2}}{\binom{8}{3}} = \frac{15}{56} \\
+	f\left(3\right) &= \frac{\binom{5}{0}\binom{3}{3}}{\binom{8}{3}} = \frac{1}{56}
+\end{align*}
+
+이고, 따라서 분포함수 $F$는
+
+\[
+\arraycolsep=1.4pt\def\arraystretch{2.2}
+F\left(x\right) = \left\{
+\begin{array}{ll}
+	0 & \qquad x < 0 \\
+	\dfrac{10}{56} & \qquad 0 \leq x < 1 \\
+	\dfrac{40}{56} & \qquad 1 \leq x < 2 \\
+	\dfrac{55}{56} & \qquad 2 \leq x < 3 \\
+	1 & \qquad 3 \leq x
+\end{array}
+\right.
+\]
+
+이다.
+
+% Problem 6
+\subsubsection{6.} 1의 눈이 나올 때까지 반복하여 주사위를 던지는 게임에서 주사위 던진 횟수를 $X$라 할 때, 다음을 구하라.
+\begin{itemize}
+	\item[(1)] $X$의 확률질량함수 $f\left(x\right)$
+	\item[(2)] 처음부터 세 번 이내에 1의 눈이 나올 확률
+	\item[(3)] 적어도 다섯 번 이상 던져야 1의 눈이 나올 확률
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+	\item[(1)] $x$번 던졌을 때 1의 눈이 처음으로 나왔을 확률은 $x - 1$번째까지 1의 눈이 나오지 않다가 $x$번째에 1의 눈이 나왔을 확률이므로, \[f\left(x\right) = \left\{
+\begin{array}{ll}
+	\left(\dfrac{5}{6}\right)^{x - 1}\left(\dfrac{1}{6}\right) & \qquad x \geq 1, x \in \mathbb{N} \\
+	0 & \qquad\textrm{otherwise}
+\end{array}
+\right. \]이다.
+	\item[(2)] 처음부터 세 번 이내에 1의 눈이 나올 확률은 $P\left(X \leq 3\right) = f\left(1\right) + f\left(2\right) + f\left(3\right) = \dfrac{91}{216}$이다.
+	\item[(3)] 적어도 다섯 번 이상 던져야 1의 눈이 나올 확률은 네 번 이내에 1이 나오는 사건의 여사건의 확률이다. 따라서 \[P\left(X \geq 5\right) = 1 - P\left(X \leq 4\right) = 1 - \left[f\left(1\right) + f\left(2\right) + f\left(3\right) + f\left(4\right)\right] = \dfrac{625}{1296}\]이다.
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 두 사람이 주사위를 던져서 먼저 1의 눈이 나오면 이기는 게임을 한다. 그러면 먼저 던지는 사람과 나중에 던지는 사람 중에서 누가 더 유리한지 구하라.
+
+\paragraph{Solution.} 주사위 던진 횟수를 $X$라 할 때, 확률질량함수는 문제 \textbf{6}의 $f\left(x\right)$과 같다.
+
+먼저 던지는 사람이 이길 확률은 
+\begin{align*}
+	&f\left(1\right) + f\left(3\right) + f\left(5\right) + \cdots \\
+	=&\sum_{i = 1}^{\infty} f\left(2i - 1\right) \\
+	=&\sum_{i = 1}^{\infty} \left(\dfrac{5}{6}\right)^{2i - 2}\left(\dfrac{1}{6}\right) \\
+	=&\dfrac{1}{6} \sum_{i = 0}^{\infty} \left(\dfrac{25}{36}\right)^{i} \\
+	=&\dfrac{1}{6} \times \dfrac{36}{11} = \dfrac{6}{11}
+\end{align*}
+
+이고, 나중에 던지는 사람이 이기는 사건은 먼저 던지는 사람이 이기는 사건의 여사건이므로 나중에 던지는 사람이 이길 확률은 $\dfrac{5}{11}$이다. 따라서 먼저 던지는 사람이 더 유리하다.
+
+
+% Problem 10
+\subsubsection{10.} 확률변수 $X$의 확률질량함수가 다음과 같을 때, $X$가 홀수일 확률을 구하라.
+\[f\left(x\right) = \left\{
+\begin{array}{ll}
+	\dfrac{2}{3^x} & \qquad x = 1, 2, 3, \cdots \\
+	0 & \qquad\textrm{otherwise}
+\end{array}
+\right. \]
+
+\paragraph{Solution.} $x$가 홀수일 확률은
+\begin{align*}
+	&f\left(1\right) + f\left(3\right) + f\left(5\right) + \cdots \\
+	=&\sum_{i = 1}^{\infty} f\left(2i - 1\right) \\
+	=&\sum_{i = 1}^{\infty} \dfrac{2}{3^{2i - 1}} \\
+	=&6 \sum_{i = 1}^{\infty} \dfrac{1}{9^i} \\
+	=&\dfrac{6}{8} = \dfrac{3}{4}
+\end{align*}
+이다. 
+
+% Problem 11
+\subsubsection{11.} 복원추출에 의하여 52장의 카드가 들어 있는 주머니에서 임의로 세 장의 카드를 꺼낼 때, 세 장의 카드 안에 포함된 하트의 수를 확률변수 $X$라 한다.
+\begin{itemize}
+  \item [(1)] $X$의 확률질량함수를 구하라.
+  \item [(2)] 분포함수를 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 복원추출의 경우 하트가 그려진 카드를 뽑을 확률은 항상 $\dfrac{1}{4}$이다. 세 장의 카드를 꺼내면 $X$는 이항분포 $B\left(\dfrac{1}{4}, 3\right)$을 따른다.
+\begin{itemize}
+  \item [(1)] $B\left(\dfrac{1}{4}, 3\right)$의 확률질량함수는 \[f\left(x\right) = \left\{
+\begin{array}{ll}
+	\displaystyle \binom{3}{x} \left(\dfrac{1}{4}\right)^x \left(\dfrac{3}{4}\right)^{3 - x} & \qquad x = 0, 1, 2, 3 \\
+	0 & \qquad\textrm{otherwise}
+\end{array}
+\right. \] 이다.
+  \item [(2)] $f\left(x\right)$를 통해 $F\left(x\right)$를 계산하면, \[
+\arraycolsep=1.4pt\def\arraystretch{2.2}
+F\left(x\right) = \left\{
+\begin{array}{ll}
+	0 & \qquad x < 0 \\
+	\dfrac{27}{64} & \qquad 0 \leq x < 1 \\
+	\dfrac{54}{64} & \qquad 1 \leq x < 2 \\
+	\dfrac{63}{64} & \qquad 2 \leq x < 3 \\
+	1 & \qquad 3 \leq x
+\end{array}
+\right.
+\] 를 얻을 수 있다.
+\end{itemize}

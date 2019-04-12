@@ -1,0 +1,212 @@
+% Problem 3
+\subsubsection{3.} 10원짜리 동전 5개와 100원짜리 동전 3개가 들어 있는 주머니에서 동전 3개를 임의로 꺼낸다고 하자. 이 때 임의로 추출된 동전 3개에 포함된 100원짜리 동전의 개수에 대한 기댓값을 구하라.
+
+\paragraph{Solution.} 꺼낸 100원짜리 동전의 갯수를 확률변수 $X$라 하자.
+
+\begin{align*}
+	P\left(X=0\right) &= \binom{3}{0} \times \dfrac{5}{8} \times \dfrac{4}{7} \times \dfrac{3}{6} = \dfrac{10}{56}\\
+	P\left(X=1\right) &= \binom{3}{1} \times \dfrac{5}{8} \times \dfrac{4}{7} \times \dfrac{3}{6} = \dfrac{30}{56}\\
+	P\left(X=2\right) &= \binom{3}{2} \times \dfrac{5}{8} \times \dfrac{3}{7} \times \dfrac{2}{6} = \dfrac{15}{56}\\
+	P\left(X=3\right) &= \binom{3}{3} \times \dfrac{3}{8} \times \dfrac{2}{7} \times \dfrac{1}{6} = \dfrac{1}{56}
+\end{align*}
+
+이 때 $\displaystyle E\left(X\right) = \sum_{x = 0}^3 xP\left(X = x\right)$이므로
+
+\begin{align*}
+	E\left(X\right) &= \sum_{x = 0}^3 xP\left(X = x\right)\\
+	&= \dfrac{0\times 10+1\times 30+2\times 15+3\times 1}{56}\\
+	&= \dfrac{9}{8} = 1.125
+\end{align*}
+
+% Problem 4
+\subsubsection{4.} 1\textasciitilde6의 숫자가 적힌 카드가 들어 있는 주머니에서 두 카드를 임의로 비복원추출할 때, 나온 카드의 수에 대한 차의 절댓값의 기댓값을 구하라.
+
+\paragraph{Solution.} 나온 카드에 적힌 수에 대한 차의 절댓값을 확률변수 $X$라 하자. 세로줄을 첫 번째 뽑은 카드에 적힌 수, 가로줄을 두 번째 뽑은 카드에 적힌 수라고 할 때 가능한 모든 사건은 다음과 같다.
+
+\begin{center}
+	\begin{tabular}{r|cccccc}
+		 $X$ & 1 & 2 & 3 & 4 & 5 & 6 \\
+		 \hline
+		 1 & - & 1 & 2 & 3 & 4 & 5 \\
+		 2 & 1 & - & 1 & 2 & 3 & 4 \\
+		 3 & 2 & 1 & - & 1 & 2 & 3 \\
+		 4 & 3 & 2 & 1 & - & 1 & 2 \\
+		 5 & 4 & 3 & 2 & 1 & - & 1 \\
+		 6 & 5 & 4 & 3 & 2 & 1 & - \\
+	\end{tabular}
+\end{center}
+
+따라서 다음과 같은 확률질량함수를 얻을 수 있다.
+
+\begin{center}
+	\begin{tabular}{r|ccccc}
+		 $x$ & 1 & 2 & 3 & 4 & 5 \\
+		 \hline
+		 $P\left(X=x\right)$ & $\dfrac{10}{30}$ & $\dfrac{8}{30}$ & $\dfrac{6}{30}$ & $\dfrac{4}{30}$ & $\dfrac{2}{30}$ \\
+	\end{tabular}
+\end{center}
+
+그러므로 기댓값 $\displaystyle E\left(X\right) = \sum_{x = 1}^5 xP\left(X = x\right)$는
+
+\begin{align*}
+	E\left(X\right) &= \sum_{x = 1}^5 xP\left(X = x\right)\\
+	&= \dfrac{1\times 10+2\times 8+3\times 6+4\times 4+5\times 2}{30}\\
+	&= \dfrac{7}{3} \approx 2.333
+\end{align*}
+
+이다.
+
+% Problem 9
+\subsubsection{9.} 이산확률변수 $X$의 확률표가 다음과 같다.
+
+\begin{center}
+	\begin{tabular}{r|cccc}
+		 $x$ & 0 & 1 & 2 & 3 \\
+		 \hline
+		 $P\left(X=x\right)$ & $\dfrac{1}{3}$ & $\dfrac{1}{6}$ & $\dfrac{1}{3}$ & $\dfrac{1}{6}$ \\
+	\end{tabular}
+\end{center}
+
+\begin{itemize}
+  \item [(1)] $X$의 평균을 구하라.
+  \item [(2)] 분산의 정의 $Var\left(X\right) = E\left[\left(X - E\left(X\right)\right)^2\right]$을 이용하여 분산을 구하라.
+  \item [(3)] 분산의 간편계산방법 $Var\left(X\right) = E\left(X^2\right) - \left[E\left(X\right)^2\right]$을 이용하여 분산을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 
+\begin{itemize}
+  \item [(1)] $E\left(X\right) = 0\times \dfrac{1}{3} + 1\times \dfrac{1}{6} + 2 \times \dfrac{1}{3} + 3\times \dfrac{1}{6} = \dfrac{4}{3}$
+  \item [(2)] $Var\left(X\right) = E\left[\left(X - \dfrac{4}{3}\right)^2\right]$
+\begin{center}
+	\begin{tabular}{r|cccc}
+		 $X-E\left(X\right)$ & $-\dfrac{4}{3}$ & $-\dfrac{1}{3}$ & $\dfrac{2}{3}$ & $\dfrac{5}{3}$ \\
+		 $\left(X-E\left(X\right)\right)^2$ & $\dfrac{16}{9}$ & $\dfrac{1}{9}$ & $\dfrac{1}{9}$ & $\dfrac{25}{9}$ \\
+		 \hline
+		 $f\left(x\right)$ & $\dfrac{1}{3}$ & $\dfrac{1}{6}$ & $\dfrac{1}{3}$ & $\dfrac{1}{6}$ \\
+	\end{tabular}
+\end{center}
+$\therefore Var\left(X\right) = \dfrac{16}{9}\times \dfrac{1}{3} + \dfrac{1}{9} \times \dfrac{1}{6} + \dfrac{4}{9} \times \dfrac{1}{3} + \dfrac{25}{9}\times \dfrac{1}{6} = \dfrac{11}{9}$\\
+  \item [(3)] \begin{align*}
+  	Var\left(X\right) &= E\left(X^2\right) - \left[E\left(X\right)^2\right]\\
+  	&= \sum_{x=0}^{3} x^2 f\left(x\right) - \left(\dfrac{4}{3}\right)^2\\
+  	&= \left[0^2\times \dfrac{1}{3} + 1^2\times \dfrac{1}{6} + 2^2\times \dfrac{1}{3} + 3^2\times \dfrac{1}{6}\right] - \dfrac{16}{9}\\
+  	&= \dfrac{11}{9}
+  \end{align*}
+\end{itemize}
+
+% Problem 18
+\subsubsection{18.} 확률변수 $X$의 분포함수가 $F\left(x\right) = \dfrac{x^2}{16}, \quad 0\leq x\leq 4$이다.
+\begin{itemize}
+  \item [(1)] 기댓값 $E\left(X\right)$와 분산 $\sigma^2$를 구하라.
+  \item [(2)] 중앙값과 최빈값을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 확률밀도함수 $f\left(x\right) = \dfrac{x}{8}, \quad 0\leq x\leq 4$이다.
+\begin{itemize}
+  \item [(1)] \begin{align*}
+  	E\left(X\right) &= \int_0^4 xf\left(x\right) \mathop{dx}\\
+  	&= \int_0^4 \dfrac{x^2}{8} \mathop{dx}\\
+  	&= \left.\dfrac{x^3}{24}\right|_0^4 = \dfrac{8}{3}
+  \end{align*}
+  \begin{align*}
+  	E\left(X^2\right) &= \int_0^4 x^2 f\left(x\right) \mathop{dx}\\
+  	&= \int_0^4 \dfrac{x^3}{8} \mathop{dx}\\
+  	&= \left.\dfrac{x^4}{32}\right|_0^4 = 8
+  \end{align*}
+  따라서 $\sigma^2 = E\left(X^2\right) - \left[\left(E\left(X\right)\right)^2\right] = 8 - \dfrac{64}{9} = \dfrac{8}{9}$\\
+  \item [(2)] 중앙값은 $F\left(M_e\right) = \dfrac{1}{2}$일 때이므로, \[\dfrac{M_e^2}{16} = \dfrac{1}{2} \Rightarrow M_e = 2\sqrt{2}\]이다.
+
+	최빈값은 $f$가 최대일 때이므로, $M_o = 4$이다.
+\end{itemize}
+
+% Problem 24
+\subsubsection{24.} 연속확률변수 $X$의 분표함수가 다음과 같을 때, $X$의 기댓값과 분산을 구하라.
+\[F\left(x\right) = \left\{
+\begin{array}{ll}
+	0 & \qquad x\leq 0 \\
+	x^2 & \qquad 0< x\leq \dfrac{1}{2} \\
+	\dfrac{1}{2}x & \qquad \dfrac{1}{2} < x \leq 1\\
+	1 & \qquad 1 < x
+\end{array}
+\right. \]
+
+\paragraph{Solution.} $F$의 각 구간을 미분해 밀도함수 $f$를 얻을 수 있다.
+
+\[f\left(x\right) = \left\{
+\begin{array}{ll}
+	0 & \qquad x < 0 \\
+	2x & \qquad 0 < x \leq \dfrac{1}{2} \\
+	\dfrac{1}{2} & \qquad \dfrac{1}{2} < x \leq 1\\
+	0 & \qquad 1 < x
+\end{array}
+\right. \]
+
+기댓값 $E\left(X\right)$는
+
+\begin{align*}
+  	E\left(X\right) &= \int_0^\frac{1}{2} xf\left(x\right) \mathop{dx} + \int_\frac{1}{2}^1 xf\left(x\right) \mathop{dx}\\
+  	&= \int_0^\frac{1}{2} 2x^2 \mathop{dx} + \int_\frac{1}{2}^1 \dfrac{x}{2} \mathop{dx}\\
+  	&= \left.\dfrac{2}{3}x^3\right|_0^\frac{1}{2} + \left.\dfrac{x^2}{4}\right|_\frac{1}{2}^1 = \dfrac{13}{48}\\
+ \end{align*}
+ 
+분산 $Var\left(X\right)$는
+
+\begin{align*}
+  	Var\left(X\right) &= E\left(X^2\right) - \left[\left(E\left(X\right)\right)^2\right]\\
+  	&= \int_0^\frac{1}{2} x^2 f\left(x\right) \mathop{dx} + \int_\frac{1}{2}^1 x^2 f\left(x\right) \mathop{dx} - \left(\dfrac{13}{48}\right)^2\\
+  	&= \int_0^\frac{1}{2} 2x^3 \mathop{dx} + \int_\frac{1}{2}^1 \dfrac{x^2}{2} \mathop{dx} - \left(\dfrac{13}{48}\right)^2\\
+  	&= \left.\dfrac{1}{2}x^4\right|_0^\frac{1}{2} + \left.\dfrac{x^3}{6}\right|_\frac{1}{2}^1 - \left(\dfrac{13}{48}\right)^2\\
+  	&= \dfrac{17}{96} - \left(\dfrac{13}{48}\right)^2 = \dfrac{239}{2304}\\
+ \end{align*}
+
+% Problem 25
+\subsubsection{25.} 장거리 전화통화 시간 $X$는 다음과 같은 확률밀도함수를 갖는다고 한다. \[f\left(x\right) = \dfrac{1}{10}e^{-\frac{x}{10}} \qquad x\geq 0\]
+\begin{itemize}
+  \item [(1)] $X$의 기댓값과 분산을 구하라.
+  \item [(2)] $P\left(\mu-\sigma\leq X\leq \mu+\sigma\right)$와 $P\left(\mu-2\sigma\leq X\leq \mu+2\sigma\right)$를 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+  \item [(1)] 기댓값 $\mu$는
+\begin{align*}
+  	\mu &= \int_0^\infty xf\left(x\right) \mathop{dx}\\
+  	&= \dfrac{1}{10} \lim_{t \rightarrow \infty} \int_0^t xe^{-\frac{x}{10}} \mathop{dx}\\
+  	&= -\dfrac{1}{10} \lim_{t \rightarrow \infty} \left[\left(10x + 100\right)e^{-\frac{x}{10}}\right]_0^t\\
+  	&= -\dfrac{1}{10} \lim_{t \rightarrow \infty} \left[\left(10t + 100\right)e^{-\frac{t}{10}} - \left(100\right)e^0\right]\\
+  	&= -\dfrac{1}{10}\left(-100\right) = 10
+ \end{align*}
+ 
+분산 $\sigma^2$는
+\begin{align*}
+  	\sigma^2 &= \int_0^\infty x^2f\left(x\right) \mathop{dx} - \mu^2\\
+  	&= \dfrac{1}{10} \lim_{t \rightarrow \infty} \int_0^t x^2 e^{-\frac{x}{10}} \mathop{dx} - 100\\
+  	&= -\dfrac{1}{10} \lim_{t \rightarrow \infty} \left[\left(10x^2 + 200x + 2000\right)e^{-\frac{x}{10}}\right]_0^t - 100\\
+  	&= -\dfrac{1}{10} \lim_{t \rightarrow \infty} \left[\left(10t^2 + 200t + 2000\right)e^{-\frac{t}{10}} - \left(2000\right)e^0\right] - 100\\
+  	&= -\dfrac{1}{10}\left(-2000\right) - 100 = 100
+\end{align*}
+ 
+표준편차 $\sigma$는 $\sqrt{100} = 10$이다.\\
+
+  \item [(2)]
+\begin{align*}
+  	& P\left(\mu-\sigma\leq X\leq \mu+\sigma\right)\\
+  	&= P\left(0 \leq X \leq 20\right)\\
+  	&= \int_0^{20} f\left(x\right) \mathop{dx}\\
+  	&= \dfrac{1}{10} \int_0^{20} e^{-\frac{x}{10}} \mathop{dx}\\
+  	&= 1-e^{-2} \approx 0.8647
+\end{align*}
+
+\begin{align*}
+  	& P\left(\mu-2\sigma\leq X\leq \mu+2\sigma\right)\\
+  	&= P\left(-10 \leq X \leq 30\right)\\
+  	&= \int_0^{30} f\left(x\right) \mathop{dx}\\
+  	&= \dfrac{1}{10} \int_0^{30} e^{-\frac{x}{10}} \mathop{dx}\\
+  	&= 1-e^{-3} \approx 0.9502
+\end{align*}
+\end{itemize}
+
+% Problem 26
+\subsubsection{26.} 패스트푸드점에서 음식이 나오는 시간은 평균 63초, 표준편차 6.5초 걸린다고 한다. 체비쇼프(Chebyshev) 부등식을 이용하여 음식이 나올 확률이 75\%와 89\% 이상일 시구간을 구하여라.
+
+\paragraph{Solution.} 체비쇼프 부등식에서, 어떤 확률변수 $X$가 $\mu \pm 2\sigma$에 놓일 확률은 75\%, $\mu \pm 3\sigma$에 놓일 확률은 89\%이다. 따라서 음식이 나올 확률이 75\%인 시구간은 $\left[50, 76\right]$초, 89\%인 시구간은 $\left[43.5, 82.5\right]$초이다.

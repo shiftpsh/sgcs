@@ -1,0 +1,234 @@
+% Problem 4
+\subsubsection{4.} 연속확률변수 $X$와 $Y$의 결합분포함수가 다음과 같다. \[F\left(x, y\right)=\left(1-e^{-2x}\right)\left(1-e^{-3y}\right)\qquad 0<x<\infty, 0<y<\infty\]
+
+\begin{itemize}
+  \item [(1)] $X$와 $Y$의 주변분포함수를 구하라.
+  \item [(2)] $X$와 $Y$의 독립성을 조사하라.
+  \item [(3)] 확률 $P\left(1<X\leq 2, 0<Y\leq 1\right)$을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 
+\begin{itemize}
+  \item [(1)] $X$의 주변분포함수 $F_X$:
+\begin{align*}
+	&F_X\left(x\right) \\
+	&= \lim_{y\rightarrow\infty} F\left(x, y\right) \\
+	&= \lim_{y\rightarrow\infty} \left(1-e^{-2x}\right)\left(1-e^{-3y}\right) \\
+	&= 1-e^{-2x} \qquad 0<x<\infty
+\end{align*}
+같은 방법으로 $0<y<\infty$에서 $F_Y\left(y\right)=1-e^{-3y}$이다.
+
+  \item [(2)] $F\left(x, y\right)=F_X\left(x\right)F_Y\left(y\right)$이므로 $X$와 $Y$는 독립이다.
+  \item [(3)] $X$와 $Y$가 독립이므로
+\begin{align*}
+	&P\left(1<X\leq 2, 0<Y\leq 1\right) \\
+	&= P\left(1<X\leq 2\right)P\left(0<Y\leq 1\right) \\
+	&= \left[F_X\left(2\right)-F_X\left(1\right)\right]\left[F_Y\left(1\right)-F_Y\left(0\right)\right]\\
+	&= \left[\left(1-e^{-4}\right)-\left(1-e^{-2}\right)\right]\left[\left(1-e^{-3}\right)-\left(1-e^{0}\right)\right]\\
+	&= \left(e^{-2}-e^{-4}\right)\left(1-e^{-3}\right) \approx 0.1112
+\end{align*}
+\end{itemize}
+
+% Problem 5
+\subsubsection{5.} 연속확률변수 $X$와 $Y$가 다음의 결합밀도함수를 갖는다. 
+
+\[f\left(x, y\right) = \left\{
+\begin{array}{ll}
+	15y & \qquad x^2\leq y\leq x \\
+	0 & \qquad\textrm{다른 곳에서}
+\end{array}
+\right. \]
+
+\begin{itemize}
+  \item [(1)] $X$의 주변밀도함수 $f_X\left(x\right)$를 구하라.
+  \item [(2)] $X=0.5$일 때, $Y$의 조건부 밀도함수를 구하라.
+  \item [(3)] (2)의 조건 아래서 $0.3\leq Y\leq 0.4$일 조건부 확률을 구하여라.
+\end{itemize}
+
+\paragraph{Solution.} $x^2\leq y\leq x \Rightarrow y\leq x \leq \sqrt{y}$
+\begin{itemize}
+  \item [(1)] $X$의 주변밀도함수 $f_X$:
+\begin{align*}
+	& f_X\left(x\right) \\
+	&= \int_{x^2}^x 15y dy \\
+	&= \dfrac{15}{2} \left.y^2\right|_{x^2}^x\\
+	&= \dfrac{15}{2} \left(x^2-x^4\right) \qquad 0<x<1
+\end{align*}
+  \item [(2)]
+\begin{align*}
+	& f\left(y\middle|x=0.5\right) \\
+	&= \dfrac{f\left(0.5, y\right)}{f_X\left(0.5\right)} \\
+	&= \dfrac{32}{3}y \qquad \dfrac{1}{4}<y<\dfrac{1}{2}
+\end{align*}
+  \item [(3)]
+ \begin{align*}
+	& P\left(0.3\leq Y\leq 0.4\middle|X=0.5\right) \\
+	&= \int_{0.3}^{0.4} f\left(y\middle|x=0.5\right) \mathop{dy} \\
+	&= \int_{0.3}^{0.4} \dfrac{32}{3}y \mathop{dy} \\
+	&= \left.\dfrac{16}{3}y^2\right|_{0.3}^{0.4} \approx 0.3733
+\end{align*}
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 두 확률변수 $X$와 $Y$의 결합확률밀도함수가 다음과 같다. 
+
+\[f\left(x, y\right) = \left\{
+\begin{array}{ll}
+	\dfrac{3}{2}y^2 & \qquad 0\leq x\leq 2, 0\leq y\leq 1 \\
+	0 & \qquad\textrm{다른 곳에서}
+\end{array}
+\right. \]
+
+\begin{itemize}
+  \item [(1)] $X$와 $Y$의 주변확률밀도함수를 구하라.
+  \item [(2)] $X$와 $Y$는 독립인지 보여라.
+  \item [(3)] 사건 $\left\{X<1\right\}$과 $\left\{Y\geq \dfrac{1}{2}\right\}$은 독립인지 보여라.
+\end{itemize}
+
+\paragraph{Solution.} 
+\begin{itemize}
+  \item [(1)] $X$의 주변밀도함수 $f_X$:
+\begin{align*}
+	& f_X\left(x\right) \\
+	&= \int_0^1 \dfrac{3}{2}y^2 dy \\
+	&= \left.\dfrac{1}{2}y^3\right|_0^1 \\
+	&= \dfrac{1}{2} \qquad 0\leq x\leq 2
+\end{align*}
+
+$Y$의 주변밀도함수 $f_Y$:
+\begin{align*}
+	& f_Y\left(y\right) \\
+	&= \int_0^2 \dfrac{3}{2}y^2 dx \\
+	&= 3y^2 \qquad 0\leq y\leq 1
+\end{align*}
+
+  \item [(2)] $f\left(x, y\right) = f_X\left(x\right)f_Y\left(y\right)$이므로 독립이다.
+  \item [(3)] $\displaystyle P\left(X<1\right) = \int_0^1 f_X\left(x\right) \mathop{dx} = \dfrac{1}{2}$,
+ 
+  $\displaystyle P\left(Y\geq \dfrac{1}{2}\right) = \int_\frac{1}{2}^1 f_Y\left(y\right) \mathop{dy} = \dfrac{7}{8}$,
+  
+  $\displaystyle P\left(X<1, Y\geq \dfrac{1}{2}\right) = \int_0^1\int_\frac{1}{2}^1 f\left(x, y\right) \mathop{dy} \mathop{dx} = \dfrac{7}{16}$에서
+  
+  $P\left(X<1, Y\geq \dfrac{1}{2}\right) = P\left(X<1\right)P\left(Y\geq \dfrac{1}{2}\right)$임을 얻을 수 있다. 따라서 두 사건은 독립이다.
+\end{itemize}
+
+% Problem 11
+\subsubsection{11.} 두 확률변수 $X$와 $Y$가 결합밀도함수
+\[f\left(x, y\right) = \left\{
+\begin{array}{ll}
+	24xy & \qquad 0<y<1-x, 0<x<1 \\
+	0 & \qquad\textrm{다른 곳에서}
+\end{array}
+\right. \]
+을 갖는다고 하자. 이 때 $P\left(Y<X\middle|X=\dfrac{1}{3}\right)$을 구하라.
+
+\paragraph{Solution.} $0<x<1$에서 $\displaystyle f_X\left(x\right) = \int_0^{1-x} 24xy\mathop{dy} = 12x\left(1-x\right)^2$이다. 따라서
+\begin{align*}
+	& P\left(Y<X\middle|X=\dfrac{1}{3}\right) \\
+	&= \dfrac{P\left(Y<X, X=\dfrac{1}{3}\right)}{P\left(X=\dfrac{1}{3}\right)}\\
+	&= \dfrac{9}{16} \int_0^\frac{1}{3} 8y \mathop{dy} \\
+	&= \dfrac{9}{16} \left.4y^2\right|_0^\frac{1}{3} \\
+	&= \dfrac{1}{4}
+\end{align*}
+
+% Problem 15
+\subsubsection{15.} $X$와 $Y$의 결합확률밀도함수가 다음과 같다.
+\[f\left(x, y\right) = \left\{
+\begin{array}{ll}
+	k\left(x^2-2\right)y & \qquad 1\leq x\leq 4, 0\leq y\leq 4 \\
+	0 & \qquad\textrm{다른 곳에서}
+\end{array}
+\right. \]
+
+\begin{itemize}
+  \item [(1)] 상수 $k$를 구하라.
+  \item [(2)] $X$와 $Y$의 주변확률밀도함수를 구하라.
+  \item [(3)] $X$와 $Y$는 독립인지 보여라.
+  \item [(4)] $Y=3$일 때, $X$의 조건부 확률밀도함수를 구하라.
+\end{itemize}
+
+\paragraph{Solution.} \begin{itemize}
+  \item [(1)] \begin{align*}
+	& \int_1^4 \int_0^4 f\left(x, y\right) \mathop{dy} \mathop{dx} \\
+	&= k \int_1^4 \int_0^4 \left(x^2-2\right)y \mathop{dy} \mathop{dx} \\
+	&= k \int_1^4 \left(x^2-2\right)\times \left.\dfrac{1}{2}y^2\right|_0^4 \mathop{dx} \\
+	&= 8k \int_1^4 x^2-2 \mathop{dx} \\
+	&= 8k\left[\dfrac{1}{3}x^3-2x\right]_1^4 \\
+	&= 15\times 8k = 1\\
+	\therefore k&=\dfrac{1}{120}
+\end{align*}
+
+  \item [(2)] $X$의 주변밀도함수 $f_X$:
+\begin{align*}
+	& f_X\left(x\right) \\
+	&= \int_0^4 f\left(x, y\right) \mathop{dy} \\
+	&= \int_0^4 \dfrac{1}{120}\left(x^2-2\right)y \mathop{dy} \\
+	&= \dfrac{1}{15}\left(x^2-2\right) \qquad 1\leq x\leq 4
+\end{align*}
+
+$Y$의 주변밀도함수 $f_Y$:
+\begin{align*}
+	& f_Y\left(y\right) \\
+	&= \int_1^4 f\left(x, y\right) \mathop{dx} \\
+	&= \int_1^4 \dfrac{1}{120}\left(x^2-2\right)y \mathop{dx} \\
+	&= \dfrac{1}{8}y \qquad 0\leq y\leq 4
+\end{align*}
+  \item [(3)] $f\left(x, y\right)=f_X\left(x\right)f_Y\left(y\right)$이므로 $X$와 $Y$는 독립이다.
+  \item [(4)]
+\begin{align*}
+	& f\left(x\middle|y=3\right) \\
+	&= \dfrac{f\left(x, 3\right)}{f_Y\left(3\right)} \\
+	&= \dfrac{\dfrac{1}{40}\left(x^2-2\right)}{\dfrac{3}{8}} \\
+	&= \dfrac{1}{40}\left(x^2-2\right)\times\dfrac{8}{3} \\
+	&= \dfrac{1}{15}\left(x^2-2\right) \qquad 1\leq x\leq 4
+\end{align*}
+\end{itemize}
+
+% Problem 16
+\subsubsection{16.} 두 확률번수 $X$와 $Y$의 결합확률밀도함수가 다음과 같다.
+
+\[f\left(x, y\right) = \left\{
+\begin{array}{ll}
+	ke^{x+y} & \qquad 0<x<1, 0<y<1 \\
+	0 & \qquad\textrm{다른 곳에서}
+\end{array}
+\right. \]
+
+\begin{itemize}
+  \item [(1)] 상수 $k$를 구하라.
+  \item [(2)] $X$와 $Y$의 주변밀도함수를 구하라.
+  \item [(3)] $X$와 $Y$는 i.i.d. 확률변수인지 보여라.
+  \item [(4)] $P\left(0.2\leq X\leq 0.8, 0.2\leq Y\leq 0.8\right)$을 구하라.
+  \item [(5)] $Y=\dfrac{1}{2}$일 때, $X$의 조건부 밀도함수를 구하라.
+\end{itemize}
+
+\paragraph{Solution.} \begin{itemize}
+  \item [(1)] \begin{align*}
+	& \int_0^1 \int_0^1 f\left(x, y\right) \mathop{dy} \mathop{dx} \\
+	&= \int_0^1 \int_0^1 ke^{x+y} \mathop{dy} \mathop{dx} \\
+	&= k \int_0^1 e^x \mathop{dx} \int_0^1 e^y \mathop{dy}\\
+	&= k \left(e - 1\right)^2 = 1\\
+	\therefore k &= \left(e - 1\right)^{-2}
+\end{align*}
+
+  \item [(2)] $X$의 주변밀도함수 $f_X$:
+\begin{align*}
+	& f_X\left(x\right) \\
+	&= \int_0^1 f\left(x, y\right) \mathop{dy} \\
+	&= \left(e - 1\right)^{-2}e^x \int_0^1 e^y \mathop{dy}\\
+	&= \dfrac{e^x}{e - 1} \qquad 0<x<1
+\end{align*}
+
+같은 방법으로 $0<y<1$에서 $Y$의 주변밀도함수 $f_Y\left(y\right) = \dfrac{e^y}{e - 1}$이다.
+
+  \item [(3)] 우선 $f\left(x, y\right)=f_X\left(x\right)f_Y\left(y\right)$이므로 $X$와 $Y$는 독립이고, $f_X\left(x\right)=f_Y\left(x\right)$이므로 항등분포를 이룬다. 따라서 $X$와 $Y$는 i.i.d. 확률변수이다.
+  \item [(4)] (3)에서 보인 것과 같이 $X$와 $Y$는 i.i.d. 확률변수이므로
+\begin{align*}
+	& P\left(0.2\leq X\leq 0.8, 0.2\leq Y\leq 0.8\right) \\
+	&= \left[P\left(0.2\leq X\leq 0.8\right)\right]^2 \\
+	&= \left[ \int_{0.2}^{0.8} f_X\left(x\right) \mathop{dx}\right]^2 \\
+	&= \left[ \int_{0.2}^{0.8} \dfrac{e^x}{e - 1} \mathop{dx}\right]^2 \\
+	&= \left(\dfrac{e^{0.8} - e^{0.2}}{e - 1} \right)^2 \approx0.3415
+\end{align*}
+  \item [(5)] 역시 $X$와 $Y$는 i.i.d. 확률변수이므로 $f\left(x\middle|y=\dfrac{1}{2}\right) = \dfrac{e^x}{e - 1}$이다.
+\end{itemize}

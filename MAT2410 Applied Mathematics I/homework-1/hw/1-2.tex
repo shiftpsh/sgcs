@@ -1,0 +1,57 @@
+% Problem 6
+\subsubsection{6.} 어느 모임의 구성원을 살펴보면 부자가 7\%, 저명인사가 10\% 그리고 부자이면서 저명인사가 3\%라고 한다. 이 모임에서 어느 한 사람을 임의로 선정하여 회장으로 추대하고자 한다.
+\begin{itemize}
+	\item[(1)] 부자가 아닌 사람이 회장으로 추대될 확률을 구하라.
+	\item[(2)] 부자는 아니지만 저명인사가 회장이 될 확률을 구하라.
+	\item[(3)] 부자 또는 저명인사가 회장이 될 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 부자가 회장이 되는 사건을 $A$, 저명인사가 회장이 되는 사건을 $B$라고 하자.
+\begin{itemize}
+	\item[(1)] $P\left(A^c\right) = 1 - P\left(A\right) = 1 - 0.07 = 0.93$
+	\item[(2)] $P\left(A^c \cap B \right) = P\left(B\right) - P\left(A \cap B \right) = 0.10 - 0.03 = 0.07$
+	\item[(3)] $P\left(A \cup B \right) = P\left(A\right) + P\left(B\right) - P\left(A \cap B \right) = 0.07 + 0.10 - 0.03 = 0.14$
+\end{itemize}
+
+% Problem 7
+\subsubsection{7.} 앞면이 나올 가능성이 $\dfrac{2}{3}$인 찌그러진 동전을 두 번 반복하여 던진다.
+\begin{itemize}
+	\item[(1)] 앞면이 한 번도 나오지 않을 확률을 구하라.
+	\item[(2)] 앞면이 한 번 나올 확률을 구하라.
+	\item[(3)] 앞면이 두 번 나올 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+	\item[(1)] $\displaystyle \binom{2}{0} \left(\frac{2}{3}\right)^0 \left(1 - \frac{2}{3}\right)^2 = 1 \times \frac{1}{9} = \frac{1}{9}$
+	\item[(2)] $\displaystyle \binom{2}{1} \left(\frac{2}{3}\right)^1 \left(1 - \frac{2}{3}\right)^1 = 2 \times \frac{2}{9} = \frac{4}{9}$
+	\item[(3)] $\displaystyle \binom{2}{2} \left(\frac{2}{3}\right)^2 \left(1 - \frac{2}{3}\right)^0 = 1 \times \frac{4}{9} = \frac{4}{9}$
+\end{itemize}
+
+% Problem 10
+\subsubsection{10.} 공정한 주사위를 독립적으로 반벅해서 던지는 실험에서 2 또는 3의 눈이 나오면 주사위 던지기를 멈춘다고 한다.
+\begin{itemize}
+	\item[(1)] 처음 던진 후에 멈출 확률을 구하라.
+	\item[(2)] 5번 던진 후에 멈출 확률을 구하라.
+	\item[(3)] $n$번 던진 후에 멈출 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 공정한 주사위에서 2 또는 3의 눈이 나올 확률은 $\dfrac{2}{6} = \dfrac{1}{3}$이다.
+\begin{itemize}
+	\item[(1)] $\displaystyle \frac{1}{3}$
+	\item[(2)] 처음 4번은 2 또는 3의 눈이 나오지 않아야 하며, 마지막 한 번은 2 또는 3의 눈이 나와야 한다. 따라서 $\displaystyle \left(\frac{2}{3}\right)^4\frac{1}{3}$
+	\item[(3)] 처음 $n - 1$번은 2 또는 3의 눈이 나오지 않아야 하며, 마지막 한 번은 2 또는 3의 눈이 나와야 한다. 따라서 $\displaystyle \left(\frac{2}{3}\right)^{n - 1}\frac{1}{3}$
+\end{itemize}
+
+% Problem 13
+\subsubsection{13.} 지난해에 어떤 단체의 스포츠 관람 습성에 대한 조사 결과, 그들 중에서 체조와 야구 그리고 축구를 관람한 사람은 각각 28\%, 29\%, 그리고 19\%이었다. 한편 체조와 야구를 관람한 사람은 14\%, 야구와 축구를 관람한 사람은 12\% 그리고 체조와 축구를 관람한 사람은 10\%이었으며, 세 개의 스포츠 모두를 관람한 사람은 8\%이었다. 세 개의 스포츠 중 어느 것도 관람하지 않은 사람의 비율을 구하라.
+
+\paragraph{Solution.} 체조를 관람한 사람의 집합을 $A$, 야구를 관람한 사람의 집단을 $B$, 축구를 관람한 사람의 집단을 $C$라 하자. 단체의 전체 사람 수를 $n$이라고 할 때, $\left|A\right| = 0.28n$, $\left|B\right| = 0.29n$, $\left|C\right| = 0.19n$, $\left|A \cap B\right| = 0.14n$, $\left|B \cap C\right| = 0.12n$, $\left|C \cap A\right| = 0.10n$, $\left|A \cap B \cap C\right| = 0.08n$이므로 어느 것도 관람하지 않은 사람의 수는 
+	\begin{align*}
+		& \left|\left(A \cup B \cup C\right)^c\right| \\
+		=& n - \left|A \cup B \cup C\right| \\
+		=& n - \left(\left|A\right| + \left|B\right| + \left|C\right| - \left|A\cap B\right| - \left|B\cap C\right| - \left|C\cap A\right| + \left|A \cap B \cap C\right|\right) \\
+		=& n - \left(0.28 + 0.29 + 0.19 - 0.14 - 0.12 - 0.10 + 0.08\right)n \\
+		=& 0.52n
+	\end{align*}
+	이다. 따라서 어느 것도 관람하지 않은 사람의 비율은 52\%이다.

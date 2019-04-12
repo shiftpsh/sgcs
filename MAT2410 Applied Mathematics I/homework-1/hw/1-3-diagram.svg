@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 413 173" style="enable-background:new 0 0 413 173;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:3.6;}
+	.st1{fill:none;stroke:#000000;stroke-width:3.6;stroke-linecap:square;stroke-miterlimit:10;}
+	.st2{stroke:#000000;stroke-width:1.8;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#DAE2F2;fill-opacity:0;}
+	.st4{font-family:'TimesNewRomanPSMT';}
+	.st5{font-size:17.496px;}
+	.st6{fill:none;stroke:#000000;stroke-width:3.6;stroke-miterlimit:10;}
+	.st7{stroke:#000000;stroke-width:3.6;stroke-linecap:square;stroke-miterlimit:10;}
+	.st8{stroke:#000000;stroke-width:3.6;}
+</style>
+<g transform=" scale(0.81) translate(-499.1,-949.390625)">
+	<rect x="802.6" y="1006.2" pointer-events="none" width="3.6" height="3.6"/>
+	<rect x="694.6" y="1006.2" pointer-events="none" width="3.6" height="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="781.4" cy="1008" rx="3.6" ry="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="718.4" cy="1008" rx="3.6" ry="3.6"/>
+	<path pointer-events="none" class="st1" d="M787.3,1008h15.3"/>
+	<path pointer-events="none" class="st1" d="M698.2,1008h15.3"/>
+	<path pointer-events="none" class="st1" d="M721.9,1006.2l36.5-14.3"/>
+	<path pointer-events="none" class="st2" d="M753.7,988l20.4-1.9l-16.7,12L753.7,988z"/>
+	<rect x="732.4" y="954" pointer-events="none" class="st3" width="23.4" height="23.4"/>
+	<g>
+		<text transform="matrix(1.2346 0 0 1.2346 730.9247 972.8998)" class="st4 st5">S1</text>
+	</g>
+	<rect x="748.6" y="1114.2" pointer-events="none" width="3.6" height="3.6"/>
+	<rect x="640.6" y="1114.2" pointer-events="none" width="3.6" height="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="727.4" cy="1116" rx="3.6" ry="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="664.4" cy="1116" rx="3.6" ry="3.6"/>
+	<path pointer-events="none" class="st1" d="M733.3,1116h15.3"/>
+	<path pointer-events="none" class="st1" d="M644.2,1116h15.3"/>
+	<path pointer-events="none" class="st1" d="M667.9,1114.2l36.5-14.3"/>
+	<path pointer-events="none" class="st2" d="M699.7,1096l20.4-1.9l-16.7,12L699.7,1096z"/>
+	<rect x="678.4" y="1134" pointer-events="none" class="st3" width="23.4" height="23.4"/>
+	<g>
+		<text transform="matrix(1.2346 0 0 1.2346 676.9244 1152.9003)" class="st4 st5">S2</text>
+	</g>
+	<rect x="856.6" y="1114.2" pointer-events="none" width="3.6" height="3.6"/>
+	<rect x="748.6" y="1114.2" pointer-events="none" width="3.6" height="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="835.4" cy="1116" rx="3.6" ry="3.6"/>
+	<ellipse pointer-events="none" class="st0" cx="772.4" cy="1116" rx="3.6" ry="3.6"/>
+	<path pointer-events="none" class="st1" d="M841.3,1116h15.3"/>
+	<path pointer-events="none" class="st1" d="M752.2,1116h15.3"/>
+	<path pointer-events="none" class="st1" d="M775.9,1114.2l36.5-14.3"/>
+	<path pointer-events="none" class="st2" d="M807.7,1096l20.4-1.9l-16.7,12L807.7,1096z"/>
+	<rect x="786.4" y="1134" pointer-events="none" class="st3" width="23.4" height="23.4"/>
+	<g>
+		<text transform="matrix(1.2346 0 0 1.2346 784.9249 1152.9003)" class="st4 st5">S3</text>
+	</g>
+	<path pointer-events="none" class="st6" d="M804.4,1008h72v108h-18"/>
+	<path pointer-events="none" class="st6" d="M642.4,1116h-18v-108h72"/>
+	<rect x="568.6" y="1060.2" pointer-events="none" width="3.6" height="3.6"/>
+	<path pointer-events="none" class="st7" d="M536.2,1062h32.4"/>
+	<path pointer-events="none" class="st6" d="M570.4,1062h18h36v14.4"/>
+	<ellipse pointer-events="none" class="st8" cx="624.4" cy="1080" rx="3.6" ry="3.6"/>
+	<rect x="964.6" y="1060.2" pointer-events="none" width="3.6" height="3.6"/>
+	<path pointer-events="none" class="st7" d="M932.2,1062h32.4"/>
+	<path pointer-events="none" class="st6" d="M966.4,1062H880"/>
+	<ellipse pointer-events="none" class="st8" cx="876.4" cy="1062" rx="3.6" ry="3.6"/>
+	<g>
+		<text transform="matrix(1.2346 0 0 1.2346 536.2347 1051.7076)" class="st4 st5">A</text>
+	</g>
+	<g>
+		<text transform="matrix(1.2346 0 0 1.2346 952.7708 1051.7076)" class="st4 st5">B</text>
+	</g>
+</g>
+</svg>
