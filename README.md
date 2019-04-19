@@ -8,57 +8,24 @@
 
 대부분은 학교 메일(~@sogang.ac.kr)이 필요하니 학교 메일이 없다면 메일부터 만듭시다
 
-*   **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**: **G Suite**, **Google Drive(무제한)** 등
+| 소프트웨어 및 서비스                                         | 제공 항목                                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **[G Suite](http://u.sogang.ac.kr/account/user/authenticateLogin.do)**<br />SAINT ID로 로그인해 계정 신청 | - G Suite<br />- 무제한 Google Drive<br />- @u.soagng.ac.kr 이메일 |
+| **[Office 365](https://o365.sogang.ac.kr)**<br />'계정신청하기' 클릭 후 SAINT ID로 로그인 | - Microsoft Office 365<br />- OneDrive 1TB<br />- @o365.sogang.ac.kr 이메일 |
+| **[Windows 10 Education](https://sogang.onthehub.com)**<br />학교 메일로 인증 | - Windows 10 Education<br />- (정품인증에 ~@o365.sogang.ac.kr 메일 필요)<br />- Parallels Desktop (할인가) |
+| **[GitHub Education Pack](https://education.github.com/pack)**<br />학교 메일로 신청 | - 2년간 GitHub Pro 기능<br />- 학생인 상태라면 계속 갱신할 수 있다 |
+| **[JetBrains](https://www.jetbrains.com/student/)**<br />학교 메일로 신청 | - 1년간 JetBrains의 모든 IDE (CLion, ReSharper, Rider 등)<br />- 학생인 상태라면 계속 갱신할 수 있다 |
+| **[AWS Educate](https://aws.amazon.com/ko/education/awseducate)**<br />학교 메일로 신청 | - Amazon Web Services 크레딧 매년 $100<br />- 교육과정을 이수하면 크레딧을 더 받을 수 있다 |
+| **[학생용 Microsoft Azure 스타터](https://azure.microsoft.com/ko-kr/offers/ms-azr-0144p/)**<br />학교 메일로 신청 | - Azure Cloud Service                                        |
+| **[캠퍼스 클라우드](https://scloud.sogang.ac.kr)**<br />SAINT ID로 로그인 | - MATLAB (웹탐색기 > 공통소프트웨어)                         |
 
-    SAINT ID로 로그인해 계정 신청
+### 할인/대여 혜택
 
-*   **[Office 365](https://o365.sogang.ac.kr)**: **MS Office**, **OneDrive(1TB)**
-
-    '계정신청하기' 클릭 후 SAINT ID로 로그인, 이후는 웹사이트 설명 참고. 밑의 Windows 10 Education을 사용하려면 신청 필요
-
-*   **[Windows 10 Education](https://sogang.onthehub.com)**
-
-    추후 정품인증에 서강대학교 Office 365 계정(~@o365.sogang.ac.kr) 필요. Parallels Desktop는 무료는 아니지만 할인가에 구매 가능
-
-*   **[GitHub Education Pack](https://education.github.com/pack)**
-
-    2년간 GitHub 프로 기능 전부 무료, 학생인 상태라면 계속 갱신 가능. 외에도 개발자를 위한 여러 도구 제공
-    
-*   **[JetBrains](https://www.jetbrains.com/student/)**: **CLion**, **ReSharper** 등
-
-    엄청나게 좋은 IDE들 무료로 제공!
-
-*   **[AWS Educate](https://aws.amazon.com/ko/education/awseducate)**: **AWS 크레딧 매년 $100**
-
-*   **[학생용 Microsoft Azure 스타터](https://azure.microsoft.com/ko-kr/offers/ms-azr-0144p/)**: Azure Cloud Service
-
-*   **[캠퍼스 클라우드](https://scloud.sogang.ac.kr)**: **MATLAB**
-
-    SAINT ID로 로그인 후 상단의 '웹탐색기' 클릭, '공통소프트웨어' 폴더 내에 MATLAB 설치 방법 pdf 참고
-
-*   **[AutoCAD](http://iic.sogang.ac.kr/new/file/AutoCAD.pdf)** 
-
-    PDF 참고, 컴공은 그렇게 상관 없을지도
-
-*   **[SAS](https://www.sas.com/ko_kr/software/university-edition.html)**: SAS University Edition
-
-    링크 참고, 컴공은 그렇게 상관 없을지도
-
-### 할인 혜택
-
-*   **[정보통신원](http://online.sogang.ac.kr/@online/login.asp)**: **Apple on Campus**
-
-    SAINT ID로 로그인 후 왼쪽 밑 구석의 작은 배너 클릭, MacBook이나 iMac 계열은 꽤 할인된 가격에 구매 가능
-
-*   **[Adobe Creative Cloud](https://www.adobe.com/kr/creativecloud/buy/students.html)**
-
-    반값 정도에 구독 가능
-
-### 대여
-
-*   **[정보통신원](http://online.sogang.ac.kr/@online/login.asp)**
-
-    노트북, 태블릿 대여 가능
+| 할인/대여 혜택                                               | 할인 항목                                                |
+| ------------------------------------------------------------ | -------------------------------------------------------- |
+| **[Apple on Campus](http://online.sogang.ac.kr/@online/login.asp)**<br />SAINT ID로 로그인 후 좌하단 작은 배너 클릭 | - Apple 제품들 할인가로 구매 가능                        |
+| **[Adobe Creative Cloud](https://www.adobe.com/kr/creativecloud/buy/students.html)**<br />학교 메일로 인증 | - 정상 가격의 50% 정도 가격으로 Creative Cloud 구독 가능 |
+| **[정보통신원](http://online.sogang.ac.kr/@online/login.asp)**<br />SAINT ID로 로그인 | - 노트북 및 태블릿 대여 가능                             |
 
 ## 작성된 과목 목록
 
@@ -78,7 +45,7 @@
 | STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 퀴즈 문제 및 답안, 강의 노트 |
 | MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 1-1 |
 
-## 작성 중인 과목 목록
+<details><summary>작성 중인 과목 목록</summary>
 
 ### 컴퓨터공학전공
 
@@ -96,5 +63,7 @@
 | STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 시험 문제 및 답안 |
 | MAT2110 | 2019-01  | Introduction to Linear Algebra<br>선형대수학 | 강의 노트 |
 | MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 전부, 강의 노트 |
+
+</details>
 
 오래되거나 틀린 정보는 [Issues](https://github.com/shiftpsh/sgcs/issues)에 제보해 주세요!
