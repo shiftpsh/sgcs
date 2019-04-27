@@ -35,7 +35,7 @@
 | ------- | -------- | --------------------------------------------- | -------- |
 | CSE2003 | 2018-01  | [Introduction to Engineering Design<br>기초공학설계](/CSE2003%20Introduction%20to%20Engineering%20Design) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
 | CSE2035 | 2018-02  | [C Programming<br>C프로그래밍](/CSE2035%20C%20Programming) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
-| CSE3080 | 2019-01  | [Data Structures<br>자료구조](/CSE3080%20Data%20Structures) | 오픈랩 코드 (~2주차) |
+| CSE3080 | 2019-01  | [Data Structures<br>자료구조](/CSE3080%20Data%20Structures) | 오픈랩 코드 (~3주차) |
 
 ### 수학전공
 

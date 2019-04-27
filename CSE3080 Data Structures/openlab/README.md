@@ -9,7 +9,7 @@
 - ADT Polynomial을 동적 할당된 array 혹은 linked list로 구현
 - Polynomial이 저장된 파일 세 개를 읽어서 세 polynomial을 더한 결과를 출력하는 프로그램 작성
 
-## Week 3
+## [Week 3](week3/main.c)
 - ADT Sparse Matrix 구현
 - Sparse Matrix를 transpose하는 알고리즘 구현
 
