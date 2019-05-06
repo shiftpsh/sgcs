@@ -6,7 +6,7 @@ STS2005 - Analytic Geometry and Calculus I
 
 - 미적분학의 기초를 배웁니다. 고등학교에서 배운 미적분학 내용들의 엄밀한 정의들을 배웁니다. 
 
-- [중간고사 문제 및 해설](midterm)
+- [중간고사 문제 및 해설](midterm/midterm.pdf)
 
 시험 문제 해설은 제 개인적인 답안이기 때문에 정답이 아닐 수도 있습니다. 틀린 경우 Issues에 제보해주세요!
 
