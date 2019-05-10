@@ -1,0 +1,126 @@
+% Problem 3
+\subsubsection{3.} 매 회 성공률이 $p$인 베르누이 실험을 처음 성공할 때까지 독립적으로 반복 시행한 횟수를 확률변수 $X$라 한다. 이 때 처음 성공이 있기 전까지 실패한 횟수
+$Y$의 확률질량함수와 평균 그리고 분산을 구하라.
+
+\paragraph{Solution.} 성공 확률이 $p$인 베르누이 시행에 대해 $x$번 시행 후 첫 번째 성공을 얻을 확률은
+\[P\left(X=x\right) = p\left(1 - p\right)^{x - 1}\]
+이며, 이는 기하분포를 따른다. 따라서 $X\sim\mathrm{G}\left(p\right)$에 대해
+\begin{align*}
+    \mathrm{E}\left(X\right) &= \frac{1}{p}\\
+    \mathrm{Var}\left(X\right) &= \frac{1-p}{p^2}
+\end{align*}
+이다. 또한 $Y = X - 1$이므로
+\begin{align*}
+    P\left(Y=y\right) &= p\left(1 - p\right)^y\\
+    \mathrm{E}\left(Y\right) &= \frac{1-p}{p}\\
+    \mathrm{Var}\left(Y\right) &= \frac{1-p}{p^2}
+\end{align*}
+이다.
+
+% Problem 5
+\subsubsection{5.} 매 회 성공률이 $p$인 베르누이 실험을 $r$번째 성공이 있기까지 독립적으로 반복 시행한 횟수를 확률변수 $X$라 한다. 이 때 $r$번째 성공이 있기까지 실패한 횟수
+$Y$의 확률질량함수와 평균 그리고 분산을 구하라.
+
+\paragraph{Solution.} 성공 확률이 $p$인 베르누이 시행에 대해 $x$번 시행 후 $r$번째 성공을 얻을 확률은
+\[P\left(X=x\right) = \binom{x-1}{r-1}p^r\left(1 - p\right)^{x-r}\]
+이며, 이는 음이항분포를 따른다. 따라서 $X\sim\mathrm{NB}\left(r,\,p\right)$에 대해
+\begin{align*}
+    \mathrm{E}\left(X\right) &= \frac{r}{p}\\
+    \mathrm{Var}\left(X\right) &= \frac{r\left(1-p\right)}{p^2}
+\end{align*}
+이다. 또한 $Y = X - r$이므로 \textbf{3}과 마찬가지로
+\begin{align*}
+    P\left(Y=y\right) &= \binom{y+r-1}{r-1}p^r\left(1 - p\right)^y \\
+    \mathrm{E}\left(Y\right) &= \frac{r\left(1-p\right)}{p}\\
+    \mathrm{Var}\left(Y\right) &= \frac{r\left(1-p\right)}{p^2}
+\end{align*}
+이다.
+
+% Problem 6
+\subsubsection{6.} 매 회 성공률이 $0.4$인 베르누이 실험을 $3$번째 성공이 있기까지 실패한 횟수 $Y$의 확률질량함수와 평균 그리고 분산을 구하라.
+
+\paragraph{Solution.} \textbf{5}에서 보인 것과 같이
+\begin{align*}
+    P\left(Y=y\right) &= \binom{y+3-1}{3-1}0.4^3\left(1 - 0.4\right)^y\\
+    &= \binom{y+2}{2}0.4^3\cdot0.6^y\\
+\end{align*}
+이다. 이 때
+\begin{align*}
+    \mathrm{E}\left(Y\right) &= \frac{3\times0.6}{0.4} = 4.5\\
+    \mathrm{Var}\left(Y\right) &= \frac{3\left(1-0.4\right)}{0.4^2} = 11.25
+\end{align*}
+이다.
+
+% Problem 11
+\subsubsection{11.} 컴퓨터 시뮬레이션을 통하여 0에서 9까지의 숫자를 무작위로 선정하며, 각 숫자가 선정될 가능성은 동일하다고 한다. 이 때 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] 처음으로 숫자 0이 나올 때까지 시뮬레이션을 반복한 횟수에 대한 확률분포
+    \item [(2)] (1)의 확률분포에 대한 평균 $\mu$와 분산 $\sigma^2$
+    \item [(3)] 시뮬레이션을 10회 실시해서야 비로소 4번째 0이 나올 확률
+    \item [(4)] 4번째 0을 얻기 위하여 시뮬레이션을 반복한 평균 횟수
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] {
+        숫자 0이 나올 확률은 0.1이므로, 주어진 확률변수는 기하분포 $\mathrm{G}\left(0.1\right)$을 따른다.
+    }
+    \item [(2)] {
+        (1)의 분포에 대해
+        \begin{align*}
+            \mu &= \frac{1}{0.1} = 10\\
+            \sigma^2 &= \frac{1-0.1}{0.1^2} = 90
+        \end{align*}
+    }
+    \item [(3)] {
+        주어진 확률변수를 $X$라 하면, $X$는 음이항분포 $\mathrm{NB}\left(4,\,0.1\right)$을 따른다. 이 때
+        \[P\left(X=10\right)=\binom{10-1}{4-1}0.1^4\left(1 - 0.1\right)^{6}\approx0.0045\]
+        이다.
+    }
+    \item [(4)] {
+        (3)의 분포에 대해
+        \begin{align*}
+            \mu &= \frac{4}{0.1} = 40\\
+        \end{align*}
+        이다.
+    }
+\end{itemize}
+
+% Problem 13
+\subsubsection{13.} $X\sim \mathrm{G}\left(p\right)$에 대하여 $\mathrm{E}\left[X\left(X - 1\right)\right]=\dfrac{2q}{p^2}$임을 보여라.
+
+\paragraph{Solution.} $X\sim \mathrm{G}\left(p\right)$이면 $P\left(X=k\right)=\left(1-p\right)^{k-1}p$이다. 따라서
+\begin{align*}
+    & \mathrm{E}\left[X\left(X - 1\right)\right] \\
+    =& \sum_{x=1}^{\infty} x\left(x-1\right)P\left(X=x\right) \\
+    =& \sum_{x=1}^{\infty} x\left(x-1\right)\left(1-p\right)^{x-1}p \\
+    =& \sum_{x=1}^{\infty} x\left(x-1\right)\left(1-p\right)^{x-2} \times p\left(1-p\right) \\
+    =& p\left(1-p\right) \sum_{x=1}^{\infty} \frac{\mathop{d}^2}{\mathop{dp}^2} \left(1-p\right)^x \\
+    =& p\left(1-p\right) \left[\frac{\mathop{d}^2}{\mathop{dp}^2} \sum_{x=1}^{\infty} \left(1-p\right)^x\right] \\
+    =& p\left(1-p\right) \left(\frac{\mathop{d}^2}{\mathop{dp}^2} \frac{1-p}{p}\right) \\
+    =& p\left(1-p\right) \frac{2}{p^3} \\
+    =& \frac{2\left(1-p\right)}{p^2} = \frac{2q}{p^2}\\
+\end{align*}
+이다.
+
+% Problem 14
+\subsubsection{14.} $X\sim \mathrm{G}\left(p\right)$에 대한 비기억성 성질을 증명하라.
+
+\paragraph{Solution.} 어떤 분포가 비기억성 또는 무기억성이라 함은 정의역의 원소 $s$, $t$에 대해
+\[P\left(X > s+t\,\middle|\,X > s\right) = P\left(X > t\right)\]
+가 성립함을 말한다. $X\sim \mathrm{G}\left(p\right)$이면 $P\left(X=k\right)=\left(1-p\right)^{k-1}p$이므로,
+\begin{align*}
+    P\left(X > k\right) &= \sum_{x=k + 1}^{\infty} \left(1-p\right)^{x-1}p \\
+    &= p\left(1-p\right)^{k-1} \sum_{x=1}^{\infty} \left(1-p\right)^{x} \\
+    &= p\left(1-p\right)^{k-1} \frac{1-p}{p} \\
+    &= \left(1-p\right)^{k} \\
+\end{align*}
+이고, 따라서
+\begin{align*}
+    P\left(X > s+t\,\middle|\,X > s\right) &= \frac{P\left(X > s+t\right)}{P\left(X > s\right)} \\
+    &= \frac{\left(1-p\right)^{s+t}}{\left(1-p\right)^{s}} \\
+    &= \left(1-p\right)^{t} = P\left(X > t\right)
+\end{align*}
+이므로 $X$는 비기억성이다.

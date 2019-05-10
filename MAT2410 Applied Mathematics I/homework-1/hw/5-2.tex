@@ -1,0 +1,224 @@
+% Problem 3
+\subsubsection{3.} 약속장소에서 친구를 만나기로 하고, 정시에 도착하였으나 친구가 아직 나오지 않았다. 그리고 친구를 만나기 위하여 기다리는 시간은 $\lambda=0.2$인 지수분포에 따른다고 한다.
+
+\begin{itemize}
+	\item [(1)] 친구를 만나기 위한 평균 시간을 구하라.
+	\item [(2)] 3분이 경과하기 이전에 친구를 만날 확률을 구하라.
+	\item [(3)] 10분 이상 기다려야 할 확률을 구하라.
+	\item [(4)] 6분이 경과했다고 할 때, 추가적으로 더 기다려야 할 시간에 대한 확률분포를 구하고, 모두 합쳐서 10분 이상 걸릴 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 기다리는 시간을 $X$라고 하자. $X\sim \mathrm{Exp}\left(0.2\right)$이다. 따라서 분포함수 $F\left(x\right)=1-e^{-0.2x}$이다.
+\begin{itemize}
+	\item [(1)] {
+		$\mu = \dfrac{1}{0.2} = 5$
+	}
+	\item [(2)] {
+		\begin{align*}
+			P\left(X \leq 3\right) &= F\left(3\right) \\
+			&= 1 - e^{-0.2\cdot 3} \approx 0.4512
+		\end{align*}
+	}
+	\item [(3)] {
+		\begin{align*}
+			P\left(X \geq 10\right) &= 1 - F\left(10\right) \\
+			&= e^{-0.2\cdot 10} \approx 0.1353
+		\end{align*}
+	}
+	\item [(4)] {
+		지수분포는 무기억성을 가지므로, 추가적으로 기다려야 할 시간은 여전히 $\mathrm{Exp}\left(0.2\right)$를 따른다.
+		따라서 모두 합쳐 10분 이상 기다려야 할 확률은 4분 이상 더 기다리는 확률과 같으므로,
+		\begin{align*}
+			P\left(X \geq 4\right) &= 1 - F\left(4\right) \\
+			&= e^{-0.2\cdot 4} \approx 0.4493
+		\end{align*}
+	}
+\end{itemize}
+
+% Problem 5
+\subsubsection{5.} 어떤 기계의 고장나는 날의 간격이 $\lambda=0.3$인 지수분포에 따른다고 한다.
+
+\begin{itemize}
+	\item [(1)] 이 기계가 고장나는 날의 평균 간격을 구하라.
+	\item [(2)] 고장나는 날의 간격에 대한 표준편차를 구하라.
+	\item [(3)] 고장나는 날의 간격에 대한 중앙값을 구하라.
+	\item [(4)] 이 기계가 수리된 후 다시 고장나기까지 적어도 일주일 이상 사용할 수 있을 확률을 구하라.
+	\item [(5)] 이 기계를 5일 동안 정상적으로 사용했을 때, 고장나기까지 적어도 이틀 이상 사용할 수 있을 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 고장나는 날의 간격을 $X \sim \mathrm{Exp}\left(0.3\right)$라고 하자.
+\begin{itemize}
+	\item [(1)] {
+		\[\mu = \frac{1}{0.3} = \frac{10}{3}\]
+	}
+	\item [(2)] {
+		\begin{align*}
+			\sigma^2 &= \left(\frac{10}{3}\right)^2 \\
+			\Rightarrow \sigma &= \frac{10}{3}
+		\end{align*}
+	}
+	\item [(3)] {
+		$X$의 분포함수는 $F\left(x\right)=1-e^{-0.3x}$이다. 중앙값은 $F^{-1}\left(0.5\right)$이므로, $F\left(m\right)=0.5$가 되는 $m$을 구하면
+		\begin{align*}
+			& F\left(m\right) = 1-e^{-0.3m} = 0.5 \\
+			\Rightarrow& e^{-0.3m} = 0.5 \\
+			\Rightarrow& -0.3m = -\ln 2 \\
+			\Rightarrow& m = \frac{\ln 2}{0.3} \approx 2.310
+		\end{align*}
+		이다.
+	}
+	\item [(4)] {
+		\begin{align*}
+			P\left(X>7\right) &= 1 - F\left(7\right) \\
+			&= 1 - \left(1-e^{-0.3\cdot 7}\right) \\
+			&= e^{-2.1} \approx 0.1225
+		\end{align*}
+	}
+	\item [(5)] {
+		지수분포는 무기억성을 가지므로, 구하는 확률은
+		\begin{align*}
+			P\left(X>2\right) &= 1 - F\left(2\right) \\
+			&= 1 - \left(1-e^{-0.3\cdot 2}\right) \\
+			&= e^{-0.6} \approx 0.5488
+		\end{align*}
+		이다.
+	}
+\end{itemize}
+
+% Problem 8
+\subsubsection{8.} 어느 상점에 매 시간당 평균 30명의 손님이 푸아송 과정을 따라서 찾아온다고 한다.
+
+\begin{itemize}
+	\item [(1)] 상점 주인이 처음 두 손님을 맞이하기 위하여 5분 이상 기다릴 확률을 구하라.
+	\item [(2)] 처음 두 손님을 맞이하기 위하여 3분에서 5분 정도 기다릴 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 처음 두 손님을 맞이하기까지 걸리는 시간을 $X$라 하면, $X \sim \mathrm{\Gamma}\left(2,\,2\right)$이다.
+이 때 확률밀도함수 $f\left(x\right) = \dfrac{x}{4} e^{-\frac{x}{2}}$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		\begin{align*}
+			P\left(X \geq 5\right) &= \int_5^\infty \frac{x}{4} e^{-\frac{x}{2}} \mathop{dx} \\
+			&= -\frac{1}{2} \left[\left(x+2\right)e^{-\frac{x}{2}}\right]_5^\infty \\
+			&= \frac{7}{2} e^{-\frac{5}{2}} \approx 0.2873
+		\end{align*}
+	}
+	\item [(2)] {
+		\begin{align*}
+			P\left(3 < X < 5\right) &= \int_3^5 \frac{x}{4} e^{-\frac{x}{2}} \mathop{dx} \\
+			&= -\frac{1}{2} \left[\left(x+2\right)e^{-\frac{x}{2}}\right]_3^5 \\
+			&= \frac{5}{2} e^{-\frac{3}{2}} - \frac{7}{2} e^{-\frac{5}{2}} \approx 0.2705
+		\end{align*}
+	}
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 전화 교환대에 1분당 평균 2번의 비율로 신호가 들어오고 있으며, 교환대에 도착한 신호는 푸아송과정을 따른다고 한다.
+
+\begin{itemize}
+	\item [(1)] 푸아송 과정의 비율 $\lambda$를 구하라.
+	\item [(2)] 교환대에 들어오는 두 신호 사이의 평균 시간을 구하라.
+	\item [(3)] 2분과 3분 사이에 신호가 없을 확률을 구하라.
+	\item [(4)] 교환원이 교환대에 앉아서 3분 이상 기다려야 첫 번째 신호가 들어올 확률을 구하라.
+	\item [(5)] 처음 2분 동안 신호가 없으나 2분과 4분 사이에 4건의 신호가 있을 확률을 구하라.
+	\item [(6)] 처음 신호가 15초 이내 들어오고, 그 이후 두 번째 신호가 들어오기까지 3분 이상 걸릴 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 1분간 들어오는 신호의 수를 $X$라고 하자. $X\sim \mathrm{Poi}\left(\lambda\right)$이다.
+
+\begin{itemize}
+	\item [(1)] 1분당 평균 2번의 비율로 신호가 들어오므로, $\lambda = 2$이다.
+	\item [(2)] 두 신호 사이의 간격 $T$는 $\mathrm{Exp}\left(2\right)$를 따르므로, 이 때 $\mu = 0.5$이다.
+	또한 분포함수 $\left(x\right) = 1 - e^{-2x}$이다.
+	\item [(3)] {
+		2분과 3분 사이에 신호가 없을 확률은 1분간 신호가 없었을 확률과 같으므로,
+		\[P\left(T > 1\right) = 1 - F\left(1\right) = e^{-2} \approx 0.1353\]이다.
+	}
+	\item [(4)] {
+		\[P\left(T > 3\right) = 1 - F\left(3\right) = e^{-6} \approx 0.002479\]
+	}
+	\item [(5)] {
+		$Y \sim \mathrm{Poi}\left(4\right)$에 대해 처음 2분 동안 신호가 없을 확률은 $P\left(Y=0\right)$, 2분과 4분 사이에 4건의 신호가 있을 확률은 
+		$P\left(Y=4\right)$이므로 동시에 일어날 확률은
+		\begin{align*}
+			P\left(Y=0\right)P\left(Y=4\right) &= \frac{4^0 e^{-4}}{0!} \times \frac{4^4 e^{-4}}{4!} \\
+			&= \frac{4^4 e^{-8}}{4!} \approx 0.003528
+		\end{align*}
+		이다.
+	}
+	\item [(6)] {
+		\begin{align*}
+			P\left(T<0.25\right) P\left(T>3\right) &= \left(1-e^{-0.5}\right)\left[1-\left(1-e^{-6}\right)\right] \\
+			&= e^{-6}\left(1-e^{-0.5}\right) \\
+			&\approx 0.0009753
+		\end{align*}
+	}
+\end{itemize}
+
+% Problem 16
+\subsubsection{16.} 가격이 200(천원)인 프린터의 수명은 평균 2년인 지수분포를 이룬다고 한다. 구매한 날로 1년 안에 프린터가 고장이 나면
+제조업자는 구매자에게 전액을 환불하고, 2년 안에 고장이 나면 반액을 환불할 것을 약속하였다. 만일 제조업자가 100대를 판매하였다면, 환불로 인하여 지불해야 할 평균 금액을 구하라.
+
+\paragraph{Solution.} 프린터의 수명을 $X \sim \mathrm{Exp}\left(\dfrac{1}{2}\right)$라고 하면, 누적분포함수 $F\left(x\right) = 1-e^{-\frac{1}{2}x}$이다.
+이 때 프린터가 1년 이내에 고장날 확률 $P\left(X\leq1\right) = 1-e^{-\frac{1}{2}}$이고,
+1년과 2년 사이에 고장날 확률 $P\left(1<X\leq2\right) = P\left(X\leq2\right) - P\left(X\leq1\right) = e^{-\frac{1}{2}} - e^{-1}$이므로
+프린터 한 대에 대한 평균 환불 금액은
+\begin{align*}
+	& 200 P\left(X\leq1\right) + 100 P\left(1<X\leq2\right) \\
+	=& 200 \left(1-e^{-\frac{1}{2}}\right) + 100 \left(e^{-\frac{1}{2}} - e^{-1}\right) \\
+	=& 200 - 100 e^{-\frac{1}{2}} - 100 e^{-1} \approx 102.6 \mbox{ (천원)}
+\end{align*}
+이고, 100대에 대해서는
+\[100\left(200 - 100 e^{-\frac{1}{2}} - 100 e^{-1}\right) \approx 10256 \mbox{ (천원)} \]
+이 된다. 따라서 평균적으로 10,255,899원을 환불해야 한다.
+
+% Problem 19
+\subsubsection{19.} 임의의 양수 $a$, $b$에 대하여 모수 $\lambda$인 지수분포를 갖는 확률변수 $X$는 다음 성질을 가짐을 보여라.
+\[P\left(X>a+b\middle|X>a\right) = P\left(X>b\right)\]
+
+\paragraph{Solution.} 지수분포의 누적분포함수 $F\left(x\right) = 1-e^{-\lambda x}$이다. 따라서
+\begin{align*}
+	P\left(X>a+b\middle|X>a\right) &= \frac{P\left(X>a+b\right)}{P\left(X>a+b\middle|X>a\right)} \\
+	&= \frac{1-F\left(a+b\right)}{1-F\left(a\right)} \\
+	&= \frac{1-\left(1-e^{-\lambda \left(a+b\right)}\right)}{1-\left(1-e^{-\lambda a}\right)} \\
+	&= \frac{e^{-\lambda \left(a+b\right)}}{e^{-\lambda a}} \\
+	&= e^{-b} = P\left(X>b\right)
+\end{align*}
+이다. $\qed$
+
+% Problem 20
+\subsubsection{19.} 임의의 양수 $\alpha$에 대하여 $\mathrm{\Gamma}\left(\alpha+1\right)=\alpha\mathrm{\Gamma}\left(\alpha\right)$이
+성립한다. 이것을 이용하여, $X\sim\mathrm{\Gamma}\left(\alpha,\,\beta\right)$에 대한 평균과 분산은 각각 $\mu=\alpha\beta$, $\sigma^2=\alpha\beta^2$임을 보여라.
+
+\paragraph{Solution.} $X\sim\mathrm{\Gamma}\left(\alpha,\,\beta\right)$의 확률밀도함수
+$f\left(x\right) = \dfrac{1}{\mathrm{\Gamma}\left(\alpha\right)\beta^\alpha}x^{\alpha-1}e^{-\frac{x}{\beta}}$이다.
+\begin{align*}
+	\mu &= \int_0^\infty x \cdot \dfrac{1}{\mathrm{\Gamma}\left(\alpha\right)\beta^\alpha}x^{\alpha-1}e^{-\frac{x}{\beta}} \mathop{dx} \\
+	&= \dfrac{1}{\mathrm{\Gamma}\left(\alpha\right)\beta^\alpha} \int_0^\infty x^{\alpha}e^{-\frac{x}{\beta}} \mathop{dx} \\
+	&= \dfrac{\mathrm{\Gamma}\left(\alpha + 1\right)\beta}{\mathrm{\Gamma}\left(\alpha\right)} \int_0^\infty \frac{1}{\mathrm{\Gamma}\left(\alpha+1\right)\beta^{\alpha+1}} x^{\alpha}e^{-\frac{x}{\beta}} \mathop{dx}
+\end{align*}
+에서 $\dfrac{1}{\mathrm{\Gamma}\left(\alpha+1\right)\beta^{\alpha+1}} x^{\alpha}e^{-\frac{x}{\beta}}$은
+$\mathrm{\Gamma}\left(\alpha + 1,\,\beta\right)$의 확률밀도함수이므로 $\displaystyle \int_0^\infty \dfrac{1}{\mathrm{\Gamma}\left(\alpha+1\right)\beta^{\alpha+1}} x^{\alpha}e^{-\frac{x}{\beta}} \mathop{dx} = 1$이고,
+감마함수의 정의에 의해 $\dfrac{\mathrm{\Gamma}\left(\alpha + 1\right)}{\mathrm{\Gamma}\left(\alpha\right)} = \alpha$이므로 $\mu = \alpha\beta$이다.
+
+분산을 구하기 위해 $\mathrm{E}\left(X^2\right)$를 계산하면
+\begin{align*}
+	\mathrm{E}\left(X^2\right) &= \int_0^\infty x^2 \cdot \dfrac{1}{\mathrm{\Gamma}\left(\alpha\right)\beta^\alpha}x^{\alpha-1}e^{-\frac{x}{\beta}} \mathop{dx} \\
+	&= \dfrac{1}{\mathrm{\Gamma}\left(\alpha\right)\beta^\alpha} \int_0^\infty x^{\alpha + 1}e^{-\frac{x}{\beta}} \mathop{dx} \\
+	&= \dfrac{\mathrm{\Gamma}\left(\alpha+2\right)\beta^2}{\mathrm{\Gamma}\left(\alpha\right)} \int_0^\infty \frac{1}{\mathrm{\Gamma}\left(\alpha+2\right)\beta^{\alpha+2}} x^{\alpha + 1}e^{-\frac{x}{\beta}} \mathop{dx} \\
+\end{align*}
+에서, $\dfrac{1}{\mathrm{\Gamma}\left(\alpha+2\right)\beta^{\alpha+2}} x^{\alpha + 1}e^{-\frac{x}{\beta}}$은
+$\mathrm{\Gamma}\left(\alpha + 2,\,\beta\right)$의 확률밀도함수이므로 $\displaystyle \int_0^\infty \frac{1}{\mathrm{\Gamma}\left(\alpha+2\right)\beta^{\alpha+2}} x^{\alpha + 1}e^{-\frac{x}{\beta}} \mathop{dx} = 1$이다.
+따라서
+\begin{align*}
+	\mathrm{E}\left(X^2\right) &= \dfrac{\mathrm{\Gamma}\left(\alpha+2\right)\beta^2}{\mathrm{\Gamma}\left(\alpha\right)} \times 1 \\
+	&= \dfrac{\left(\alpha+1\right)\mathrm{\Gamma}\left(\alpha+1\right)\beta^2}{\mathrm{\Gamma}\left(\alpha\right)} \\
+	&= \dfrac{\alpha\left(\alpha+1\right)\mathrm{\Gamma}\left(\alpha\right)\beta^2}{\mathrm{\Gamma}\left(\alpha\right)} = \alpha\left(\alpha+1\right)\beta^2
+\end{align*}
+이다. 분산 $\sigma^2 = \mathrm{E}\left(X^2\right) - \left[\mathrm{E}\left(X\right)\right]^2$이므로
+\begin{align*}
+	\sigma^2 &= \alpha\left(\alpha+1\right)\beta^2 - \left(\alpha\beta\right)^2 \\
+	&= \alpha\beta^2
+\end{align*}
+이다. $\qed$

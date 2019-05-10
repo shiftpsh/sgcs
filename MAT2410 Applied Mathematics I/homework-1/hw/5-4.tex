@@ -1,0 +1,114 @@
+% Problem 1
+\subsubsection{1.} $X\sim\mathrm{\chi^2}\left(12\right)$에 대하여, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] $\mu=\mathrm{E}\left(X\right)$
+	\item [(2)] $\sigma^2=\mathrm{Var}\left(X\right)$
+	\item [(3)] $P\left(X>5.23\right)$
+	\item [(4)] $P\left(X<21.03\right)$
+	\item [(5)] $\mathrm{\chi^2_{0.995}}\left(12\right)$
+	\item [(6)] $\mathrm{\chi^2_{0.005}}\left(12\right)$
+\end{itemize}
+
+\paragraph{Solution.} $\mathrm{\chi^2}$-분포표로부터 값들을 얻을 수 있다.
+
+\begin{itemize}
+	\item [(1)] $\mu=12$
+	\item [(2)] $\sigma^2 = 2\times12 = 24$
+	\item [(3)] $P\left(X>5.23\right)\approx0.95$
+	\item [(4)] $P\left(X>21.05\right)\approx0.05$이므로 $P\left(X<21.05\right)\approx0.95$
+	\item [(5)] $3.07$
+	\item [(6)] $28.30$
+\end{itemize}
+
+\paragraph{Solution.}
+
+% Problem 2
+\subsubsection{2.} $X\sim\mathrm{\chi^2}\left(10\right)$에 대하여, $P\left(X<a\right)=0.05$, $P\left(a<X<b\right)=0.90$을 만족하는
+상수 $a$와 $b$를 구하라.
+
+\paragraph{Solution.} $P\left(X<a\right)=0.05$라면 $P\left(X>a\right)=0.95$이고, $P\left(a<X<b\right)=0.90$이라면 $P\left(X>b\right)=0.05$이다.
+따라서 $\mathrm{\chi^2}$-분포표로부터 $a \approx 3.94$, $b \approx 18.31$을 얻을 수 있다.
+
+% Problem 3
+\subsubsection{3.} $\mathrm{t}$-분포표를 이용하여 $T\sim \mathrm{t}\left(12\right)$일 때, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] $t_{0.1}\left(12\right)$
+	\item [(2)] $t_{0.01}\left(12\right)$
+	\item [(3)] $P\left(T\leq t_0\right)=0.995$을 만족하는 $t_0$
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] $P\left(T>t_{0.1}\left(12\right)\right) = 0.1$에서 $t_{0.1}\left(12\right) \approx 1.356$
+	\item [(2)] $P\left(T>t_{0.01}\left(12\right)\right) = 0.01$에서 $t_{0.01}\left(12\right) \approx 2.681$
+	\item [(3)] $P\left(T\leq t_0\right)=0.995$이라면 $P\left(T>t_0\right)=0.005$이므로 이 때의 $t_0 \approx 3.055$
+\end{itemize}
+
+% Problem 4
+\subsubsection{4.} $\mathrm{F}$-분포표를 이용하여 $F\sim \mathrm{F}\left(8,\,6\right)$일 때, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] $f_{0.01}\left(8,\,6\right)$
+	\item [(2)] $f_{0.05}\left(8,\,6\right)$
+	\item [(3)] $f_{0.90}\left(8,\,6\right)$
+	\item [(4)] $f_{0.99}\left(8,\,6\right)$
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] $P\left(F>f_{0.01}\left(8,\,6\right)\right)=0.01$에서 $f_{0.01}\left(8,\,6\right)\approx 6.37$
+	\item [(2)] $P\left(F>f_{0.05}\left(8,\,6\right)\right)=0.05$에서 $f_{0.05}\left(8,\,6\right)\approx 3.58$
+	\item [(3)] $f_{0.90}\left(8,\,6\right)=\left[f_{0.10}\left(8,\,6\right)\right]^{-1}\approx 0.34$
+	\item [(4)] $f_{0.99}\left(8,\,6\right)=\left[f_{0.01}\left(8,\,6\right)\right]^{-1}\approx 0.12$
+\end{itemize}
+
+% Problem 7
+\subsubsection{7.} 어느 기업의 주식을 10,000원에 구입하였고, 이 주식의 가치는 연간 10\%의 연속적인 성장을 한다고 한다.
+그리고 이 주식의 성장비율 $Y$는 $\mu_Y=0.1$, $\sigma^2_Y=0.04$인 정규분포에 따른다고 한다.
+
+\begin{itemize}
+	\item [(1)] 6개월 후, 이 주식의 가치를 구하라.
+	\item [(2)] 1년 후의 주식 가격 $X=10000e^Y$의 평균과 분산을 구하라.
+	\item [(3)] 1년 후 주식 가격이 11,750원 이상 12,250원 이하일 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] {
+		$V\left(0\right)=10000$이고 $r=0.1$에서
+		\[V\left(0.5\right)=10000e^{0.1\times0.5} \approx 10510\mbox{ (원)}\]
+		을 얻는다.
+	}
+	\item [(2)] {
+		$\mu_Y=0.1$, $\sigma^2_Y=0.04$에서 $X$의 평균 $\mu_X$는
+		\begin{align*}
+			\mu_X &= \mathrm{E}\left(10000 e^Y\right) \\
+			&= 10000 e^{0.1+\frac{0.04}{2}}\\
+			&\approx 11270\mbox{ (원)}
+		\end{align*}
+		이고, 분산 $\sigma^2_X$는
+		\begin{align*}
+			\sigma^2_X &= \mathrm{Var}\left(10000 e^Y\right) \\
+			&= 10000^2 \left(e^{0.04}-1\right)e^{0.2+0.04}\\
+			&\approx 51680000 \mbox{ (원)}
+		\end{align*}
+		이다.
+	}
+	\item [(3)] {
+		1년 후 주식 가격이 11,750원 이상 12,250원 이하일 확률 $P\left(11750 \leq X \leq 12250\right)$은
+		\begin{align*}
+			P\left(11750 \leq X \leq 12250\right) &= P\left(11750 \leq 10000e^Y \leq 12250\right) \\
+			&= P\left(1.175 \leq e^Y \leq 1.225\right) \\
+			&= P\left(\ln 1.175 \leq Y \leq \ln 1.225\right) \\
+			&\approx P\left(0.1613 \leq Y \leq 0.2029\right) \\
+			&= P\left(0.3065 \leq Z \leq 0.5145\right) \\
+			&\approx 0.07616
+		\end{align*}
+		이다.
+	}
+\end{itemize}

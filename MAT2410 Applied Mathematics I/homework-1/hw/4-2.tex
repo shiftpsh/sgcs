@@ -1,0 +1,65 @@
+% Problem 3
+\subsubsection{3.} 비복원추출에 의하여 52장의 카드가 들어 있는 주머니에서 임의로 세 장의 카드를 꺼낼 때, 세 장의 카드 안에 포함된 하트의 수를 확률변수 $X$라 한다.
+
+\begin{itemize}
+	\item [(1)] $X$의 확률질량함수를 구하라.
+    \item [(2)] 평균과 표준편차를 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item [(1)] {
+        카드 52장 중 3장을 뽑는 경우의 수는 $\displaystyle \binom{52}{3}$이고,
+        3장 중 하트가 $x$장 나오는 경우의 수는 $\displaystyle \binom{13}{x}\binom{39}{3 - x}$이다. 따라서 확률질량함수는
+        \[\frac{\displaystyle\binom{13}{x}\binom{39}{3 - x}}{\displaystyle\binom{52}{3}} \qquad x=0,\,1,\,2,\,3\]
+        이며, $X \sim \mathrm{H}\left(52,\,13,\,3\right)$이다.
+    }
+    \item [(2)] {
+            \begin{align*}
+                \mu &= n\frac{M}{N}\\
+                &= 3\times\frac{13}{52}\\
+                &= \frac{3}{4}\\
+                \sigma^2 &= n\frac{M}{N}\frac{N-M}{N}\frac{N-n}{N-1}\\
+                &= 3\times\frac{13}{52}\frac{39}{52}\frac{49}{51}\\
+                &= \frac{147}{272}\\
+                \therefore \sigma &= \sqrt{\frac{147}{212}}
+            \end{align*}
+    }
+\end{itemize}
+
+% Problem 6
+\subsubsection{6.} 지하수 오염 실태를 조사하기 위하여 30곳의 구멍을 뚫어 수질을 조사하였다. 그 걀과 19곳은 오염이 매우 심각하였고, 6곳은 약간 오염되었다고 보고하였다. 그러나
+채취한 지하수 병들이 섞여 있어 어느 지역이 깨끗한 지하수를 갖고 있는지 모르는 상황에서 5곳을 선정하였을 때, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] 오염 정도에 따른 확률분포
+    \item [(2)] 선정된 5곳 중에서 매우 심각하게 오염된 지역이 3곳, 약간 오염된 지역이 1곳일 확률
+    \item [(3)] 5곳 중에서 적어도 4곳에서 심각하게 오염되었을 확률
+\end{itemize}
+
+\paragraph{Solution.} 선정한 5곳 중 매우 심각하게 오염된 지역의 수를 $X$, 약간 오염된 지역의 수를 $Y$라 하자.
+\begin{itemize}
+	\item[(1)] {
+        30곳 중 5곳을 선정했는데 매우 심각하게 오염된 지역을 $x$곳, 약간 오염된 지역을 $y$곳 선정했을 확률을 $f\left(x,\,y\right)$라 하면
+	    \begin{align*}
+            f\left(x,\,y\right) &= \frac{\displaystyle \binom{19}{x}\binom{6}{y}\binom{30-19-6}{5-x-y}}{\displaystyle\binom{30}{5}}\\
+            &= \frac{\displaystyle \binom{19}{x}\binom{6}{y}\binom{5}{5-x-y}}{\displaystyle\binom{30}{5}} \qquad 0 \leq x + y \leq 5,\, 0 \leq x,\,y \leq 5,\,x,\,y\in \mathbb{Z}
+	    \end{align*}
+        이며, 확률분포는 확률질량함수 $f$를 갖는다.
+    }
+    \item[(2)] {
+	    \begin{align*}
+            f\left(3,\,1\right) &= \frac{\displaystyle \binom{19}{3}\binom{6}{1}\binom{5}{1}}{\displaystyle\binom{30}{5}}\\
+            &= \frac{1615}{7917} \approx 0.2040
+	    \end{align*}
+    }
+    \item[(3)] {
+	    \begin{align*}
+            P\left(X \geq 4\right) &= f\left(4,\,0\right) + f\left(4,\,1\right) + f\left(5,\,0\right)\\
+            &=\frac{\displaystyle \binom{19}{4}\binom{6}{0}\binom{5}{1}}{\displaystyle\binom{30}{5}} +
+            \frac{\displaystyle \binom{19}{4}\binom{6}{1}\binom{5}{0}}{\displaystyle\binom{30}{5}} +
+            \frac{\displaystyle \binom{19}{5}\binom{6}{0}\binom{5}{0}}{\displaystyle\binom{30}{5}}\\
+            &= \frac{1292}{3393} \approx 0.3808
+        \end{align*}
+    }
+\end{itemize}

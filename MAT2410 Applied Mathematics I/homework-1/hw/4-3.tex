@@ -1,0 +1,82 @@
+% Problem 3
+\subsubsection{3.} Society of Actuaries(SOA)의 확률 시험문제는 5지 선다형으로 제시된다. 15문항의 SOA 시험 문제 중에서 지문을 임의로 선택할 때, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] 정답을 선택한 평균 문항 수
+    \item [(2)] 정답을 정확히 5개 선택할 확률
+    \item [(3)] 정답을 4개 이상 선택할 확률
+\end{itemize}
+
+\paragraph{Solution.} 정답을 선택한 문제의 개수를 확률변수 $X$라 하면 $X \sim \mathrm{B}\left(15, \dfrac{1}{5}\right)$이다.
+\begin{itemize}
+	\item[(1)] \[\mathrm{E}\left(X\right) = 15\times\frac{1}{5} = 3\]
+	\item[(2)] {
+        \begin{align*}
+            P\left(X=5\right) &= \binom{15}{5} \left(\frac{1}{5}\right)^5 \left(1 - \frac{1}{5}\right)^{15-5}\\
+            &\approx 0.1032
+        \end{align*}
+    }
+    \item[(3)] {
+        \begin{align*}
+            P\left(X \geq 4\right) &= 1 - P\left(X \leq 3\right)\\
+            &= 1 - \sum_{i = 0}^3 \binom{15}{i} \left(\frac{1}{5}\right)^i \left(1-\frac{1}{5}\right)^{15-i}\\
+            &\approx 0.3518
+        \end{align*}
+    }
+\end{itemize}
+
+% Problem 6
+\subsubsection{6.} 지방의 어느 중소도시에서 5\%의 사람이 특이한 질병에 걸렸다고 한다. 이들 중에서 임의로 5명을 선정하였을 때, 이 질병에 걸린 사람이 2명 이하일 확률을 구하라.
+
+\paragraph{Solution.} 질병에 걸린 사람의 수를 확률변수 $X$라 하면 $X \sim \mathrm{B}\left(5,\,\dfrac{1}{20}\right)$이다. 따라서
+\begin{align*}
+    P\left(X \leq 2\right) &= \sum_{i = 0}^2 \binom{5}{i} \left(\frac{1}{20}\right)^i \left(1-\frac{1}{20}\right)^{5 - i}\\
+    &\approx 0.9988
+\end{align*}
+
+% Problem 7
+\subsubsection{7.} 수도권 지역에서 B$^+$ 혈액형을 가진 사람의 비율이 10\%라고 한다. 이 때 헌혈센터에서 20명이 헌혈을 했을 때, 그들 중 정확히 4명이 B$^+$ 혈액형일 확률과
+적어도 3명이 B$^+$일 확률을 구하라.
+
+\paragraph{Solution.} B$^+$ 혈액형을 가진 사람의 수를 확률변수 $X$라 하면 $X \sim \mathrm{B}\left(20,\,\dfrac{1}{10}\right)$이다. 따라서
+\begin{itemize}
+    \item[(1)] {
+        \begin{align*}
+            P\left(X=4\right) &= \binom{20}{4} \left(\frac{1}{10}\right)^4 \left(1-\frac{1}{10}\right)^{16}\\
+            &\approx 0.0898
+        \end{align*}
+    }
+    \item[(2)] {
+        \begin{align*}
+            P\left(X \geq 3\right) &= \sum_{i=3}^{20} \binom{20}{i} \left(\frac{1}{10}\right)^i \left(1-\frac{1}{10}\right)^{20-i}\\
+            &\approx 0.3231
+        \end{align*}
+    }
+\end{itemize}
+
+% Problem 14
+\subsubsection{14.} $X \sim \mathrm{H}\left(N,\,r,\,n\right)$에 대하여 $r/N=p$로 일정하고 $N \rightarrow \infty$이면, $X$의 확률분포는 모수
+$n$과 $p$를 갖는 이항분포에 가까워짐을 보여라.
+
+\paragraph{Solution.} $\mathrm{H}\left(N,\,r,\,n\right)$의 확률질량함수는
+\[f\left(x\right) = \frac{\displaystyle \binom{r}{x} \binom{N-r}{n-x}}{\displaystyle \binom{N}{n}} \qquad 0 \leq x < n,\, x \in \mathbb{Z}\]
+이다. 이 때
+\begin{align*}
+    & \frac{\displaystyle \binom{r}{x} \binom{N-r}{n-x}}{\displaystyle \binom{N}{r}}\\
+    =& \frac{\dfrac{r!}{x!\left(r - x\right)!}\times\dfrac{\left(N - r\right)!}{\left(n - x\right)!\left(N - r - n + x\right)!}}{\dfrac{N!}{n!\left(N - n\right)!}}\\
+    =& \frac{n!}{x!\left(n - x\right)!}\times\frac{r!\left(N - r\right)!}{N!}\times\frac{\left(N - n\right)!}{\left(r - x\right)!\left(N - n - r + x\right)!}\\
+    =& \binom{n}{x} \times \prod_{i=1}^x \frac{(r-x+i)}{(N-x+i)} \times \prod_{i=1}^{n-x}\frac{(N-r-(n-x)+i)}{(N-n+i) }
+\end{align*}
+이다. 한편
+\begin{align*}
+    \lim_{N\rightarrow\infty} \frac{(r-x+i)}{(N-x+i)} &= \lim_{N\rightarrow\infty} \frac{r}{N} = p,\\
+    \lim_{N\rightarrow\infty} \frac{(N-r-(n-x)+i)}{(N-n+i) } &= \lim_{N\rightarrow\infty} \frac{N-r}{N} = 1-p
+\end{align*}
+이므로
+\begin{align*}
+    \lim_{N\rightarrow\infty}  f\left(x\right) =&\lim_{N\rightarrow\infty} \frac{\displaystyle \binom{r}{x} \binom{N-r}{n-x}}{\displaystyle \binom{N}{r}}\\
+    =& \lim_{N\rightarrow\infty} \binom{n}{x} \times \prod_{i=1}^x \frac{(r-x+i)}{(N-x+i)} \times \prod_{i=1}^{n-x}\frac{(N-r-(n-x)+i)}{(N-n+i) }\\
+    =& \binom{n}{x} p^{x} \left(1-p\right)^{n-x}
+\end{align*}
+인데, 이는 $\mathrm{B}\left(n,\,p\right)$의 확률질량함수이다. 따라서 $N \rightarrow \infty$이면
+$\mathrm{H}\left(N,\,r,\,n\right) \rightarrow \mathrm{B}\left(n,\,p\right)$이다. $\qed$

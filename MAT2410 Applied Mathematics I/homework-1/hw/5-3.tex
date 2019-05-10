@@ -1,0 +1,190 @@
+% Problem 3
+\subsubsection{3.} $X\sim\mathrm{N}\left(77,\,16\right)$에 대하여 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] $X$가 평균을 중심으로 10\% 안에 있지 않은 확률
+	\item [(2)] $X$의 분포에 대한 25-백분위수
+	\item [(3)] $X$의 분포에 대한 75-백분위수
+	\item [(4)] $P\left(\mu-x_0 < X < \mu+x_0\right)=0.95$인 $x_0$
+\end{itemize}
+
+\paragraph{Solution.} $X$를 표준화시키면 $Z = \dfrac{X - 77}{\sqrt{16}} = \dfrac{X - 77}{4}$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		$X$가 평균을 중심으로 10\% 안에 있을 확률을 구하면 
+		\begin{align*}
+			P\left(\left|X-\mu\right|\leq 0.1\mu\right) &= P\left(-0.1\mu \leq X-\mu \leq 0.1\mu\right) \\
+			&= P\left(69.3\leq X-\mu \leq 84.7\right) \\
+			&= P\left(\frac{69.3-77}{4}\leq \frac{X-77}{4} \leq \frac{84.7-77}{4}\right) \\
+			&= P\left(-1.925 \leq Z \leq 1.925\right) \\
+			&\approx 0.9729
+		\end{align*}
+		이므로, 구하고자 하는 확률은 약 $1-0.9729=0.02712$이다.
+	}
+	\item [(2)] {
+		25-백분위수 $p_{25}$에 대해 $P\left(X\leq p_{25}\right) = 0.25$를 만족하므로
+		\begin{align*}
+			P\left(X\leq p_{25}\right) &= P\left(\frac{X-77}{4}\leq \frac{p_{25}-77}{4}\right) \\
+			&= P\left(Z \leq \frac{p_{25}-77}{4}\right) = 0.25
+		\end{align*}
+		이다. 표준정규분포표를 이용해 $\dfrac{p_{25}-77}{4} \approx -0.675$를 얻을 수 있으며, 이 때 $p_{25}$는 약 74.3이다.
+	}
+	\item [(3)] {
+		(2)와 같은 방법으로 구하면 $p_{75}$는 약 79.7이다.
+	}
+	\item [(4)] {
+		\begin{align*}
+			P\left(\mu-x_0 < X < \mu+x_0\right) &= P\left(\frac{-x_0}{4} < \frac{X-77}{4} < \frac{x_0}{4}\right) \\
+			&= P\left(-\frac{x_0}{4} < Z < \frac{x_0}{4}\right)
+		\end{align*}
+		이므로, $\dfrac{x_0}{4} \approx 1.96$을 얻는다. 따라서 $x_0 \approx 7.84$이다.
+	}
+\end{itemize}
+
+% Problem 4
+\subsubsection{4.} $X\sim\mathrm{N}\left(4,\,9\right)$에 대하여 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] $P\left(X<7\right)$
+	\item [(2)] $P\left(X\leq x_0\right)=0.9750$인 $x_0$
+	\item [(3)] $P\left(1<X<x_0\right)=0.756$인 $x_0$
+\end{itemize}
+
+\paragraph{Solution.} $X$를 표준화시키면 $Z = \dfrac{X - 4}{\sqrt{9}} = \dfrac{X - 4}{3}$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		\begin{align*}
+			P\left(X<7\right) &= P\left(Z<\frac{7-4}{3}\right) \\
+			&= P\left(Z<1\right)
+			&\approx 0.8413
+		\end{align*}
+	}
+	\item [(2)] {
+		표준정규분포표에서 $P\left(Z<1.96\right)\approx 0.9750$이다. 따라서
+		\begin{align*}
+			\frac{x_0-4}{3} &\approx 1.96 \\
+			x_0 &\approx 9.88
+		\end{align*}
+		이다.
+	}
+	\item [(3)] {
+		$P\left(1<X<x_0\right)=0.95$이면 $P\left(X<x_0\right) - P\left(X<1\right)=0.95$인데,
+		$P\left(X<1\right)$은 $P\left(Z<-1\right) \approx 0.1587$이므로 $P\left(X<x_0\right) \approx 0.9147$이다.
+		$P\left(Z<1.37\right) \approx 0.9147$이므로 $\dfrac{x_0-4}{3} \approx 1.37$이고, $x_0 \approx 8.11$이다.
+	}
+\end{itemize}
+
+% Problem 10
+\subsubsection{10.} 대구에서 서울까지 기차로 걸리는 시간은 $X\sim\mathrm{N}\left(3.5,\,0.4\right)$인 정규분포를 이루고, 고속버스로 걸리는 시간은
+$Y\sim\mathrm{N}\left(3.8,\,0.9\right)$인 정규분포를 이룬다고 한다.
+
+\begin{itemize}
+	\item [(1)] $P\left(X\leq3.2\right)$일 확률을 구하라.
+	\item [(2)] $P\left(Y\leq3.2\right)$일 확률을 구하라.
+	\item [(3)] $X-Y$의 확률분포를 구하라.
+	\item [(4)] $P\left(\left|X-Y\right|\leq0.1\right)$일 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} $\dfrac{X-3.5}{\sqrt{0.4}} = Z$이고, $\dfrac{Y-3.8}{\sqrt{0.9}} = Z$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		\begin{align*}
+			P\left(X\leq3.2\right) &= P\left(Z\leq\frac{3.2-3.5}{\sqrt{0.4}}\right)  \\
+			&\approx P\left(Z\leq-0.4743\right) \\
+			&\approx 0.3176
+		\end{align*}
+	}
+	\item [(2)] {
+		\begin{align*}
+			P\left(Y\leq3.2\right) &= P\left(Z\leq\frac{3.2-3.8}{\sqrt{0.9}}\right)  \\
+			&\approx P\left(Z\leq-0.6325\right) \\
+			&\approx 0.2635
+		\end{align*}
+	}
+	\item [(3)] $X-Y \sim \mathrm{N}\left(-0.3,\,1.3\right)$
+	\item [(4)] {
+		$\dfrac{X-Y+0.3}{\sqrt{1.3}} = Z$이다.
+		\begin{align*}
+			P\left(\left|X-Y\right|\leq0.1\right) &= P\left(\dfrac{0.2}{\sqrt{1.3}}\leq Z\leq\dfrac{0.4}{\sqrt{1.3}}\right) \\
+			&\approx P\left(0.1754\leq Z\leq0.3508\right) \\
+			&\approx 0.06752
+		\end{align*}
+	}
+\end{itemize}
+
+
+% Problem 16
+\subsubsection{16.} 컴퓨터를 이용하여 얻은 $\left[0,\,1\right]$에서 균등분포를 이루는 100개의 독립인 확률변수들 $X_1,\,X_2,\,\cdots,\,X_{100}$에 대하여
+다음을 구하여라.
+
+\begin{itemize}
+	\item [(1)] $S=X_1,\,X_2,\,\cdots,\,X_{100}$이 45와 55 사이일 근사확률
+	\item [(2)] 표본평균 $\overline{X}$가 0.55 이상일 확률
+\end{itemize}
+
+\paragraph{Solution.} $X_i \sim \mathrm{U}\left(0, 1\right)$이다. 따라서 $\mu=\dfrac{1}{2}$, $\sigma^2=\dfrac{1}{12}$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		중심극한정리에 의하면
+		\[X=\sum_{i=1}^{100} X_i \approx \mathrm{N}\left(100\mu,\,100\sigma^2\right)\]
+		이므로, $X$의 분포는 $\mathrm{N}\left(50,\,\dfrac{25}{3}\right)$로 근사되며
+		$\dfrac{X-50}{\sqrt{\dfrac{25}{3}}}=\dfrac{\sqrt{3}\left(X-50\right)}{5}\approx Z$이다. 이 때 45와 55 사이일 근사확률은
+		\begin{align*}
+			P\left(45\leq X\leq 55\right) &\approx P\left(-\sqrt{3} \leq Z \leq \sqrt{3}\right) \\
+			&\approx P\left(-1.732 \leq Z \leq 1.732\right) \\
+			&\approx 0.9167
+		\end{align*}
+		이다.
+	}
+	\item [(2)] {
+		$\overline{X} \approx \mathrm{N}\left(\mu, \dfrac{\sigma^2}{n}\right) = \mathrm{N}\left(\dfrac{1}{2}, \dfrac{1}{1200}\right)$이다.
+		이 때 $\dfrac{\overline{X}-\dfrac{1}{2}}{\sqrt{\dfrac{1}{1200}}} = 10\sqrt{3} \left(2\overline{X}-1\right) \approx Z$이다. 따라서
+		\begin{align*}
+			P\left(\overline{X} \geq 0.55\right) &\approx P\left(Z \geq 10\sqrt{3} \left(0.10\right)\right) \\
+			&\approx P\left(Z \geq 1.732\right) \\
+			&\approx 0.04163
+		\end{align*}
+		이다.
+	}
+\end{itemize}
+
+
+% Problem 19
+\subsubsection{19.} $X\sim\mathrm{B}\left(16,\,0.5\right)$일 때, 연속성을 수정한 근사확률
+$P\left(8\leq X\leq10\right)$과 $P\left(X\geq10\right)$을 구하라.
+
+\paragraph{Solution.} $\mu = np = 8$, $\sigma^2 = np\left(1-p\right) = 4$이다.
+따라서 $\mathrm{B}\left(16,\,0.5\right) \approx \mathrm{N}\left(8,\,4\right)$이고, $\dfrac{X-8}{2} \approx Z$이다. 연속성을 수정하면
+\begin{align*}
+	P\left(8\leq X\leq 10\right) &\approx P\left(-0.25\leq Z\leq 1.25\right) \approx 0.4931 \\
+	P\left(X\geq 10\right) &\approx P\left(Z\geq 0.75\right) \approx 0.2266
+\end{align*}
+이다.
+
+% Problem 21
+\subsubsection{21.} Society of Actuaries(SOA)의 확률 시험문제는 5지 선다형으로 제시된다. 100문항의 SOA 시험문제 중에서 지문을 임의로 선택할 때, 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] 평균적으로 정답을 선택한 문항 수
+	\item [(2)] 정답을 정확히 8개 선택할 근사확률
+\end{itemize}
+
+\paragraph{Solution.} 정답을 선택할 확률은 $\dfrac{1}{5}$이므로 정답의 개수 $X \sim \mathrm{B}\left(100, \dfrac{1}{5}\right)$이다.
+
+\begin{itemize}
+	\item [(1)] $\mu = 20$
+	\item [(2)] {
+		$\sigma^2 = 20\times\dfrac{1}{5}\times\dfrac{4}{5} = 16$이므로 $X$를 정규분포에 근사하면 $\mathrm{N}\left(20,\,16\right)$을
+		얻을 수 있다. 이 때 $\dfrac{X-20}{4}\approx Z$이므로, 따라서
+		\begin{align*}
+			P\left(X=8\right) &= P\left(7.5\leq X\leq 8.5\right) \\
+			&\approx P\left(-3.125 \leq Z \leq -2.875\right) \\
+			&\approx 0.001131
+		\end{align*}
+		이다.
+	}
+\end{itemize}

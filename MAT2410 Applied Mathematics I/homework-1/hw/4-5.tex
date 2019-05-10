@@ -1,0 +1,148 @@
+% Problem 2
+\subsubsection{2.} 보험회사는 10년 기간의 보험증권을 소지한 가입자 5,000명을 가지고 있다. 이 기간 동안에 12,200개의 보험금 지급 요구가 있었고,
+지급 요구 건수는 푸아송 분포를 이룬다고 한다.
+
+\begin{itemize}
+	\item [(1)] 연간 보험증권당 요구 건수의 평균을 구하라.
+	\item [(2)] 1년에 한 건 이하의 요구가 있을 확률을 구하라.
+	\item [(3)] 보혐금 지급 요구 건당 1,000만 원의 보험금이 지급된다면, 1년에 한 보험가입자에게 지급될 평균 보험금을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 단위기간을 1년으로 두면, 지급 요구 건수는 평균적으로 1,220건일 것이다.
+
+\begin{itemize}
+	\item [(1)] {
+		\[\mathrm{E}\left(X\right) = \frac{1220}{5000} = 0.244\]
+		이고, 단위 기간이 1년일 때 개인당 지급 요구 건수 $X \sim \mathrm{Poi}\left(0.244\right)$이다.
+	}
+	\item [(2)] {
+		\begin{align*}
+			P\left(X\leq 1\right) &= P\left(X=0\right) + P\left(X=1\right) \\
+			&= \frac{0.244^0\times e^{-0.244}}{0!} + \frac{0.244^1\times e^{-0.244}}{1!} \\
+			&= \frac{1.244}{e^{0.244}} \approx 0.9747
+		\end{align*}
+	}
+	\item [(3)] $10^7 \mathrm{E}\left(X\right) = 244 \times 10^4$이므로 1년에 한 보험가입자에게 지급될 평균 보험금은 244만원이다.
+\end{itemize}
+
+% Problem 3
+\subsubsection{3.} 보험회사는 보험 가입자가 보험금 지급 요구를 네 번 신청할 확률이 두 번 신청할 확률의 3배가 되는 것을 발견했다.
+보험금 지급 요구 건수가 푸아송 분포를 이룬다고 할 때, 요구 건수의 분산을 구하라.
+
+\paragraph{Solution.} 지급 요구 건수 $X \sim \mathrm{Poi}\left(\lambda\right)$에 대하여 $P\left(X=4\right)=3P\left(X=2\right)$로 두면
+\begin{align*}
+	 &\frac{\lambda^4 e^{-\lambda}}{4!} = 3\times \frac{\lambda^2 e^{-\lambda}}{2!} \\
+	\Rightarrow& \lambda^2 = \frac{3\times 4!}{2!} = 36 \\
+	\Rightarrow& \lambda = 6
+\end{align*}
+이므로, 분산 $\mathrm{Var}\left(X\right) = 6$이다.
+
+% Problem 8
+\subsubsection{8.} 우리나라 동남부 지역에서 단위시간으로써 1년에 3번 지진이 일어난다고 한다.
+
+\begin{itemize}
+	\item [(1)] 앞으로 2년간 적어도 3번의 지진이 일어날 확률을 구하라.
+	\item [(2)] 지금부터 다음 지진이 일어날 때까지 걸리는 시간 $T$의 확률분포를 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 1년간 지진의 발생 횟수 $X \sim \mathrm{Poi}\left(3\right)$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		2년간 지진의 발생 횟수 $Y \sim \mathrm{Poi}\left(6\right)$이므로
+		\begin{align*}
+			P\left(Y\geq3\right) &= 1 - P\left(Y\leq2\right) \\
+			&= 1 - \sum_{k=0}^2 P\left(Y=k\right) \\
+			&= 1 - \sum_{k=0}^2 \frac{6^k e^{-6}}{k!} \\ 
+			&= 1 - 25e^{-6} \approx 0.9380
+		\end{align*}
+	}
+	\item [(2)] {
+		$T \sim \mathrm{Exp}\left(3\right)$이다.
+	}
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 해저 케이블에 생긴 결함의 수는 1km당 발생 비율 $\lambda = 0.15$인 푸아송 과정에 따른다고 한다.
+
+\begin{itemize}
+	\item [(1)] 처음 3km에서 결함이 발견되지 않을 확률을 구하라.
+	\item [(2)] 처음 3km에서 결함이 발견되지 않았다고 할 때, 처음부터 3km 지점과 4km 지점에서 결함이 발견되지 않을 확률을 구하라.
+	\item [(3)] 처음 3km 지점 이전에 1개, 3km 지점과 4km 지점에서 1개의 결함이 발견되지만, 4km 지점과 5km 지점에서 결함이 발견되지 않을 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.} 1km당 결함의 수 $X \sim \mathrm{Poi}\left(0.15\right)$이다.
+또한 $x$km당 결함의 수 $X\left(x\right) \sim \mathrm{Poi}\left(0.15x\right)$이다.
+
+\begin{itemize}
+	\item [(1)] {
+		처음 3km에서 결함이 발견되지 않을 확률은 $P\left(X\left(3\right) = 0\right)$이다.
+		$X\left(3\right) \sim \mathrm{Poi}\left(0.45\right)$이므로
+		\begin{align*}
+			P\left(X\left(3\right)=0\right) &= \frac{0.45^0 e^{-0.45}}{0!}\\
+			&= e^{-0.45} \approx 0.6376
+		\end{align*}
+		이다.
+	}
+	\item [(2)] {
+		처음부터 3km 지점과 4km 지점에서 결함이 발견되지 않는 사건은 처음 3km에서 결함이 발견되지 않는 사건과 독립이다. 따라서 3km 지점과 4km 지점의 사이 1km 구간에서
+		결함이 발견되지 않을 확률은 $P\left(X\left(1\right) = 0\right)$이고, (1)과 같은 방법으로 계산하면 $e^{-0.15} \approx 0.8607$이다.
+	}
+	\item [(3)] {
+		처음 3km 지점 이전에 1개가 발견될 확률은 $P\left(X\left(3\right) = 1\right)$,
+		3km 지점과 4km 지점에서 1개의 결함이 발견될 확률은 $P\left(X\left(1\right) = 1\right)$,
+		4km 지점과 5km 지점에서 결함이 발견되지 않을 확률은 $P\left(X\left(1\right) = 0\right)$이므로 이 사건들이 동시에 일어날 확률은
+		\begin{align*}
+			& P\left(X\left(3\right) = 1\right)P\left(X\left(1\right) = 1\right)P\left(X\left(1\right) = 0\right) \\
+			=& \frac{0.45^1 e^{-0.45}}{1!} \times \frac{0.15^1 e^{-0.15}}{1!} \times \frac{0.15^0 e^{-0.15}}{0!} \\
+			=& 0.45 \times 0.15 \times e^{-0.75} \approx 0.03188
+		\end{align*}
+		이다.
+	}
+\end{itemize}
+
+% Problem 11
+\subsubsection{11.} 어느 상점에 찾아오는 손님은 시간당 $\lambda = 4$인 푸아송 과정에 따른다고 한다. 아침 8시에 문을 열었을 때,
+8시 30분까지 꼭 한 사람이 찾아오고 11시까지 찾아온 사람이 모두 5명일 확률을 구하라.
+
+\paragraph{Solution.} 문제 \textbf{9}의 (3)과 같은 방법으로 생각하면,
+$x$시간당 방문하는 손님의 수 $X\left(x\right) \sim \mathrm{Poi}\left(4x\right)$에 대해
+8시 30분까지 정확히 한 명이 찾아오는 확률은 $P\left(X\left(0.5\right) = 1\right)$,
+8시 30분부터 11시까지 4명이 찾아오는 확률은 $P\left(X\left(2.5\right) = 4\right)$이므로 이 사건들이 동시에 일어날 확률은
+\begin{align*}
+	& P\left(X\left(0.5\right) = 1\right)P\left(X\left(2.5\right) = 4\right) \\
+	=& \frac{2^1 e^{-2}}{1!} \times \frac{10^4 e^{-10}}{4!} \\
+	=& \frac{1256}{3} e^{-12} \approx 0.002572
+\end{align*}
+이다.
+
+% Problem 12
+\subsubsection{12.} 이항확률변수 $X\sim\mathrm{B}\left(n,\,p\right)$에 대하여 $np=\mu$로 일정하고 $n\rightarrow\infty$이면, $X$의 확률질량함수는
+모수 $\mu$인 푸아송 확률변수의 확률질량함수에 근사함을 보여라.
+
+\paragraph{Solution.} $X\sim\mathrm{B}\left(n,\,p\right)$에서 $P\left(X=x\right) = \displaystyle\binom{n}{x}p^x\left(1-p\right)^{n-x}$이다. 이 때
+\begin{align*}
+	\lim_{n\rightarrow\infty} P\left(X=x\right) &= \lim_{n\rightarrow\infty}\left[\binom{n}{x}p^x\left(1-p\right)^{n-x}\right] \\
+	&= \lim_{n\rightarrow\infty}\left[ \frac{n!}{x!\left(n-x\right)!}p^x\left(1-p\right)^{n-x} \right] \\
+	&= \frac{1}{x!} \lim_{n\rightarrow\infty}\left[ \frac{n!}{\left(n-x\right)!}\left(\frac{\mu}{n}\right)^x\left(1-\frac{\mu}{n}\right)^{n-x} \right] \\
+	&= \frac{\mu^x}{x!} \lim_{n\rightarrow\infty}\left[ \left(\prod_{k=n-x+1}^{n} k\right)\frac{1}{n^x}\left(1-\frac{\mu}{n}\right)^{n-x} \right] \\
+	&= \frac{\mu^x}{x!} \lim_{n\rightarrow\infty}\left(1-\frac{\mu}{n}\right)^{n} \\
+	&= \frac{\mu^x}{x!} \lim_{n\rightarrow\infty}\left[\left(1+\frac{1}{n\left(-\mu^{-1}\right)}\right)^{n\left(-\mu^{-1}\right)}\right]^{-\mu} \\
+	&= \frac{\mu^x e^{-\mu}}{x!}
+\end{align*}
+인데, 이는 $\mathrm{Poi}\left(\mu\right)$의 확률질량함수이다.
+따라서 $n\rightarrow\infty$이면 $\mathrm{B}\left(n,\,p\right) \sim \mathrm{Poi}\left(\mu\right)$이다. $\qed$
+
+% Problem 13
+\subsubsection{13.} $X\sim\mathrm{P}\left(\mu\right)$에 대하여 $\mathrm{E}\left[X\left(X-1\right)\right]=\mu^2$임을 보여라.
+
+\paragraph{Solution.} $X\sim\mathrm{Poi}\left(\mu\right)$이면 $P\left(X=x\right) = \dfrac{\mu^x e^{-\mu}}{x!}$이다. 따라서
+\begin{align*}
+	\mathrm{E}\left[X\left(X-1\right)\right] &= \sum_{x=0}^{\infty} x\left(x-1\right) P\left(X=x\right) \\
+	&= \sum_{x=0}^{\infty} x\left(x-1\right) \frac{\mu^x e^{-\mu}}{x!} \\
+	&= \sum_{x=2}^{\infty} \frac{\mu^x e^{-\mu}}{\left(x-2\right)!} \\
+	&= \mu^2 \sum_{x=0}^{\infty} \frac{\mu^x e^{-\mu}}{x!}
+\end{align*}
+인데, $\dfrac{\mu^x e^{-\mu}}{x!}$은 $X\sim\mathrm{Poi}\left(\mu\right)$의 확률질량함수이다. 따라서
+\[\sum_{x=0}^{\infty} \frac{\mu^x e^{-\mu}}{x!}=1\]
+이므로 $\mathrm{E}\left[X\left(X-1\right)\right]=\mu^2$이다.

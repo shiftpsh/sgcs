@@ -1,0 +1,81 @@
+% Problem 1
+\subsubsection{1.} $X\sim\mathrm{U}\left(-1,\,1\right)$에 대하여 다음을 구하라.
+
+\begin{itemize}
+	\item [(1)] 확률밀도함수와 분포함수
+	\item [(2)] 평균과 분산
+	\item [(3)] $P\left(\mu - \sigma < X < \mu + \sigma\right)$
+	\item [(4)] 사분위수
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] {
+		확률밀도함수 $f$는 다음과 같다.
+		\[f\left(x\right) = \frac{1}{2} \qquad -1 \leq x \leq 1\]
+		분포함수 $F$는 다음과 같다.
+		\[F\left(x\right) = \frac{x+1}{2} \qquad -1 \leq x \leq 1\]
+	}
+	\item [(2)] {
+		\begin{align*}
+			\mu &= \frac{1 + \left(-1\right)}{2} = 0 \\
+			\sigma^2 &= \frac{\left(1-\left(-1\right)\right)^2}{12} = \frac{1}{3}
+		\end{align*}
+	}
+	\item [(3)] {
+		\begin{align*}
+			& P\left(\mu - \sigma < X < \mu + \sigma\right) \\\
+			&= P\left(-\sqrt{\frac{1}{3}} < X < \sqrt{\frac{1}{3}}\right) \\
+			&= \frac{1}{2} \times 2\sqrt{\frac{1}{3}} \\
+			&\approx 0.5773
+		\end{align*}
+	}
+	\item [(4)] $Q_1 = -0.5$, $Q_2 = 0$, $Q_3 = 0.5$
+\end{itemize}
+
+% Problem 3
+\subsubsection{3.} 특수직에 근무하는 사람들 중에서 임의로 선정한 사람의 출생에서 사망에 이르기까지 걸리는 시간을 $X$라 하자.
+그러면 이 사람의 생존 시간 $X$는 사고나 질병에 의하지 않는다면 $\left[0,\,65.5\right]$에서 균등분포를 이룬다고 한다.
+
+\begin{itemize}
+	\item [(1)] $X$의 밀도함수와 분포함수를 구하라.
+	\item [(2)] $X$의 평균을 구하라.
+	\item [(3)] 임의로 선정된 사람이 60세 이상 생존할 확률을 구하라.
+	\item [(4)] 임의로 선정된 사람이 45세 이상 살았다는 조건 아래서, 60세 이상 생존할 확률을 구하라.
+	\item [(5)] (4)의 조건 아래서, $x$ $\left(45 < x \leq 65.5\right)$세 이상 생존할 확률을 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+	\item [(1)] {
+		확률밀도함수 $f$는 다음과 같다.
+		\[f\left(x\right) = \frac{1}{65.5} \qquad 0 \leq x \leq 65.5\]
+		분포함수 $F$는 다음과 같다.
+		\[F\left(x\right) = \frac{x}{65.5} \qquad 0 \leq x \leq 65.5\]
+	}
+	\item [(2)] {
+		\[E\left(X\right) = \frac{0+65.5}{2} = 32.75\]
+	}
+	\item [(3)] {
+		\begin{align*}
+			P\left(X\geq 60\right) &= 1 - F\left(60\right) \\
+			&= 1 - \frac{60}{65.5} \approx 0.0840
+		\end{align*}
+	}
+	\item [(4)] {
+		\begin{align*}
+			P\left(X\geq 60 \,\middle|\, X\geq 45\right) &= \frac{1-F\left(60\right)}{1-F\left(45\right)} \\
+			&= \frac{1 - \dfrac{60}{65.5}}{1 - \dfrac{45}{65.5}} \\
+			&\approx 0.2683
+		\end{align*}
+	}
+	\item [(5)] {
+		\begin{align*}
+			P\left(X\geq x \,\middle|\, X\geq 45\right) &= \frac{1-F\left(x\right)}{1-F\left(45\right)} \\
+			&= \frac{1 - \dfrac{x}{65.5}}{1 - \dfrac{45}{65.5}} \\
+			&= \frac{65.5 - x}{20.5} = \frac{131 - 2x}{41} \qquad 45<x\leq 65.5 \\
+		\end{align*}
+	}
+\end{itemize}

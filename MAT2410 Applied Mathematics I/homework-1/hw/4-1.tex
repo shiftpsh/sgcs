@@ -1,0 +1,28 @@
+% Problem 3
+\subsubsection{3.} $X$는 2와 11 사이의 정수들에 대하여 이산균등분포를 이룬다고 한다.
+
+\begin{itemize}
+	\item [(1)] $X$의 확률질량함수를 구하라.
+	\item [(2)] $Y=X-1$의 확률질량함수를 구하라.
+	\item [(3)] $Y=X-1$의 평균과 분산을 구하라.
+    \item [(4)] $X$의 평균과 분산을 구하라.
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+	\item [(1)] {
+        \[f\left(x\right) = \frac{1}{11 - 2 + 1} = \frac{1}{10} \qquad 2 \leq x \leq 11,\, x \in \mathbb{Z}\]
+    }
+	\item [(2)] {
+        \[f\left(y\right) = \frac{1}{10} \qquad 1 \leq y \leq 10,\, y \in \mathbb{Z}\]
+    }
+	\item [(3)] {
+        $Y \sim \mathrm{DU}\left(10\right)$이므로 기댓값은 \[\frac{1 + 10}{2} = \frac{11}{2}\]이고, 분산은 \[\frac{10^2-1}{12}=\frac{33}{4}\]이다.
+    }
+    \item [(4)] {
+        \begin{align*}
+            \mathrm{E}\left(X\right) &= \mathrm{E}\left(Y + 1\right) = \frac{13}{2} \\
+            \mathrm{Var}\left(X\right) &= \mathrm{Var}\left(Y + 1\right) = \frac{33}{4}
+        \end{align*}
+    }
+\end{itemize}
