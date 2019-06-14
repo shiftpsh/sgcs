@@ -1,0 +1,57 @@
+% Problem 2
+\subsubsection{2.} 한국금연운동협의회에 따르면 전국의 20세 이상 성인 남자의 흡연율은 55.1\%로 2001년 69.9\%에 비해 14.8\%p 감소했다고
+주장하였다. 이러한 주장에 대한 진위 여부를 확인하기 위하여 850명의 20세 이상 성인 남자를 조사한 결과 503명이 흡연을 하는 것으로 조사되었다면, 
+흡연율이 55.1\%라는 주장에 타당성이 있는지 $p$-값에 의하여 유의수준 1\%에서 검정하라.
+
+\paragraph{Solution.}
+\[H_0:p=0.551 \qquad H_1:p\neq0.551\]
+으로 설정한다. Z-통계량 $Z=\dfrac{n\hat{p}-np_0}{\sqrt{np_0\left(1-p_0\right)}}$을 설정하면 관측값은
+$Z=\dfrac{503-850\times0.551}{\sqrt{850\times0.551\left(1-0.551\right)}}=2.39$이며 이 때의 $p$-값은 0.0168이다.
+이는 유의수준 0.01보다 크므로 귀무가설을 기각하기에는 불충분하고, 따라서 흡연율이 55.1\%라고 생각할 수 있다.
+
+% Problem 5
+\subsubsection{5.} 두 표본분포 $X\sim \mathrm{B}\left(20,\,p_1\right)$과 $Y\sim \mathrm{B}\left(30,\,p_2\right)$에 대하여
+성공이 각각 $x=7$, $y=12$로 관찰되었다.
+
+\begin{itemize}
+    \item[(1)] 두 표본비율 $\hat{p_1}$과 $\hat{p_2}$를 구하라.
+    \item[(2)] $\hat{p_1}-\hat{p_2}$에 대한 99\% 신뢰구간을 구하라.
+    \item[(3)] 가설 $H_0:p_1=p_2$, $H_1:p_1<p_2$를 유의수준 1\%에서 검정하라.
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item[(1)] {
+        $\hat{p_1}=0.35$, $\hat{p_2}=0.40$
+    }
+    \item[(2)] {
+        $z_{0.005}=2.58$이다.
+        또한 $\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{n}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{m}}=0.139$이다.
+        따라서 99\% 신뢰구간은
+        \begin{align*}
+            & \left(
+                \hat{p_1}-\hat{p_2}-z_{0.005}\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{n}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{m}},\,
+                \hat{p_1}-\hat{p_2}+z_{0.005}\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{n}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{m}}
+            \right) \\
+            =& \left(-0.05-2.58\times0.139,\, -0.05+2.58\times0.139\right) = \left(-0.41,\,0.31\right)
+        \end{align*}
+        이다.
+    }
+    \item[(3)] {
+        합동표본비율 $\hat{p}=0.38$이고 $z_0
+        =\dfrac{\hat{p_1}-\hat{p_2}}{\sqrt{\hat{p}\left(1-\hat{p}\right)\left(\dfrac{1}{n}+\dfrac{1}{m}\right)}}
+        =-0.357$이므로 $p$-값은 0.7196이다. 이는 유의수준 0.1보다 크므로 귀무가설을 기각하기에는 불충분하다.
+    }
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 어떤 단체에서 국영 TV의 광고방송에 대한 찬반을 묻는 조사를 실시하였다. 대도시에 거주하는 사람들 2,050명 중 1,250명이 찬성하였고,
+농어촌에 거주하는 사람 800명 중 486명이 찬성하였다. 도시와 농어촌 사람들의 찬성 비율이 같은지 유의수준 5\%에서 검정하라.
+
+\paragraph{Solution.} 대도시에서의 찬성률을 $p_1$, 농어촌에서의 찬성률을 $p_2$라 하자.
+\[H_0:p_1=p_2 \qquad H_1:p_1\neq p_2\]
+로 설정한다. 합동표본비율 $\hat{p}=0.609$이고 $\hat{p_1}=0.610$, $\hat{p_2}=0.608$이다.
+또한 $\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{n}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{m}}=0.026$이다.
+따라서 $z_0=\dfrac{\hat{p_1}-\hat{p_2}}{\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{n}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{m}}}=0.125$
+이다. 유의수준 0.05에서 $z_{0.025}=1.96$이므로 기각역 $R:\left|Z\right|\geq1.96$인데 $z_0$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다.
+따라서 도시와 농어촌 사람들의 찬성 비율은 같다고 생각할 수 있다.

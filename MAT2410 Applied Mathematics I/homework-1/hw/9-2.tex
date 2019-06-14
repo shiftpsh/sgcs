@@ -1,0 +1,196 @@
+% Problem 4
+\subsubsection{4.} 승용차에 사용되는 유리를 생산하는 회사에서 만든 유리의 두께는 정규분포에 따른다고 한다. 한편 이 회사에서 생산하는 유리의 두께는
+평균 5mm라고 주장한다. 이러한 주장의 진위를 알아보기 위하여 41개의 유리를 표본조사한 결과 평균 4.96mm, 표준편차 0.124mm를 얻었다. 이 회사에서
+주장하는 유리 두께의 평균과 표준편차에 대하여 유의수준 0.05와 0.01에서 양측검정하라.
+
+\paragraph{Solution.}
+\[H_0:\mu=5 \qquad H_1:\mu\neq5\]
+로 설정한다. 검정통계량 $T=\dfrac{\overline{X}-5}{\dfrac{s}{\sqrt{41}}}\sim \mathrm{t}\left(41-1\right)$이고
+관측값 $t_0=\dfrac{4.96-5}{\dfrac{0.124}{\sqrt{41}}}=-2.066$이다.
+\begin{itemize}
+    \item {
+        유의수준 0.05에서 양측검정하면, $t_{0.025}\left(40\right)=2.021$이므로 기각역 $R:\left|T\right|\geq 2.021$인데
+        $t_0=-2.066$은 기각역에 들어가므로 귀무가설을 기각한다.
+    }
+    \item {
+        유의수준 0.01에서 양측검정하면, $t_{0.005}\left(40\right)=2.704$이므로 기각역 $R:\left|T\right|\geq 2.704$인데
+        $t_0=-2.066$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다.
+    }
+\end{itemize}
+
+% Problem 8
+\subsubsection{8.}컴퓨터 회사에서 새로 개발한 소프트웨어는 초보자도 쉽게 사용할 수 있도록 만들었으며,
+그 사용법을 능숙하게 익히는 데 3시간 이상 걸리지 않는다고 한다. 이를 확인하기 위하려 20명을 표본으로 선정하여 조사한 결과 다음과 같다.
+유의수준 5\%에서 이 회사의 주장에 대한 타당성을 조사하라. 단, 소프트웨어를 사용하는 데 걸리는 시간은 정규분포를 이룬다고 한다.
+
+\begin{center}
+    \begin{tabular}{cccccccccc}
+        \hline
+        2.75 & 3.25 & 3.48 & 2.95 & 2.82 & 3.75 & 4.01 & 3.05 & 2.67 & 4.25 \\
+        3.01 & 2.84 & 2.75 & 1.80 & 3.20 & 2.48 & 2.95 & 3.02 & 2.73 & 2.56 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} 표본의 평균 $\overline{x}=3.016$, 표준편차 $s=0.5501$이다.
+\[H_0:\mu\leq3 \qquad H_1:\mu>3\]
+으로 설정한다. 검정통계량 $T=\dfrac{\overline{X}-3}{\dfrac{s}{\sqrt{20}}}\sim \mathrm{t}\left(20-1\right)$이고
+관측값 $t_0=\dfrac{3.016-3}{\dfrac{0.5501}{\sqrt{20}}}=0.1301$이다.
+
+유의수준 0.05에서 단측검정하면, $t_{0.05}\left(19\right)=1.729$이므로 기각역 $R:T\geq 1.729$인데
+$t_0=0.1301$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 회사의 주장은 타당하다고 생각할 수 있다.
+
+% Problem 10
+\subsubsection{10.} 어느 진공관 제조회사의 주장에 따르면, 이 회사에서 생산되는 진공관의 수명의 수명이 2,550시간 이상 된다고 한다.
+이를 확인하기 위하여 36개의 진공관을 임의로 추출하여 조사한 결과 평균 수명이 2,516시간이고 표준편차가 132시간이었다. 이 회사의 주장이 타당한지
+유의수준 5\%에서 검정하라. 단, 진공관의 수명은 정규분포에 따른다고 알려져 있다.
+
+\paragraph{Solution.}
+\[H_0:\mu\geq2550 \qquad H_1:\mu<2550\]
+으로 설정한다. 모분산이 알려져 있지 않은 대표본이므로 중심극한정리에 의해 검정통계량의 분포는 정규분포로 근사되며
+이 때 $Z=\dfrac{\overline{X}-2550}{\dfrac{s}{\sqrt{36}}}\approx \mathrm{N}\left(0,\,1\right)$이고
+관측값 $z_0=\dfrac{2516-2550}{\dfrac{132}{\sqrt{36}}}=-1.5455$이다.
+
+유의수준 0.05에서 단측검정하면, 기각역 $R:Z\leq -1.6$인데
+$z_0=-1.5455$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 회사의 주장은 타당하다고 생각할 수 있다.
+
+% Problem 12
+\subsubsection{12.} 두 회사 A와 B에서 생산되는 타이어의 평균 수명에 차이가 있는지 조사하기 위하여, 각각 36개씩 타이어를 표본추출하여 조사한 결과
+다음과 같았다. 두 회사에서 생산한 타이어의 평균 수명에 차이가 있는지 유의수준 5\%에서 조사하라. 단위는 주행 km이다.
+
+\begin{center}
+    \begin{tabular}{l|cc}
+        \hline
+         & 표본평균 & 표본표준편차 \\
+        \hline
+        A 회사 타이어 & 57,300 & 3,550 \\ 
+        B 회사 타이어 & 56,100 & 3,800 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.}
+\[H_0:\mu_1=\mu_2 \qquad H_1:\mu_1\neq\mu_2\]
+로 설정한다. 모분산이 알려져 있지 않은 대표본이므로 중심극한정리에 의해 검정통계량의 분포는 정규분포로 근사되며
+이 때 $Z=\dfrac{\overline{X}-\overline{Y}}{\sqrt{\dfrac{s_1^2}{n}+\dfrac{s_2^2}{m}}}
+=\dfrac{\overline{X}-\overline{Y}}{866.7} \approx \mathrm{N}\left(0,\,1\right)$이고 관측값 $z_0=\dfrac{57300-56100}{866.7}=1.38$이다.
+
+유의수준 0.05에서 양측검정하면, 기각역 $R:\left|Z\right|\geq 1.96$인데
+$z_0=1.38$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 두 회사에서 생산한 타이어의 평균 수명에는 차이가 없다고 생각할 수 있다.
+
+% Problem 13
+\subsubsection{13.} 어떤 대학 병원에서 단기간 동안 이 병원에 입원한 남녀 환자들의 입원 기간을 조사하여 다음을 얻었다. 이 때 유의수준 5\%에서
+남자와 여자의 입원 기간에 차이가 있는지 검정하라. 단, 남자와 여자의 입원 기간은 각각 표준편차가 5.6일, 4.5일인 정규분포에 따른다고 한다.
+
+\begin{center}
+    \begin{tabular}{l|cccccccccc}
+        \hline
+        남자 & 3 & 4 & 12 & 16 & 5 & 11 & 21 & 9 & 8 & 25 \\
+            & 17 & 3 & 8 & 6 & 13 & 7 & 30 & 12 & 9 & 10 \\
+        \hline
+        여자 & 12 & 5 & 4 & 10 & 1 & 8 & 19 & 13 & 9 & 1 \\
+            & 13 & 13 & 7 & 9 & 15 & 8 & 28 & & & \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} 남자의 경우 $\overline{x}=11.45$, $s_1=7.258$이고 여자의 경우 $\overline{y}=10.29$, $s_2=6.622$이다.
+\[H_0:\mu_1=\mu_2 \qquad H_1:\mu_1\neq\mu_2\]
+로 설정한다. 검정통계량 $Z=\dfrac{\overline{X}-\overline{Y}}{\sqrt{\dfrac{\sigma_1^2}{n}+\dfrac{\sigma_2^2}{m}}}
+=\dfrac{\overline{X}-\overline{Y}}{1.6443} \sim \mathrm{N}\left(0,\,1\right)$이고 관측값 $z_0=\dfrac{11.45-10.29}{1.6443}=0.705$이다.
+
+유의수준 0.05에서 양측검정하면, 기각역 $R:\left|Z\right|\geq 1.96$인데
+$z_0=0.705$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 남자와 여자의 입원 기간에는 차이가 없다고 생각할 수 있다.
+
+% Problem 14
+\subsubsection{14.} 서로 독립인 두 정규모집단에서 각각 크기 11과 16인 표본을 추출하여 다음 결과를 얻었다.
+
+\begin{center}
+    \begin{tabular}{c|ccc}
+        \hline
+        모집단 & 표본의 크기 & 표본평균 & 표본표준편차 \\
+        \hline
+        1 & 11 & 704 & 1.6 \\ 
+        2 & 16 & 691 & 1.2 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 합동표본분산 $S_p^2$을 구하라.
+    \item[(2)] 두 모분산이 같은 경우에 유의수준 0.1에서 $H_0:\mu_1=\mu_2$와 $H_1:\mu_1\neq\mu_2$를 검정하라. 
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item[(1)] {
+        $S_p^2=\dfrac{1}{11+16-2}\left[\left(11-1\right)\times1.6^2+\left(16-1\right)\times1.2^2\right]=1.888$
+    }
+    \item[(2)] {
+        검정통계량 $T=\dfrac{\overline{X}-\overline{Y}}{S_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}}
+        =\dfrac{\overline{X}-\overline{Y}}{0.538} \sim \mathrm{t}\left(11+16-2\right)$이고 관측값 $t_0=\dfrac{704-691}{0.538}=24.164$이다.
+
+        유의수준 0.1에서 양측검정하면, 기각역 $R:\left|T\right|\geq 1.316$인데
+        $t_0=24.164$는 기각역에 들어가므로 귀무가설을 기각한다.
+    }
+\end{itemize}
+
+% Problem 15
+\subsubsection{15.} A 고등학교 학생들의 주장에 따르면 자신들의 평균 성적이 B 고등학교 학생들보다 높다고 한다. 이를 확인하기 위하여 두 고등학교에서
+각각 10명씩 임의로 추출하여 모의고사를 치른 결과 다음과 같은 점수를 얻었다. A 고등학교 학생들의 주장이 맞는지 유의수준 0.05에서 검정하라. 단,
+두 학교 학생들의 표준편차는 거의 비슷하다고 한다.
+
+\begin{center}
+    \begin{tabular}{l|cccccccccc}
+        \hline
+        A 고교 & 77 & 78 & 75 & 94 & 65 & 82 & 69 & 78 & 77 & 84 \\
+        \hline
+        B 고교 & 73 & 88 & 75 & 89 & 54 & 72 & 69 & 66 & 87 & 77 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} A 고교의 경우 $\overline{x}=77.9$, $s_1=7.951$이고 B 고교의 경우 $\overline{y}=75.0$, $s_2=10.975$이다.
+또한 $S_p^2=\dfrac{1}{10+10-2}\left[\left(10-1\right)\times7.951^2+\left(10-1\right)\times10.975^2\right]=91.835$이다.
+
+\[H_0:\mu_1\geq\mu_2 \qquad H_1:\mu_1<\mu_2\]
+로 설정한다. 검정통계량 $T=\dfrac{\overline{X}-\overline{Y}}{S_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}}
+=\dfrac{\overline{X}-\overline{Y}}{4.286} \sim \mathrm{t}\left(10+10-2\right)$이고 관측값 $t_0=\dfrac{2.9}{4.286}=0.677$이다.
+
+유의수준 0.05에서 단측검정하면, 기각역 $R:T \leq 1.734$인데
+$t_0=0.677$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 A 고교의 평균 성적은 B 고교의 평균 성적보다 높다고 생각할 수 있다.
+
+% Problem 16
+\subsubsection{16.} 자동차 사고가 빈번히 일어나는 교차로의 신호체계를 바꾸면 사고를 줄일 수 있다고 경찰청에서 말한다. 이것을 알아보기 위하여
+시범적으로 사고가 많이 발생하는 지역을 선정하여 지난 한 달 동안 발생한 사고 건수와 신호체계를 바꾼 후의 사고 건수를 조사한 결과 다음과 같았다.
+유의 수준 5\%에서 신호체계를 바꾸면 사고를 줄일 수 있는지 조사하라. 단, 사고 건수는 정규분포를 이룬다고 알려져 있다.
+
+\begin{center}
+    \begin{tabular}{l|cccccccc}
+        \hline
+        지역 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+        \hline
+        바꾸기 전 & 5 & 10 & 8 & 9 & 5 & 7 & 6 & 8 \\
+        바꾼 후 & 4 & 9 & 8 & 8 & 4 & 8 & 5 & 8 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} 바꾼 전후의 사고 건수의 차이를 계산하면 다음과 같다.
+\begin{center}
+    \begin{tabular}{l|cccccccc}
+        \hline
+        지역 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+        \hline
+        바꾼 후 $-$ 바꾸기 전 & 1 & 1 & 0 & 1 & 1 & $-1$ & 1 & 0 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\[H_0:\mu_1\leq\mu_2 \qquad H_1:\mu_1>\mu_2\]
+로 설정한다. 바꾼 전후의 사고 건수의 차이를 표본이라고 생각하면 평균 $\overline{x}=0.50$, 표준편차 $s=0.756$이다.
+검정통계량 $T=\dfrac{\overline{d}}{\dfrac{s}{\sqrt{8}}}\sim \mathrm{t}\left(8-1\right)$이고
+관측값 $t_0=\dfrac{0.50}{\dfrac{0.756}{\sqrt{8}}}=1.871$이다.
+
+유의수준 0.05에서 단측검정하면, $t_{0.05}\left(7\right)=1.895$이므로 기각역 $R:T\geq 1.895$인데
+$t_0=1.871$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 신호체계를 바꾼다고 해서 사고가 줄어든다고 생각할 수는 없다.

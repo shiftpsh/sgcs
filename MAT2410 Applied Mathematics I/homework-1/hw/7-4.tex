@@ -1,0 +1,28 @@
+% Problem 6
+\subsubsection{6.} 어느 도시의 시장 선거에서 A 후보자는 그 도시의 유권자를 상대로 53\%의 지지율을 얻고 있다고 한다.
+이때 400명의 유권자를 상대로 조사한 결과, 49\% 이하의 유권자가 지지할 확률을 구하라.
+
+\paragraph{Solution.} $\hat{p} \approx \mathrm{N}\left(0.53,\,\dfrac{0.53\left(1-0.53\right)}{400}\right) = \mathrm{N}\left(0.7,\,0.02495^2\right)$이다.
+따라서
+\begin{align*}
+    P\left(\hat{p}\geq 0.49\right) &= P\left(\frac{\hat{p}-0.53}{0.02495} \leq \frac{0.49-0.53}{0.02495}\right) \\
+    &= P\left(Z \leq -1.603\right) \approx 0.0548
+\end{align*}
+이다.
+
+% Problem 8
+\subsubsection{8.} 2005년 통계조사에 따르면 25세 이상 남성과 여성 중 대졸 이상은 각각 37.8\%와 25.4\%로 조사되었다.
+남성 500명과 여성 450명을 표본조사한 결과, 남성과 여성의 비율의 차가 11.5\% 이하일 확률을 구하라.
+
+\paragraph{Solution.} 남성에 대해
+\[\hat{p_M} \approx \mathrm{N}\left(0.378,\,\dfrac{0.378\left(1-0.378\right)}{500}\right) = \mathrm{N}\left(0.378,\,0.0004702\right)\]
+이고, 여성에 대해
+\[\hat{p_F} \approx \mathrm{N}\left(0.254,\,\dfrac{0.254\left(1-0.254\right)}{450}\right) = \mathrm{N}\left(0.254,\,0.0004211\right)\]
+이다. 따라서 $t=\hat{p_M}-\hat{p_F}$라 하면
+\[t \approx \mathrm{N}\left(0.378-0.254,\,0.0004702+0.0004211\right)=\mathrm{N}\left(0.124,\,0.02985^2\right)\]
+이다. 이를 통해 남성과 여성의 비율의 차가 11.5\% 이하일 확률을 구하면
+\begin{align*}
+    P\left(t<0.115\right) &= P\left(\frac{t-0.124}{0.02985} \leq \frac{0.115-0.124}{0.02985}\right) \\
+    &= P\left(Z \leq -0.3015\right) \approx 0.3815
+\end{align*}
+이다.

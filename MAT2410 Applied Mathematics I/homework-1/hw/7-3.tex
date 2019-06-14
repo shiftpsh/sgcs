@@ -1,0 +1,177 @@
+% Problem 2
+\subsubsection{2.} 다음 표는 고소공포증에 걸린 환자 32명을 각각 16명씩 기존의 치료법과 새로운 치료법에 의하여 치료한 결과로
+점수가 높을수록 치료의 효과가 있음을 나타낸다. 이 때 두 방법에 의한 치료 결과는 정규분포를 이룬다고 한다.
+
+\begin{center}
+    \begin{tabular}{c|ll}
+        \hline
+        기존 치료법 & $\overline{x} = 44.33$ & $s_X^2 = 101.666$ \\
+        \hline
+        새 치료법 & $\overline{y} = 47.67$ & $s_Y^2 = 95.095$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 두 모분산이 동일하게 100이라 할 때, 합동표본분산이 170보다 작을 근사확률을 구하라.
+    \item[(2)] 두 표본에 대한 합동표본분산을 구하라.
+    \item[(3)] 두 모평균이 동일하다 할 때, 새로운 방법에 의한 치료 결과가 기존의 치료법보다 7.56점 이상 높을 근사확률을 구하라.
+    \item[(4)] 두 모분산이 동일하게 100이라 할 때, $P\left(S_Y^2 \geq \left(2.4\right)S_X^2\right)$를 구하라.   
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+    \item[(1)] {
+        $\sigma^2=100$이고 표본의 크기가 16으로 같으므로 합동표본분산 $\dfrac{16+16-2}{100}S_p^2\sim \chi^2\left(16+16-2\right)\Rightarrow 0.3 S_p^2\sim \chi^2\left(30\right)$이다.
+        따라서
+        \begin{align*}
+            P\left(S_p^2 \leq 170\right) &= P\left(0.3S_p^2 \leq 51\right) \\
+            &\approx 0.99
+        \end{align*}
+        이다.
+    }
+    \item[(2)] {
+        $s_p^2=\dfrac{1}{16+16-2}\left[\left(16-1\right)\times101.666 + \left(16-1\right)\times95.095\right]=98.3805$
+    }
+    \item[(3)] {
+        기존 방법으로 얻은 평균을 $\overline{X}$, 새 방법으로 얻은 평균을 $\overline{Y}$라 하면
+        \[\frac{\overline{Y}-\overline{X}}{\sqrt{98.3805}\sqrt{\dfrac{1}{16}+\dfrac{1}{16}}}=\frac{\overline{Y}-\overline{X}}{3.51}\sim\mathrm{t}\left(28\right)\]
+        이다. 따라서
+        \begin{align*}
+            P\left(\overline{Y}-\overline{X}\geq 7.56\right) &= P\left(\frac{\overline{Y}-\overline{X}}{3.51}\geq 2.155\right) \\
+            &\approx 0.02
+        \end{align*}
+        이다.
+    }
+    \item[(4)] {
+        $\dfrac{\dfrac{S_Y^2}{100}}{\dfrac{S_X^2}{100}}=\dfrac{S_Y^2}{S_X^2}\sim \mathrm{F}\left(15,\,15\right)$이다. 따라서
+        \begin{align*}
+            \mathrm{P}\left(S_Y^2 \geq 2.4S_X^2\right) &= \mathrm{P}\left(\frac{S_Y^2}{S_X^2} \geq 2.4\right) \\
+            &\approx 0.05
+        \end{align*}
+        이다.
+    }
+\end{itemize}
+
+% Problem 3
+\subsubsection{3.} 시중에서 판매되고 있는 두 회사의 땅콩 잼에 포함된 카페인의 양을 조사한 결과, 다음 표를 얻었다.
+이 때 두 회사에서 제조된 땅콩 잼에 포함된 카페인의 양은 동일한 분산을 갖는 정규분포에 따른다고 한다. 단위는 mg이다.
+
+\begin{center}
+    \begin{tabular}{c|lll}
+        \hline
+        A 회사 & $n=15$ & $\overline{x} = 78$ & $s_X^2 = 30.25$ \\
+        \hline
+        B 회사 & $m=13$ & $\overline{y} = 75$ & $s_Y^2 = 36$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 두 모분산이 동일하게 35라 할 때, 합동표본분산이 12.4보다 작을 근사확률을 구하라.
+    \item[(2)] 두 표본에 대한 합동표본분산을 구하라.
+    \item[(3)] 두 모평균이 동일하다 할 때, A 회사에서 제조된 땅콩 잼의 평균이 B 회사에서 제조된 평균보다 3.7mg 이하일 근사확률을 구하라.
+    \item[(4)] $\sigma_A^2=30$, $\sigma_B^2=35$일 때, $P\left(S_Y^2 \geq 3S_X^2\right)$를 구하라.   
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+    \item[(1)] {
+        합동표본분산 $S_p^2$에 대해 $\dfrac{15+13-2}{35}S_p^2 \sim \chi^2\left(26\right)$이다. 따라서
+        \begin{align*}
+            P\left( S_p^2\leq12.4 \right) &= P\left( \frac{26}{35}S_p^2\leq9.21 \right) \\
+            &\approx 0.001
+        \end{align*}
+        이다.
+    }
+    \item[(2)] {
+        $s_p^2=\dfrac{1}{15+13-2}\left[\left(15-1\right)\times30.25+\left(13-1\right)\times36\right]=32.9$
+    }
+    \item[(3)] {
+        \[\frac{\overline{X}-\overline{Y}}{\sqrt{32.9}\sqrt{\dfrac{1}{15}+\dfrac{1}{13}}}=\frac{\overline{X}-\overline{Y}}{2.17}\sim\mathrm{t}\left(26\right)\]
+        이다. 따라서
+        \begin{align*}
+            P\left(\overline{X}-\overline{Y} \leq 3.7\right) &= P\left(\frac{\overline{X}-\overline{Y}}{2.17}\geq 1.705\right) \\
+            &\approx 0.95
+        \end{align*}
+        이다.
+    }
+    \item[(4)] {
+        $\dfrac{\dfrac{S_Y^2}{30}}{\dfrac{S_X^2}{35}}=\dfrac{7S_Y^2}{6S_X^2}\sim \mathrm{F}\left(12,\,14\right)$이다. 따라서
+        \begin{align*}
+            \mathrm{P}\left(S_Y^2 \geq 3S_X^2\right) &= \mathrm{P}\left(\frac{S_Y^2}{S_X^2} \geq 3\right) \\
+            &\approx 0.025
+        \end{align*}
+        이다.
+    }
+\end{itemize}
+
+% Problem 4
+\subsubsection{4.} 두 정규모집단 A와 B의 모분산은 동일하고, 평균은 각각 $\mu_X=700$, $\mu_Y=680$이라 한다.
+이 때 두 모집단으로부터 표본을 추출하여 다음과 같은 결과를 얻었다. 단위는 mg이다.
+
+\begin{center}
+    \begin{tabular}{c|lll}
+        \hline
+        A 표본 & $n=17$ & $\overline{x} = 704$ & $s_X = 39.25$ \\
+        \hline
+        B 표본 & $m=10$ & $\overline{y} = 675$ & $s_Y = 43.75$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 합동표본분산의 관측값 $s_p^2$을 구하라.
+    \item[(2)] 두 표본평균의 차 $T=\overline{X}-\overline{Y}$에 대한 확률분포를 구하라.
+    \item[(3)] $P\left(T \geq t_0\right)=0.05$인 $t_0$을 구하라.  
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item[(1)] {
+        $s_p^2 = \dfrac{1}{17+10-2}\left[\left(17-1\right)\times 39.25^2 + \left(10-1\right)\times 43.75^2\right]=1675.0225$
+    }
+    \item[(2)] {
+        \begin{align*}
+            \frac{\overline{X}-\overline{Y}-\left(\mu_X-\mu_Y\right)}{s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}}
+            &= \frac{T-20}{\sqrt{1675.0225}\sqrt{\dfrac{1}{17}+\dfrac{1}{10}}} \\
+            &= \frac{T-20}{16.3105} \sim \mathrm{t}\left(17+10-2\right) = \mathrm{t}\left(25\right) \\
+        \end{align*}
+    }
+    \item[(3)] {
+        $t_{0.05}\left(25\right)=1.708$이므로 $t_0=20+1.708\times16.3105=47.8583$이다.
+    }
+\end{itemize}
+
+% Problem 5
+\subsubsection{5.} 모직 17묶음의 절단강도는 평균 452.4이고 표준편차는 12.3이고, 인조섬유 25묶음의 절단강도는 평균 474.6이고 표준편차는 5.50인 것으로 조사되었다.
+그리고 두 종류 섬유의 절단강도는 동일한 분산을 갖는 정규분포를 이룬다고 한다.
+
+\begin{itemize}
+    \item[(1)] 합동표본분산의 측정값 $s_p^2$을 구하라.
+    \item[(2)] 모직의 평균 절단강도 $\overline{X}$와 인조섬유의 평균 절단강도 $\overline{Y}$의 차 $T=\overline{Y}-\overline{X}$에
+    대한 확률분포를 구하라.
+    \item[(3)] 표본의 측정값 $T_0=\overline{y}-\overline{x}$를 이용하여 두 모집단 인조섬유와 모직에 대한 절단강도의 평균의
+    차이 $\mu_0$에 대하여 $P\left(\left|T-\mu_0\right|\leq t_0\right)=0.95$인 $\mu_0$의 범위를 구하라.  
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+    \item[(1)] {
+        $s_p^2=\dfrac{1}{17+25-2}\left[\left(17-1\right)\times12.3^2+\left(25-1\right)\times5.50^2\right]=78.666$
+    }
+    \item[(2)] {
+        \begin{align*}
+            \frac{\overline{Y}-\overline{X}-\left(\mu_Y-\mu_X\right)}{s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}}
+            &= \frac{T-22.2}{\sqrt{78.666}\sqrt{\dfrac{1}{17}+\dfrac{1}{25}}} \\
+            &= \frac{T-22.2}{2.7882} \sim \mathrm{t}\left(17+25-2\right) = \mathrm{t}\left(40\right) \\
+        \end{align*}
+    }
+    \item[(3)] {
+        $t_{0.025}\left(40\right)=2.021$이다. 따라서 $t_0=2.021\times 2.7882=5.635$이다. 또한 $T_0=\overline{y}=\overline{x}=22.2$이다.
+        따라서 $\mu_0$은 $T_0-t_0\leq \mu_0 \leq T_0+t_0$에서 범위 $\left[16.565,\,27.835\right]$를 갖는다.
+    }
+\end{itemize}

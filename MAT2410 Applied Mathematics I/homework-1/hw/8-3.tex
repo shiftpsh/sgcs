@@ -1,0 +1,51 @@
+% Problem 4
+\subsubsection{4.} 다음은 어떤 제조회사에서 생산되는 음료수를 분석한 당분 함량의 자료이다. 이것을 이용하여 이 회사에서 생산되는 음료수의
+당분 함량에 대한 분산과 표준 편차에 대한 95\% 신뢰구간을 구하라.
+
+\begin{center}
+    \begin{tabular}{cccccccccc}
+        \hline
+        15.1 & 13.4 & 16.5 & 14.6 & 14.4 & 14.0 & 15.4 & 13.8 & 14.6 & 14.3 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} 이 표본의 표준분산 $s^2=0.7854$이다. $\left(10-1\right)\dfrac{S^2}{\sigma^2} \sim \chi^2\left(10-1\right)$이고
+$\chi_{0.975}^2\left(9\right)=2.70$, $\chi_{0.025}^2=\left(19.02\right)$이므로 $\sigma^2$에 대한 95\% 신뢰구간은
+\begin{align*}
+    \left(\frac{9s^2}{\chi_{0.025}^2\left(9\right)},\,\frac{9s^2}{\chi_{0.975}^2\left(9\right)}\right)
+    &= \left(\frac{9\times0.7854}{19.02},\,\frac{9\times0.7854}{2.70}\right) \\
+    &= \left(0.37,\,2.62\right)
+\end{align*}
+이고, $\sigma$에 대한 95\% 신뢰구간은 $\left(0.61,\,1.62\right)$이다.
+
+% Problem 9
+\subsubsection{9.} 2000년 4월 (사)한국청소년순결운동본부가 전국의 고등학생(남학생 256명, 여학생 348명)울 대상으로
+청소년의 음주정도에 대한 무작위 표본조사를 실시한 결과, 남학생 83.9\%, 여학생 59.2\%가 음주 경험이 있는 것으로 조사되었다. 남학생과
+여학생의 음주율 차에 대한 95\% 신뢰구간을 구하라.
+
+\paragraph{Solution.} $z_{0.025}=1.96$이다. 남학생에 대해 $\hat{p_1}=0.839$, 여학생에 대해 $\hat{p_2}=0.592$이다. 따라서 $\hat{p_1}-\hat{p_2}=0.247$이고
+표준 오차 $\sigma_{\hat{p_1}-\hat{p_2}}=\sqrt{\dfrac{\hat{p_1}\left(1-\hat{p_1}\right)}{256}+\dfrac{\hat{p_2}\left(1-\hat{p_2}\right)}{348}}=0.035$
+이므로, $p_1-p_2$에 대한 95\% 신뢰구간은
+\begin{align*}
+     & \left(\hat{p_1}-\hat{p_2}-z_{0.025}\sigma_{\hat{p_1}-\hat{p_2}},\,\hat{p_1}-\hat{p_2}+z_{0.025}\sigma_{\hat{p_1}-\hat{p_2}}\right) \\
+    =& \left(0.247-1.96\times0.035,\,0.247+1.96\times0.035\right) \\
+    =& \left(0.178,\,0.316\right)
+\end{align*}
+이다.
+
+% Problem 11
+\subsubsection{11.} 두 종류의 약품 A, B의 효능을 조사하기 위하여 동일한 조건에 놓인 환자 200명에게 A를 투여하고, 다른 200명의 환자에게 B를
+투여한 결과 각각 165명과 150명이 효과를 얻었다. 두 약품의 효율의 차이에 대한 95\% 신뢰구간을 구하라.
+
+\paragraph{Solution.} $z_{0.025}=1.96$이다. A에 대해 $\hat{p_\mathrm{A}}=0.825$, B에 대해 $\hat{p_\mathrm{B}}=0.750$이다. 따라서
+$\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}=0.075$이고 표준 오차 $\sigma_{\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}}=
+\sqrt{\dfrac{\hat{p_\mathrm{A}}\left(1-\hat{p_\mathrm{A}}\right)}{200}+
+\dfrac{\hat{p_\mathrm{B}}\left(1-\hat{p_\mathrm{B}}\right)}{200}}=0.0407$이므로,
+$p_\mathrm{A}-p_\mathrm{B}$에 대한 95\% 신뢰구간은
+\begin{align*}
+    & \left(\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}-z_{0.025}\sigma_{\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}},\,\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}+z_{0.025}\sigma_{\hat{p_\mathrm{A}}-\hat{p_\mathrm{B}}}\right) \\
+   =& \left(0.075-1.96\times0.0407,\,0.075+1.96\times0.0407\right) \\
+   =& \left(-0.0048,\,0.155\right)
+\end{align*}
+이다.

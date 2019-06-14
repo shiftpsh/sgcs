@@ -1,0 +1,117 @@
+% Problem 2
+\subsubsection{2.} 전자상가에 있는 10곳의 캠코더 판매점을 둘러본 결과, 동일한 제품의 캠코더 가격이 다음과 같이 다르게 나타났다.
+판매상에 의하면 전체 캠코더 판매액이 정규분포에 따른다고 한다. 단위는 천원이다.
+
+\begin{center}
+    \begin{tabular}{cccccccccc}
+        \hline
+        938.8 & 952.0 & 946.8 & 958.8 & 948.4 & 950.0 & 953.8 & 928.8 & 947.5 & 936.2 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 표본평균과 표본분산을 구하라.
+    \item[(2)] 모평균이 950인지 유의수준 5\%에서 검정하라.
+    \item[(3)] 모표준편차가 11.2인지 유의수준 5\%에서 검정하라.  
+\end{itemize}
+
+\paragraph{Solution.}
+
+\begin{itemize}
+    \item[(1)] {
+        $\overline{x}=946.11$, $s^2=80.99$
+    }
+    \item[(2)] {
+        \[H_0:\mu=950 \qquad H_1:\mu\neq950\]
+        으로 설정한다. 검정통계량 $T=\dfrac{\overline{X}-950}{\dfrac{s}{\sqrt{10}}}\sim\mathrm{t}\left(10-1\right)$이고,
+        관측값 $t_0=\dfrac{946.11-950}{\dfrac{9.00}{\sqrt{10}}}=-1.37$이다.
+
+        유의수준 0.05에서 양측검정하면, $t_{0.025}\left(9\right)=2.262$이므로 기각역 $R:\left|T\right|\geq 2.262$인데
+        $t_0=-1.37$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 모평균은 950이라고 생각할 수 있다.
+    }
+    \item[(3)] {
+        \[H_0:\sigma^2=125.44 \qquad H_1:\sigma^2\neq125.44\]
+        로 설정한다. $\chi^2$-통계량 $V=\dfrac{\left(10-1\right)S^2}{\hat{\sigma}^2}=\dfrac{S^2}{13.94}$를 선택할 때
+        관측값 $v_0=\dfrac{80.99}{13.94}=5.81$이다.
+
+        유의수준 0.05에서 양측검정하면, $\chi^2_{0.975}\left(9\right)=2.7$, $\chi^2_{0.025}\left(9\right)=19.02$에서
+        기각역 $R:\left(V\leq 2.7\right) \cup \left(V\geq 19.02\right)$인데 $v_0=5.81$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다.
+    }
+\end{itemize}
+
+% Problem 3
+\subsubsection{3.} 두 종류의 비료 A와 B를 각각 5개 지역에 사용하여 담위 면적당 쌀 수확량을 조사한 결과 다음을 얻었다.
+이 때 쌀 수확량은 정규분포에 따른다고 한다.
+
+\begin{center}
+    \begin{tabular}{l|ccccc}
+        \hline
+        A 지역 & 357 & 325 & 346 & 345 & 330 \\
+        \hline
+        B 지역 & 335 & 328 & 335 & 344 & 326 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 두 종류의 비료에 의한 평균 쌀 수확량에 차이가 있는지 유의수준 5\%에서 조사하라.
+    \item[(2)] 쌀 수확량의 분산에 차이가 있는지 유의수준 5\%에서 조사하라. 
+\end{itemize}
+
+\paragraph{Solution.} A 지역의 경우 평균 $\overline{x}=340.6$, 표준편차 $s_1=12.97$를,
+B 지역의 경우 평균 $\overline{y}=333.6$, 표준편차 $s_2=7.09$를 각각 보였다.
+$S_p=\dfrac{1}{5+5-2}\left[\left(5-1\right)\times12.97^2+\left(5-1\right)\times7.09^2\right]=109.24$였다.
+
+\begin{itemize}
+    \item[(1)] {
+        평균 수확량을 각각 $\mu_1$, $\mu_2$라 하자.
+        \[H_0:\mu_1=\mu_2 \qquad H_1:\mu_1\neq\mu_2\]
+        로 설정한다. 검정통계량 $T=\dfrac{\overline{X}-\overline{Y}}{S_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}}
+        =\dfrac{\overline{X}-\overline{Y}}{6.61}\sim \mathrm{t}\left(10-2\right)$이고 관측값
+        $t_0=\dfrac{340.6-333.6}{6.61}=1.06$이다.
+
+        유의수준 0.05에서 양측검정하면, $t_{0.025}\left(8\right)=2.306$이므로 기각역 $R:\left|T\right|\geq 2.306$인데
+        $t_0=1.06$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 두 종류의 비료에 의한 평균 쌀 수확량에는
+        차이가 없다고 생각할 수 있다.
+    }
+    \item[(2)] {
+        분산을 각각 $\sigma_1$, $\sigma_2$라 하자.
+        \[H_0:\sigma_1=\sigma_2 \qquad H_1:\sigma_1\neq\sigma_2\]
+        로 설정한다. 검정통계량 $F=\dfrac{S_1^2}{S_2^2}$이고 관측값 $f_0=\dfrac{12.97^2}{7.09^2}=3.35$이다.
+
+        유의수준 0.05에서 양측검정하면, $f_{0.025}\left(4,\,4\right)=9.60$, $f_{0.975}\left(4,\,4\right)
+        =\dfrac{1}{f_{0.025}\left(4,\,4\right)}=0.104$에서
+        기각역 $R:\left(F\leq 0.104\right) \cup \left(F\geq 9.60\right)$인데
+        $f_0=3.35$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 두 종류의 비료에 의한 쌀 수확량의 분산에도
+        차이가 없다고 생각할 수 있다.
+    }
+\end{itemize}
+
+% Problem 6
+\subsubsection{6.} 어느 컴퓨터 공정라인에서 종사하는 남자와 여자의 작업 능률이 동일한지 알아보기 위하여 남$\cdot$여 근로자를 각각
+12명, 10명씩 임의로 추출하여 조사한 결과 남자 근로자의 표준편차는 2.3대이고, 여자 근로자의 표준편차는 2.0대였다. 남자와 여자가 생산한
+컴퓨터의 대수의 모분산에 차이가 있는지 유의수준 10\%에서 검정하라.
+
+\paragraph{Solution.} 분산을 각각 $\sigma_1$, $\sigma_2$라 하자.
+\[H_0:\sigma_1=\sigma_2 \qquad H_1:\sigma_1\neq\sigma_2\]
+로 설정한다. 검정통계량 $F=\dfrac{S_1^2}{S_2^2}$이고 관측값 $f_0=\dfrac{2.3^2}{2.0^2}=1.32$이다.
+
+유의수준 0.1에서 양측검정하면, $f_{0.05}\left(11,\,9\right)=3.1$, $f_{0.95}\left(11,\,9\right)
+=\dfrac{1}{f_{0.05}\left(11,\,9\right)}=0.35$에서
+기각역 $R:\left(F\leq 0.35\right) \cup \left(F\geq 3.1\right)$인데
+$f_0=1.32$는 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다. 따라서 남자와 여자가 생산한
+컴퓨터의 대수의 분산에는 차이가 없다고 생각할 수 있다.
+
+% Problem 12
+\subsubsection{12.} 독립인 두 정규모집단으로부터 각각 크기 16과 21인 표본을 추출한 결과, 표본 A에서 표준편차 $s_1=5.96$, 
+표본 B에서 표준편차 $s_2=11.40$을 얻었다. 이 자료를 근거로 귀무가설 $H_0:\sigma_1^2=\sigma_2^2$를 유의수준 5\%에서 검정하라.
+
+\paragraph{Solution.}
+\[H_0:\sigma_1=\sigma_2 \qquad H_1:\sigma_1\neq\sigma_2\]
+로 설정한다. 검정통계량 $F=\dfrac{S_1^2}{S_2^2}$이고 관측값 $f_0=\dfrac{5.96}{11.40}=0.523$이다.
+
+유의수준 0.05에서 양측검정하면, $f_{0.025}\left(15,\,20\right)=2.57$, $f_{0.975}\left(15,\,20\right)
+=\dfrac{1}{f_{0.025}\left(15,\,20\right)}=0.362$에서
+기각역 $R:\left(F\leq 0.362\right) \cup \left(F\geq 2.57\right)$인데
+$f_0=0.523$은 기각역에 들어가지 않으므로 귀무가설을 기각할 수 없다.

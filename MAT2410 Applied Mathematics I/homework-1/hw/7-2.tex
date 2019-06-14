@@ -1,0 +1,97 @@
+% Problem 2
+\subsubsection{2.} 어느 회사에서 제조된 전구의 수명은 평균 516시간, 분산 185시간이라 한다.
+이 회사에서 제조된 전구를 100개 구입했을 때, 이 전구들의 평균수명에 대한 평균과 분산을 구하고, 평균수명이 520시간 이상일 근사확률을 구하라.
+
+\paragraph{Solution.} $\mathrm{E}\left(\overline{X}\right)=\mu=516$, $s^2=\dfrac{\sigma^2}{100}=1.85$이다.
+표본의 크기가 100이면 대표본이므로 중심극한정리를 적용한다면 평균수명은 정규분포에 근사하게 된다. 따라서
+
+\begin{align*}
+    P\left(\overline{X}>520\right) &= P\left(\frac{\overline{X}-510}{\sqrt{1.85}}>\frac{520-510}{\sqrt{1.85}}\right) \\
+    &= P\left(Z>2.94\right) = 0.0016
+\end{align*}
+
+이다.
+
+% Problem 6
+\subsubsection{6.} 우리나라에서 생산되는 어떤 종류의 담배 한 개에 포함된 타르\translation{tar}의 양이 평균 5.5mg 표준편차 2.5mg이라고 한다.
+어느 날 판매점에서 임의로 수거한 500개의 담배를 조사했을 때 다음을 구하라.
+
+\begin{itemize}
+    \item[(1)] 평균 타르가 5.6mg 이상일 근사확률
+    \item[(2)] 평균 타르가 5.3mg 이하일 근사확률 
+\end{itemize}
+
+\paragraph{Solution.} $\mathrm{E}\left(\overline{X}\right)=\mu=5.5$, $s^2=\dfrac{\sigma^2}{500}=0.0125$이고
+중심극한정리에 의해 $\overline{X} \approx \mathrm{N}\left(5.5,\,0.0125\right)$이다.
+
+\begin{itemize}
+    \item[(1)] {
+        \begin{align*}
+            P\left(\overline{X}>5.6\right) &= P\left(\frac{\overline{X}-5.5}{\sqrt{0.0125}}>\frac{5.6-5.5}{\sqrt{0.0125}}\right) \\
+            &= P\left(Z<0.89\right) = 0.1867
+        \end{align*}
+    }
+    \item[(2)] {
+        \begin{align*}
+            P\left(\overline{X}<5.3\right) &= P\left(\frac{\overline{X}-5.5}{\sqrt{0.0125}}<\frac{5.3-5.5}{\sqrt{0.0125}}\right) \\
+            &= P\left(Z<-1.79\right) = 0.0367
+        \end{align*}
+    }
+\end{itemize}
+
+% Problem 11
+\subsubsection{11.} A 교수의 과거 경험에 따르면 학생들의 통계학 점수를 평균 77점 그리고 표준편차 15점이라고 한다.
+현재 이 교수는 36명과 64명인 두 반에서 강의하고 있다.
+
+\begin{itemize}
+    \item[(1)] 두 반의 평균성적이 72점과 82점 사이일 근사확률을 각각 구하라.
+    \item[(2)] 36명인 반의 평균성적이 64명인 반보다 2점 이상 더 큰 근사확률을 구하라. 
+\end{itemize}
+
+\paragraph{Solution.} 중심극한정리에 의해, 36명 반에 대해서 $\mathrm{E}\left(\overline{X}\right)=\mu=77$, $s_1=\dfrac{\sigma}{\sqrt{36}}=2.5$이고
+$\overline{X} \approx \mathrm{N}\left(77,\,2.5^2\right)$이다. 또한 64명 반에 대해서
+$\mathrm{E}\left(\overline{Y}\right)=\mu=77$, $s_2^2=\dfrac{\sigma}{\sqrt{64}}=1.875$이고
+$\overline{Y} \approx \mathrm{N}\left(77,\,1.875^2\right)$이다.
+
+\begin{itemize}
+    \item[(1)] {
+        \begin{align*}
+            P\left(72<\overline{X}<82\right)&=P\left(\frac{72-77}{2.5}<\frac{\overline{X}-77}{2.5}<\frac{82-77}{2.5}\right) \\
+            &=P\left(-2<Z<2\right) = 0.9544
+        \end{align*}
+        \begin{align*}
+            P\left(72<\overline{Y}<82\right)&=P\left(\frac{72-77}{1.875}<\frac{\overline{Y}-77}{2.5}<\frac{82-77}{1.875}\right) \\
+            &=P\left(-2.67<Z<2.67\right) = 0.9924
+        \end{align*}
+    }
+    \item[(2)] {
+        $T=\overline{X}-\overline{Y}$라 하면 $T \approx \mathrm{N}\left(77-77,\,2.5^2+1.875^2\right)=\mathrm{N}\left(0,\,3.125^2\right)$이다. 따라서
+        \begin{align*}
+            P\left(\overline{X}>\overline{Y}+2\right) &= P\left(\overline{X}-\overline{Y}>2\right) \\ 
+            &= P\left(T>2\right) \\ 
+            &= P\left(\frac{T}{3.125}>\frac{2}{3.125}\right) \\
+            &= P\left(Z>0.64\right) = 0.2611
+        \end{align*}
+        이다.
+    }
+\end{itemize}
+
+% Problem 13
+\subsubsection{13.} 모평균 $\mu_1=550$, $\mu_2=500$이고 모표준편차 $\sigma_1=9$, $\sigma_2=16$인 두 정규모집단에서
+각각 크기 50과 40인 표본을 임의로 추출하였을 때, 두 표본평균의 차가 48과 52 사이일 확률을 구하라.
+
+\paragraph{Solution.} 중심극한정리에 의해, 크기 50인 표본 $\overline{X}$에 대해 $\overline{X} \approx \mathrm{N}\left(550,\,\dfrac{9^2}{50}\right)$이고
+크기 40인 표본 $\overline{Y}$에 대해 $\overline{Y} \approx \mathrm{N}\left(500,\,\dfrac{16^2}{40}\right)$이다. 따라서 $T=\overline{X}-\overline{Y}$는
+$T\approx \mathrm{N}\left(550-500,\,\dfrac{9^2}{50}+\dfrac{16^2}{40}\right)=\mathrm{N}\left(50,\,8.02\right)$이다.
+
+두 표본평균의 차가 48과 52 사이이려면 $-52<T<-48$ 또는 $48<T<52$이어야 한다. 첫 번째 경우
+\begin{align*}
+    P\left(-52<T<-48\right) &= P\left(\frac{-52-50}{\sqrt{8.02}}<\frac{T-50}{\sqrt{8.02}}<\frac{-48-50}{\sqrt{8.02}}\right) \\ 
+    &= P\left(-36.02<Z<-34.61\right) = 0.0000 \\
+\end{align*}
+이고, 두 번째 경우
+\begin{align*}
+    P\left(48<T<52\right) &= P\left(\frac{48-50}{\sqrt{8.02}}<\frac{T-50}{\sqrt{8.02}}<\frac{52-50}{\sqrt{8.02}}\right) \\ 
+    &= P\left(-0.71<Z<0.71\right) = 0.5223 \\
+\end{align*}
+이므로 두 표본평균의 차가 48과 52 사이일 확률은 0.5223이다.

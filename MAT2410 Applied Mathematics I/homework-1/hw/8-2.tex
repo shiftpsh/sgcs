@@ -1,0 +1,194 @@
+% Problem 1
+\subsubsection{1.} 어느 회사에서 생산하는 비누 무게는 분산이 $\sigma^2=4$인 정규분포를 따른다고 한다. 25개의 비누를 임의로 추출하였을 때, 
+그 평균 무게의 값은 $\overline{x}=97$이었다. 실제 평균 무게 $\mu$에 대한 95\% 신뢰구간을 구하라. 단위는 g이다.
+
+\paragraph{Solution.} $z_{0.025}=1.96$이다. 따라서 95\% 신뢰구간은
+\begin{align*}
+    \left(\overline{x}-z_{0.025}\frac{\sigma}{\sqrt{n}},\,\overline{x}+z_{0.025}\frac{\sigma}{\sqrt{n}}\right)
+    &= \left(97-1.96\times\frac{2}{\sqrt{25}},\,97+1.96\times\frac{2}{\sqrt{25}}\right) \\
+    &= \left(96.216,\,97.784\right)\mbox{ g}
+\end{align*}
+이다.
+
+% Problem 2
+\subsubsection{2.} 문제 \textbf{1}에서 분산 $\sigma^2$를 모르지만 $s^2=4.25$라 할 때, 실제 평균 무게 $\mu$에 대한 95\% 신뢰구간을 구하라.
+
+\paragraph{Solution.} $t_{0.025}\left(25-1\right)=2.064$이고 $s=\sqrt{4.25}=2.062$이다. 따라서 95\% 신뢰구간은
+\begin{align*}
+    \left(\overline{x}-t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}},\,\overline{x}+t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}}\right)
+    &= \left(97-2.064\times\frac{2.062}{\sqrt{25}},\,97+2.064\times\frac{2.062}{\sqrt{25}}\right) \\
+    &= \left(96.149,\,97.851\right)\mbox{ g}
+\end{align*}
+이다.
+
+% Problem 4
+\subsubsection{4.} 다음 자료는 어느 직장에 근무하는 직원 20명에 대한 혈중 콜레스테롤 수치를 조사한 자료이다. 다음 각 조건 아래서 이 직장에 근무하는
+직원들의 콜레스테롤 평균 수치에 대한 95\% 신뢰구간을 구하라.
+
+\begin{center}
+    \begin{tabular}{cccccccccc}
+        \hline
+        193.27 & 193.88 & 253.26 & 237.15 & 188.83 & 200.56 & 274.31 & 230.36 & 212.08 & 222.19 \\
+        198.48 & 202.50 & 215.35 & 218.95 & 233.16 & 222.23 & 218.53 & 204.64 & 206.72 & 199.37 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 콜레스테롤 수치가 정규분포 $\mathrm{N}\left(\mu,\,400\right)$에 따르는 경우
+    \item[(2)] 콜레스테롤 수치가 정규분포에 따르는 경우 
+\end{itemize}
+
+\paragraph{Solution.} 이 표본의 평균 $\overline{x}=216.29$, 표준편차 $s=21.53$이다.
+
+\begin{itemize}
+    \item[(1)] {
+        $z_{0.025}=1.96$이다. 따라서 95\% 신뢰구간은
+        \begin{align*}
+            \left(\overline{x}-z_{0.025}\frac{\sigma}{\sqrt{n}},\,\overline{x}+z_{0.025}\frac{\sigma}{\sqrt{n}}\right)
+            &= \left(216.29-1.96\times\frac{20}{\sqrt{20}},\,216.29+1.96\times\frac{20}{\sqrt{20}}\right) \\
+            &= \left(207.52,\,225.06\right)\mbox{ mg/dL}
+        \end{align*}
+        이다.
+    }
+    \item[(2)] {
+        $t_{0.025}\left(20-1\right)=2.093$이다. 따라서 95\% 신뢰구간은
+        \begin{align*}
+            & \left(\overline{x}-t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}},\,\overline{x}+t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}}\right) \\
+            =& \left(216.29-2.064\times\frac{21.53}{\sqrt{20}},\,216.29+2.064\times\frac{21.53}{\sqrt{20}}\right) \\
+            =& \left(206.35,\,226.23\right)\mbox{ mg/dL}
+        \end{align*}
+        이다.
+    }
+\end{itemize}
+
+% Problem 9
+\subsubsection{9.} 강의실 옆의 커피 자판기에서 컵 한 잔에 나오는 커피의 양을 조사하기 위하여 101잔을 조사한 결과 평균 0.3리터, 표준편차 0.06리터이었다.
+다음 각 조건 아래서 이 자판기에서 나오는 커피 한 잔의 평균 양에 대한 95\% 신뢰구간을 구하라.
+
+\begin{itemize}
+    \item[(1)] 커피의 양은 정규분포에 따르며, 표준편차는 0.05리터로 알려져 있는 경우
+    \item[(2)] 커피의 양은 정규분포에 따르며, 표준편차를 모르는 경우 
+\end{itemize}
+
+\paragraph{Solution.}
+\begin{itemize}
+    \item[(1)] {
+        $z_{0.025}=1.96$이다. 따라서 95\% 신뢰구간은
+        \begin{align*}
+            \left(\overline{x}-z_{0.025}\frac{\sigma}{\sqrt{n}},\,\overline{x}+z_{0.025}\frac{\sigma}{\sqrt{n}}\right)
+            &= \left(0.3-1.96\times\frac{0.05}{\sqrt{101}},\,0.3+1.96\times\frac{0.05}{\sqrt{101}}\right) \\
+            &= \left(0.2902,\,0.3098\right)\mbox{ L}
+        \end{align*}
+        이다.
+    }
+    % 커피의 양은 정규분포에 따르며, 표준편차는 0.05리터로 알려져 있는 경우
+    \item[(2)] {
+        $t_{0.025}\left(101-1\right)=1.984$이다. 따라서 95\% 신뢰구간은
+        \begin{align*}
+            \left(\overline{x}-t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}},\,\overline{x}+t_{0.025}\left(n-1\right)\frac{s}{\sqrt{n}}\right)
+            &= \left(0.3-1.984\times\frac{0.06}{\sqrt{101}},\,0.3+1.984\times\frac{0.06}{\sqrt{101}}\right) \\
+            &= \left(0.2881,\,0.3119\right)\mbox{ L}
+        \end{align*}
+        이다.
+    }
+    % 커피의 양은 정규분포에 따르며, 표준편차를 모르는 경우 
+\end{itemize}
+
+% Problem 10
+\subsubsection{10.} 어느 컴퓨터 제조회사에서 생산되는 컴퓨터의 내구연한이 정규분포를 이룬다고 한다. 10명의 소비자를 대상으로 설문 조사한 결과 다음 자료를 얻었다.
+모평균 $\mu$에 대한 90\% 신뢰구간을 구하라. 단위는 년이다.
+
+\begin{center}
+    \begin{tabular}{cccccccccc}
+        \hline
+        4.6 & 3.6 & 4.0 & 6.1 & 8.8 & 5.3 & 1.2 & 5.6 & 3.3 & 1.6 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\paragraph{Solution.} 이 표본의 평균 $\overline{x}=4.41$이고 표준편차 $s=2.23$이다. 모표준편차가 알려져 있지 않으므로 $t$-추정이 필요하다.
+$t_{0.05}\left(10-1\right)=1.833$이다. 따라서 90\% 신뢰구간은
+\begin{align*}
+    \left(\overline{x}-t_{0.05}\left(n-1\right)\frac{s}{\sqrt{n}},\,\overline{x}+t_{0.05}\left(n-1\right)\frac{s}{\sqrt{n}}\right)
+    &= \left(4.41-1.833\times\frac{2.23}{\sqrt{10}},\,4.41+1.833\times\frac{2.23}{\sqrt{10}}\right) \\
+    &= \left(3.117,\,5.703\right)\mbox{ 년}
+\end{align*}
+이다.
+
+% Problem 15
+\subsubsection{15.} 모평균 $\mu_1$, $\mu_2$, 그리고 $\sigma_1=4$, $\sigma_2=5$인 두 정규모집단으로부터 각각 크기 12, 10인 표본을
+임의로 추출하여 $\overline{x}=75.5$, $\overline{y}=70.4$인 결과를 얻었다. 모평균의 차 $\mu_1-\mu_2$에 대한 95\% 신뢰구간을 구하라.
+\paragraph{Solution.} $\overline{x}-\overline{y}=5.1$이고 $\sqrt{\dfrac{\sigma_1^2}{n}+\dfrac{\sigma_2^2}{m}}=1.9578$이다.
+또한 $z_{0.025}=1.96$이다. 따라서 95\% 신뢰구간은
+\begin{align*}
+     & \left(\overline{x}-\overline{y}-z_{0.025}\sqrt{\dfrac{\sigma_1^2}{n}+\dfrac{\sigma_2^2}{m}},\,\overline{x}-\overline{y}+z_{0.025}\sqrt{\dfrac{\sigma_1^2}{n}+\dfrac{\sigma_2^2}{m}}\right)\\
+    =& \left(5.1-1.96\times1.9578,\,5.1+1.96\times1.9578\right) \\
+    =& \left(1.2625,\,8.9375\right)
+\end{align*}
+이다.
+
+% Problem 19
+\subsubsection{19.} 모평균 $\mu_1$, $\mu_2$인 두 정규모집단으로부터 각각 크기 10, 15 표본을
+임의로 추출하여 $\overline{x}=485.5$, $\overline{y}=501.4$와 $s_1=6$, $s_2=7$인 결과를 얻었다.
+모평균의 차 $\mu_1-\mu_2$에 대한 95\% 신뢰구간을 구하라.
+\paragraph{Solution.} 합동표본분산 $s_p^2=\dfrac{1}{10+15-2}\left[\left(10-1\right)\times6^2+\left(15-1\right)\times7^2\right]=43.913$이므로
+합동표본표준편차 $s_p=6.627$이고, $t_{0.025}\left(23\right)=2.069$이므로 95\% 신뢰구간은
+\begin{align*}
+    & \left(\overline{x}-\overline{y}-t_{0.025}\left(n+m-2\right)s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}},\,\overline{x}-\overline{y}+t_{0.025}\left(n+m-2\right)s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}\right)\\
+   =& \left(-15.9-2.069\times6.627\times0.408,\,-15.9+2.069\times6.627\times0.408\right) \\
+   =& \left(-21.496,\,-10.303\right)
+\end{align*}
+이다.
+
+% Problem 21
+\subsubsection{21.} 다음은 남자와 여자의 생존 연령을 조사한 자료이다.
+
+\begin{center}
+    \begin{tabular}{l|cccccccccc}
+        \hline
+        남자 & 52 & 60 & 55 & 46 & 33 & 75 & 58 & 45 & 57 & 88 \\
+        \hline
+        여자 & 62 & 58 & 65 & 56 & 53 & 45 & 56 & 65 & 77 & 47 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item[(1)] 남자와 여자의 평균 생존 연령에 대한 90\% 신뢰구간을 구하라.
+    \item[(2)] 두 그룹의 모분산이 동일하다는 조건 아래서 합동표준편차를 구하라.
+    \item[(3)] (2)를 이용하여, 여자와 남자의 평균 생존 연령의 차이에 대한 90\% 신뢰구간을 구하라.  
+\end{itemize}
+
+\paragraph{Solution.} 남자의 경우 평균 $\overline{x}=56.9$, 표준편차 $s_1=15.51$이고,
+여자의 경우 평균 $\overline{y}=58.4$, 표준편차 $s_2=9.41$이다.
+
+\begin{itemize} 
+    \item[(1)] {
+        $t_{0.05}\left(10-1\right)=1.833$이다. 따라서 남자의 경우 90\% 신뢰구간은
+        \begin{align*}
+            \left(\overline{x}-t_{0.05}\left(n-1\right)\frac{s_1}{\sqrt{n}},\,\overline{x}+t_{0.05}\left(n-1\right)\frac{s_1}{\sqrt{n}}\right)
+            &= \left(56.9-1.833\times\frac{15.51}{\sqrt{10}},\,56.9+1.833\times\frac{15.51}{\sqrt{10}}\right) \\
+            &= \left(47.91,\,65.89\right)\mbox{ 세}
+        \end{align*}
+        이고 여자의 경우 90\% 신뢰구간은
+        \begin{align*}
+            \left(\overline{y}-t_{0.05}\left(m-1\right)\frac{s_1}{\sqrt{m}},\,\overline{y}+t_{0.05}\left(m-1\right)\frac{s_1}{\sqrt{m}}\right)
+            &= \left(58.4-1.833\times\frac{9.41}{\sqrt{10}},\,58.4+1.833\times\frac{9.41}{\sqrt{10}}\right) \\
+            &= \left(52.95,\,63.85\right)\mbox{ 세}
+        \end{align*}
+        이다.
+    }
+    \item[(2)] {
+        $s_p^2 = \dfrac{1}{10+10-2}\left[\left(10-1\right)\times15.51^2+\left(10-1\right)\times9.41^2\right]=164.55$, $s_p=12.83$
+    }
+    \item[(3)] {
+        $t_{0.05}\left(18\right)=1.734$이다. 따라서 90\% 신뢰구간은
+        \begin{align*}
+            & \left(\overline{y}-\overline{x}-t_{0.05}\left(n+m-2\right)s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}},\,\overline{y}-\overline{x}+t_{0.05}\left(n+m-2\right)s_p\sqrt{\dfrac{1}{n}+\dfrac{1}{m}}\right)\\
+           =& \left(1.5-1.734\times12.83\times0.4472,\,1.5+1.734\times12.83\times0.4472\right) \\
+           =& \left(-8.45,\,11.45\right)
+        \end{align*}
+        이다.
+    }
+\end{itemize}
