@@ -36,6 +36,7 @@
 | CSE2003 | 2018-01  | [Introduction to Engineering Design<br>기초공학설계](/CSE2003%20Introduction%20to%20Engineering%20Design) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
 | CSE2035 | 2018-02  | [C Programming<br>C프로그래밍](/CSE2035%20C%20Programming) | 실습 코드, 프로젝트 레포트 및 코드,<br>시험 코드 전부 |
 | CSE3080 | 2019-01  | [Data Structures<br>자료구조](/CSE3080%20Data%20Structures) | 오픈랩 코드 |
+| CSE3013 | 2019-01  | [Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I](https://github.com/shiftpsh/sgcs-cse3013) | 실습 및 과제 코드, 레포트 전부,<br>기말시험 코드 전부 (공개 예정) |
 
 ### 수학전공
 
@@ -51,9 +52,8 @@
 
 | Code    | Semester | Class                                         | Contents |
 | ------- | -------- | --------------------------------------------- | -------- |
-| CSE3030 | 2019-01  | Assembly Programming<br>어셈블리 프로그래밍 | 강의 노트, 실습 코드 전부 |
+| CSE3030 | 2019-01  | Assembly Programming<br>어셈블리 프로그래밍 | 강의 노트, 실습 코드 전부,<br>기말시험 코드 전부 |
 | CSE3080 | 2019-01  | [Data Structures<br>자료구조](/CSE3080%20Data%20Structures) | 프로젝트 코드 전부 |
-| CSE3013 | 2019-01  | Computer Science and Engineering Laboratory I<br>컴퓨터공학 설계 및 실험 I | 실습 및 과제 코드, 보고서 전부 |
 
 ### 수학전공
 
