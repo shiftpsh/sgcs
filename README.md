@@ -43,7 +43,7 @@
 | ------- | -------- | --------------------------------------------- | -------- |
 | STS2005 | 2018-01  | [Analytic Geometry and Calculus I<br>미적분학I](/STS2005%20Analytic%20Geometry%20and%20Calculus%20I) | 시험 문제 및 답안 (중간시험) |
 | STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 퀴즈 문제 및 답안, 강의 노트 |
-| MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 1 전부, 시험 문제 및 답안 (중간시험) |
+| MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 1 전부, 시험 문제 및 답안 (중간시험), 강의 노트 |
 
 <details><summary>작성 중인 과목 목록</summary>
 
@@ -62,7 +62,7 @@
 | STS2005 | 2018-01  | [Analytic Geometry and Calculus I<br>미적분학I](/STS2005%20Analytic%20Geometry%20and%20Calculus%20I) | 퀴즈 문제 및 답안, 시험 문제 및 답안 (기말시험) |
 | STS2006 | 2018-02  | [Analytic Geometry and Calculus II<br>미적분학II](/STS2006%20Analytic%20Geometry%20and%20Calculus%20II) | 시험 문제 및 답안 |
 | MAT2110 | 2019-01  | Introduction to Linear Algebra<br>선형대수학 | 강의 노트 |
-| MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 2 전부, 강의 노트 |
+| MAT2410 | 2019-01  | [Applied Mathematics I<br>응용수학I](/MAT2410%20Applied%20Mathematics%20I) | 과제 2 전부, 시험 문제 및 답안 (기말시험) |
 
 </details>
 
